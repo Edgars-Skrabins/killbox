@@ -71,9 +71,8 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-#Project Settings
+#Project Settings and tools
 
 .idea/
-.vsconfig/
 .vscode
-./Assets/Tools/Feel/
+Assets/Tools/Feel/
