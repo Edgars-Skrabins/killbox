@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1377345006}
-  m_IndirectSpecularColor: {r: 0.027252868, g: 0.051778454, b: 0.1319319, a: 1}
+  m_IndirectSpecularColor: {r: 0.027252832, g: 0.05177839, b: 0.13193178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -64286,6 +64286,10 @@ PrefabInstance:
     - target: {fileID: 4338167332743421750, guid: ef760799c9c7bc048b7749f607ac3eb5, type: 3}
       propertyPath: m_Name
       value: Fence_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7550981193502278199, guid: ef760799c9c7bc048b7749f607ac3eb5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef760799c9c7bc048b7749f607ac3eb5, type: 3}
