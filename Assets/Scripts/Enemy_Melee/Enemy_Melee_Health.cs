@@ -19,8 +19,8 @@ public class Enemy_Melee_Health : Health
         SpawnDamagePopup(_damage);
 
         m_enemyStatsCS.EnemyHealth -= _damage;
-        if (m_takeDamageFeedback) m_takeDamageFeedback.PlayFeedbacks();
-        if (m_enemyStatsCS.EnemyHealth <= 0)
+        if(m_takeDamageFeedback) m_takeDamageFeedback.PlayFeedbacks();
+        if(m_enemyStatsCS.EnemyHealth <= 0)
         {
             Die();
         }
@@ -34,8 +34,8 @@ public class Enemy_Melee_Health : Health
         SpawnDamagePopup(_damage);
 
         m_enemyStatsCS.EnemyHealth -= _damage;
-        if (m_takeDamageFeedback) m_takeDamageFeedback.PlayFeedbacks();
-        if (m_enemyStatsCS.EnemyHealth <= 0)
+        if(m_takeDamageFeedback) m_takeDamageFeedback.PlayFeedbacks();
+        if(m_enemyStatsCS.EnemyHealth <= 0)
         {
             Die();
         }
@@ -52,14 +52,14 @@ public class Enemy_Melee_Health : Health
         m_enemyStatsCS.NavMeshAgent.speed = 0;
         m_enemyStatsCS.NavMeshAgent.velocity = Vector3.zero;
         m_stunnedVFX.SetActive(true);
-        if (!m_isStunned) SpawnStunnedPopup();
+        if(!m_isStunned) SpawnStunnedPopup();
         m_isStunned = true;
     }
 
     private void UnStun()
     {
         m_stunTimer += Time.deltaTime;
-        if (m_stunTimer >= m_enemyStatsCS.StunDuration)
+        if(m_stunTimer >= m_enemyStatsCS.StunDuration)
         {
             m_isStunned = false;
             m_stunnedVFX.SetActive(false);
@@ -73,11 +73,11 @@ public class Enemy_Melee_Health : Health
 
     public override void Slow()
     {
-        if (m_isStunned) return;
+        if(m_isStunned) return;
 
         m_slowedVFX.SetActive(true);
         m_enemyStatsCS.NavMeshAgent.speed = m_enemyStatsCS.EnemySpeed - m_enemyStatsCS.EnemySlowAmount;
-        if (!m_isSlowed) SpawnSlowedPopup();
+        if(!m_isSlowed) SpawnSlowedPopup();
         m_isSlowed = true;
     }
 
@@ -85,14 +85,14 @@ public class Enemy_Melee_Health : Health
     {
         m_slowTimer += Time.deltaTime;
 
-        if (m_isStunned)
+        if(m_isStunned)
         {
             m_isSlowed = false;
             m_slowedVFX.SetActive(false);
             m_slowTimer = 0;
         }
 
-        if (m_slowTimer >= m_enemyStatsCS.SlowDuration)
+        if(m_slowTimer >= m_enemyStatsCS.SlowDuration)
         {
             m_isSlowed = false;
             m_slowedVFX.SetActive(false);
@@ -103,12 +103,12 @@ public class Enemy_Melee_Health : Health
 
     private void Update()
     {
-        if (m_isSlowed)
+        if(m_isSlowed)
         {
             UnSlow();
         }
 
-        if (m_isStunned)
+        if(m_isStunned)
         {
             UnStun();
         }
@@ -129,21 +129,14 @@ public class Enemy_Melee_Health : Health
 
     private void AddScore()
     {
-        if (GameManager.I.IsPlayerAlive)
+        if(GameManager.I.IsPlayerAlive)
         {
             PlayerStats.I.PlayerScore += m_enemyStatsCS.EnemyScoreValue;
         }
     }
 
-    [Space(5)]
-    [Header("General Popup settings")]
-    [Space(5)]
-    [SerializeField] private Transform m_popupTF;
-
-    [Space(10)]
-    [Header("Damage Popup settings")]
-    [Space(5)]
-    [SerializeField] private GameObject m_damagePopup;
+    [Space(5)] [Header("General Popup settings")] [Space(5)] [SerializeField] private Transform m_popupTF;
+    [Space(10)] [Header("Damage Popup settings")] [Space(5)] [SerializeField] private GameObject m_damagePopup;
 
     [SerializeField] private float m_damagePopupMinFontSize;
     [SerializeField] private float m_damagePopupMinFontSizeMaxFontSize;
@@ -158,10 +151,7 @@ public class Enemy_Melee_Health : Health
         tmproText.fontSize = Random.Range(m_damagePopupMinFontSize, m_damagePopupMinFontSizeMaxFontSize);
     }
 
-    [Space(10)]
-    [Header("Slowed Popup settings")]
-    [Space(5)]
-    [SerializeField] private GameObject m_slowedPopup;
+    [Space(10)] [Header("Slowed Popup settings")] [Space(5)] [SerializeField] private GameObject m_slowedPopup;
 
     [SerializeField] private float m_slowedPopupMinFontSize;
     [SerializeField] private float m_slowedPopupMaxFontSize;
@@ -174,10 +164,7 @@ public class Enemy_Melee_Health : Health
         tmproText.fontSize = Random.Range(m_slowedPopupMinFontSize, m_slowedPopupMaxFontSize);
     }
 
-    [Space(10)]
-    [Header("Stunned Popup settings")]
-    [Space(5)]
-    [SerializeField] private GameObject m_stunnedPopup;
+    [Space(10)] [Header("Stunned Popup settings")] [Space(5)] [SerializeField] private GameObject m_stunnedPopup;
 
     [SerializeField] private float m_stunnedPopupMinFontSize;
     [SerializeField] private float m_stunnedPopupMaxFontSize;
