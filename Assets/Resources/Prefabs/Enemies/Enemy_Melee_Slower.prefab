@@ -19786,8 +19786,8 @@ GameObject:
   - component: {fileID: 8408079668972110193}
   - component: {fileID: 8408079668972110196}
   - component: {fileID: 1556430429633354558}
-  - component: {fileID: 2976610120075391587}
   - component: {fileID: 8325659276563280668}
+  - component: {fileID: 2976610120075391587}
   m_Layer: 9
   m_Name: Enemy_Melee_Slower
   m_TagString: Enemy
@@ -20015,19 +20015,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!135 &2976610120075391587
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5231917037245067972}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.69
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8325659276563280668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20063,6 +20050,19 @@ MonoBehaviour:
   m_stunnedPopup: {fileID: 8140709818029415262, guid: 4710701587235fd47bc74865a535cf1d, type: 3}
   m_stunnedPopupMinFontSize: 0.75
   m_stunnedPopupMaxFontSize: 0.8
+--- !u!135 &2976610120075391587
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5231917037245067972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.69
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6422560714071586017
 GameObject:
   m_ObjectHideFlags: 0
