@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class Health_Enemy : Health
 {
-    
+
 }

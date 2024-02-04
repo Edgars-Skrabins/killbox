@@ -20,7 +20,7 @@ public class Enemy_Melee_Exploder_Health : Health
     [SerializeField] private float m_explosionRadius;
     [SerializeField] private LayerMask m_explosionLayers;
     [SerializeField] private int m_explosionDamage;
-    
+
     private void Update()
     {
         if(m_isSlowed)
@@ -33,12 +33,12 @@ public class Enemy_Melee_Exploder_Health : Health
             UnStun();
         }
     }
-    
+
     public override void TakeDamage(int _damage)
     {
-        
+
         m_explosionDamage = m_enemyStatsCS.ExplosiveDamage;
-        
+
         SpawnDamagePopup(_damage);
 
         m_enemyStatsCS.EnemyHealth -= _damage;
@@ -56,7 +56,7 @@ public class Enemy_Melee_Exploder_Health : Health
     {
 
         m_explosionDamage = _explosiveDamage;
-        
+
         SpawnDamagePopup(_damage);
 
         m_enemyStatsCS.EnemyHealth -= _damage;
@@ -99,7 +99,6 @@ public class Enemy_Melee_Exploder_Health : Health
 
     public override void Slow()
     {
-        
         if(m_isStunned) return;
 
         m_slowedVFX.SetActive(true);
@@ -107,18 +106,18 @@ public class Enemy_Melee_Exploder_Health : Health
         if(!m_isSlowed) SpawnSlowedPopup();
         m_isSlowed = true;
     }
-    
+
     private void UnSlow()
     {
         m_slowTimer += Time.deltaTime;
-        
+
         if(m_isStunned)
         {
             m_isSlowed = false;
             m_slowedVFX.SetActive(false);
             m_slowTimer = 0;
         }
-        
+
         if(m_slowTimer >= m_enemyStatsCS.SlowDuration)
         {
             m_isSlowed = false;
@@ -130,11 +129,11 @@ public class Enemy_Melee_Exploder_Health : Health
 
     [SerializeField] private GameObject m_enemyDeathVFX;
     [SerializeField] private GameObject m_enemyDebri;
-    
+
     protected override void Die()
     {
         gameObject.SetActive(false);
-        
+
         AddScore();
         Instantiate(m_enemyDebri, transform.position, Random.rotation);
         Instantiate(m_enemyDeathVFX, transform.position, Quaternion.identity);
@@ -149,7 +148,7 @@ public class Enemy_Melee_Exploder_Health : Health
                 if(health) health.TakeDamage(m_explosionDamage);
             }
         }
-        
+
     }
 
     private void AddScore()
@@ -198,7 +197,7 @@ public class Enemy_Melee_Exploder_Health : Health
         TextMeshProUGUI tmproText = obj.GetComponentInChildren<TextMeshProUGUI>();
         tmproText.fontSize = Random.Range(m_slowedPopupMinFontSize, m_slowedPopupMaxFontSize);
     }
-    
+
     [Space(10)]
     [Header("Stunned Popup settings")]
     [Space(5)]
@@ -214,7 +213,7 @@ public class Enemy_Melee_Exploder_Health : Health
         TextMeshProUGUI tmproText = obj.GetComponentInChildren<TextMeshProUGUI>();
         tmproText.fontSize = Random.Range(m_stunnedPopupMinFontSize, m_stunnedPopupMaxFontSize);
     }
-    
+
     private void OnEnable()
     {
         TurnOffAllEffects();
