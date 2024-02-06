@@ -175,7 +175,7 @@ public class Enemy_Melee_Exploder_Health : Health
     private void SpawnDamagePopup(int _damage)
     {
         //var obj = Instantiate(m_damagePopup, m_damagePopupTF.transform.position, m_damagePopupTF.transform.rotation);
-        var obj = Instantiate(m_damagePopup, Random.insideUnitSphere + m_popupTF.position, m_popupTF.transform.rotation);
+        GameObject obj = Instantiate(m_damagePopup, Random.insideUnitSphere + m_popupTF.position, m_popupTF.transform.rotation);
 
         TextMeshProUGUI tmproText = obj.GetComponentInChildren<TextMeshProUGUI>();
         tmproText.text = _damage.ToString();
@@ -192,7 +192,7 @@ public class Enemy_Melee_Exploder_Health : Health
 
     private void SpawnSlowedPopup()
     {
-        var obj = Instantiate(m_slowedPopup, Random.insideUnitSphere + m_popupTF.position, m_popupTF.transform.rotation);
+        GameObject obj = Instantiate(m_slowedPopup, Random.insideUnitSphere + m_popupTF.position, m_popupTF.transform.rotation);
 
         TextMeshProUGUI tmproText = obj.GetComponentInChildren<TextMeshProUGUI>();
         tmproText.fontSize = Random.Range(m_slowedPopupMinFontSize, m_slowedPopupMaxFontSize);
@@ -208,7 +208,7 @@ public class Enemy_Melee_Exploder_Health : Health
 
     private void SpawnStunnedPopup()
     {
-        var obj = Instantiate(m_stunnedPopup, Random.insideUnitSphere + m_popupTF.position, m_popupTF.transform.rotation);
+        GameObject obj = Instantiate(m_stunnedPopup, Random.insideUnitSphere + m_popupTF.position, m_popupTF.transform.rotation);
 
         TextMeshProUGUI tmproText = obj.GetComponentInChildren<TextMeshProUGUI>();
         tmproText.fontSize = Random.Range(m_stunnedPopupMinFontSize, m_stunnedPopupMaxFontSize);
