@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using MoreMountains.Feedbacks;
 using TMPro;
 using UnityEngine;
@@ -13,38 +11,35 @@ public class Enemy_Melee_Wiper_Health : Health
     [SerializeField] private GameObject m_dieEnemySFX;
     [SerializeField] private GameObject m_slowedVFX;
     [SerializeField] private GameObject m_stunnedVFX;
-    
 
     public override void TakeDamage(int _damage)
     {
-
         SpawnDamagePopup(_damage);
 
         m_enemyStatsCS.EnemyHealth -= _damage;
-        if(m_takeDamageFeedback) m_takeDamageFeedback.PlayFeedbacks();
-        if(m_enemyStatsCS.EnemyHealth <= 0)
+        if (m_takeDamageFeedback) m_takeDamageFeedback.PlayFeedbacks();
+        if (m_enemyStatsCS.EnemyHealth <= 0)
         {
             Die();
         }
 
         Instantiate(m_hitEnemySFX, transform.position, transform.rotation);
     }
-    
+
     public override void TakeDamage(int _damage, int _explosiveDamage)
     {
-
         SpawnDamagePopup(_damage);
 
         m_enemyStatsCS.EnemyHealth -= _damage;
-        if(m_takeDamageFeedback) m_takeDamageFeedback.PlayFeedbacks();
-        if(m_enemyStatsCS.EnemyHealth <= 0)
+        if (m_takeDamageFeedback) m_takeDamageFeedback.PlayFeedbacks();
+        if (m_enemyStatsCS.EnemyHealth <= 0)
         {
             Die();
         }
 
         Instantiate(m_hitEnemySFX, transform.position, transform.rotation);
     }
-    
+
     private float m_stunTimer;
     private bool m_isStunned;
 
@@ -53,14 +48,14 @@ public class Enemy_Melee_Wiper_Health : Health
         m_stunnedVFX.SetActive(true);
         m_enemyStatsCS.NavMeshAgent.speed = 0;
         m_enemyStatsCS.NavMeshAgent.velocity = Vector3.zero;
-        if(!m_isStunned) SpawnStunnedPopup();
+        if (!m_isStunned) SpawnStunnedPopup();
         m_isStunned = true;
     }
 
-    private void UnStun()
+    protected override void UnStun()
     {
         m_stunTimer += Time.deltaTime;
-        if(m_stunTimer >= m_enemyStatsCS.StunDuration)
+        if (m_stunTimer >= m_enemyStatsCS.StunDuration)
         {
             m_isStunned = false;
             m_stunnedVFX.SetActive(false);
@@ -74,28 +69,27 @@ public class Enemy_Melee_Wiper_Health : Health
 
     public override void Slow()
     {
-        
-        if(m_isStunned) return;
+        if (m_isStunned) return;
 
         m_slowedVFX.SetActive(true);
         m_enemyStatsCS.NavMeshAgent.speed = m_enemyStatsCS.EnemySpeed - m_enemyStatsCS.EnemySlowAmount;
-        if(!m_isSlowed) SpawnSlowedPopup();
+        if (!m_isSlowed) SpawnSlowedPopup();
         m_isSlowed = true;
     }
 
-    private void UnSlow()
+    protected override void UnSlow()
     {
         m_slowTimer += Time.deltaTime;
-        
-        if(m_isStunned)
+
+        if (m_isStunned)
         {
             m_isSlowed = false;
             m_slowedVFX.SetActive(false);
             m_slowTimer = 0;
         }
-        
-        
-        if(m_slowTimer >= m_enemyStatsCS.SlowDuration)
+
+
+        if (m_slowTimer >= m_enemyStatsCS.SlowDuration)
         {
             m_isSlowed = false;
             m_slowedVFX.SetActive(false);
@@ -106,12 +100,12 @@ public class Enemy_Melee_Wiper_Health : Health
 
     private void Update()
     {
-        if(m_isSlowed)
+        if (m_isSlowed)
         {
             UnSlow();
         }
-        
-        if(m_isStunned)
+
+        if (m_isStunned)
         {
             UnStun();
         }
@@ -120,10 +114,9 @@ public class Enemy_Melee_Wiper_Health : Health
     [SerializeField] private GameObject m_enemyDeathVFX;
     [SerializeField] private GameObject m_enemyDebri;
     [SerializeField] private GameObject m_deathSphere;
-    
+
     protected override void Die()
     {
-
         AddScore();
         Instantiate(m_enemyDebri, transform.position, Random.rotation);
         Instantiate(m_enemyDeathVFX, transform.position, Quaternion.identity);
@@ -136,7 +129,7 @@ public class Enemy_Melee_Wiper_Health : Health
 
     private void AddScore()
     {
-        if(GameManager.I.IsPlayerAlive)
+        if (GameManager.I.IsPlayerAlive)
         {
             PlayerStats.I.PlayerScore += m_enemyStatsCS.EnemyScoreValue;
         }
@@ -180,7 +173,7 @@ public class Enemy_Melee_Wiper_Health : Health
         TextMeshProUGUI tmproText = obj.GetComponentInChildren<TextMeshProUGUI>();
         tmproText.fontSize = Random.Range(m_slowedPopupMinFontSize, m_slowedPopupMaxFontSize);
     }
-    
+
     [Space(10)]
     [Header("Stunned Popup settings")]
     [Space(5)]

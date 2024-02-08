@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Orb : Health
 {
-
     [SerializeField] private MMF_Player m_getShotFeedback;
 
     private bool m_hasBeenActivated;
@@ -21,7 +20,6 @@ public class Orb : Health
         m_getShotFeedback.Initialization();
         m_getShotFeedback.PlayFeedbacks();
         Instantiate(m_orbHitVFX, transform.position, transform.rotation);
-
     }
 
     public override void TakeDamage(int _damage, int _explosiveDamage)
@@ -32,7 +30,6 @@ public class Orb : Health
         m_getShotFeedback.Initialization();
         m_getShotFeedback.PlayFeedbacks();
         Instantiate(m_orbHitVFX, transform.position, transform.rotation);
-
     }
 
     protected override void Die()
@@ -47,12 +44,18 @@ public class Orb : Health
 
     public override void Slow()
     {
+    }
 
+    protected override void UnSlow()
+    {
     }
 
     public override void Stun()
     {
+    }
 
+    protected override void UnStun()
+    {
     }
 
 

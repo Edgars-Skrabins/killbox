@@ -1,60 +1,88 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 public abstract class Health_Enemy : Health
 {
-    [Space(5)]
-    [Header("General Popup settings")]
-    [Space(5)]
-    [SerializeField] private Transform m_popupTF;
+    [SerializeField] private EnemyStats m_enemyStatsCS;
+    [SerializeField] private MMF_Player m_takeDamageFeedback;
+    [SerializeField] private GameObject m_hitEnemySFX;
 
-    [Space(10)]
-    [Header("Damage Popup settings")]
-    [Space(5)]
-    [SerializeField] private GameObject m_damagePopup;
-
-    [SerializeField] private float m_damagePopupMinFontSize;
-    [SerializeField] private float m_damagePopupMinFontSizeMaxFontSize;
-
-    private void SpawnDamagePopup(int _damage)
+    // TODO: Try to do this OnDisable instead and see if it works
+    private void OnEnable()
     {
-        GameObject obj = Instantiate(m_damagePopup, Random.insideUnitSphere + m_popupTF.position, m_popupTF.transform.rotation);
-
-        TextMeshProUGUI popupText = obj.GetComponentInChildren<TextMeshProUGUI>();
-        popupText.text = _damage.ToString();
-        popupText.fontSize = Random.Range(m_damagePopupMinFontSize, m_damagePopupMinFontSizeMaxFontSize);
+        m_enemyStatsCS.EnemyEffectsCS.TurnOffAllEffects();
     }
 
-    [Space(10)]
-    [Header("Slowed Popup settings")]
-    [Space(5)]
-    [SerializeField] private GameObject m_slowedPopup;
-
-    [SerializeField] private float m_slowedPopupMinFontSize;
-    [SerializeField] private float m_slowedPopupMaxFontSize;
-
-    private void SpawnSlowedPopup()
+    private void AddScore()
     {
-        GameObject obj = Instantiate(m_slowedPopup, Random.insideUnitSphere + m_popupTF.position, m_popupTF.transform.rotation);
-        TextMeshProUGUI popupText = obj.GetComponentInChildren<TextMeshProUGUI>();
-        popupText.fontSize = Random.Range(m_slowedPopupMinFontSize, m_slowedPopupMaxFontSize);
+        if (GameManager.I.IsPlayerAlive)
+        {
+            PlayerStats.I.PlayerScore += m_enemyStatsCS.EnemyScoreValue;
+        }
     }
 
-    [Space(10)]
-    [Header("Stunned Popup settings")]
-    [Space(5)]
-    [SerializeField] private GameObject m_stunnedPopup;
-
-    [SerializeField] private float m_stunnedPopupMinFontSize;
-    [SerializeField] private float m_stunnedPopupMaxFontSize;
-
-    private void SpawnStunnedPopup()
+    public override void TakeDamage(int _damage)
     {
-        GameObject obj = Instantiate(m_stunnedPopup, Random.insideUnitSphere + m_popupTF.position, m_popupTF.transform.rotation);
+        m_enemyStatsCS.PopupSpawnerCS.SpawnDamagePopup(_damage);
+        m_enemyStatsCS.EnemyHealth -= _damage;
+        if (m_takeDamageFeedback) m_takeDamageFeedback.PlayFeedbacks();
+        if (m_enemyStatsCS.EnemyHealth <= 0)
+        {
+            Die();
+        }
 
-        TextMeshProUGUI popupText = obj.GetComponentInChildren<TextMeshProUGUI>();
-        popupText.fontSize = Random.Range(m_stunnedPopupMinFontSize, m_stunnedPopupMaxFontSize);
+        PlayHitSound();
+    }
+
+    public override void TakeDamage(int _damage, int _explosiveDamage)
+    {
+        m_enemyStatsCS.PopupSpawnerCS.SpawnDamagePopup(_damage);
+        m_enemyStatsCS.EnemyHealth -= _damage;
+        if (m_takeDamageFeedback) m_takeDamageFeedback.PlayFeedbacks();
+        if (m_enemyStatsCS.EnemyHealth <= 0)
+        {
+            Die();
+        }
+
+        PlayHitSound();
+    }
+
+    [SerializeField] private GameObject m_enemyDeathVFX;
+    [SerializeField] private GameObject m_dieEnemySFX;
+    [SerializeField] private GameObject m_enemyDebris;
+
+    protected override void Die()
+    {
+        gameObject.SetActive(false);
+        AddScore();
+        Vector3 thisPosition = transform.position;
+        Instantiate(m_enemyDebris, thisPosition, Random.rotation);
+        Instantiate(m_enemyDeathVFX, thisPosition, Quaternion.identity);
+        Instantiate(m_dieEnemySFX, thisPosition, transform.rotation);
+    }
+
+    public override void Slow()
+    {
+        m_enemyStatsCS.EnemyEffectsCS.Slow();
+    }
+
+    protected override void UnSlow()
+    {
+        m_enemyStatsCS.EnemyEffectsCS.UnSlow();
+    }
+
+    public override void Stun()
+    {
+        m_enemyStatsCS.EnemyEffectsCS.Stun();
+    }
+
+    protected override void UnStun()
+    {
+        m_enemyStatsCS.EnemyEffectsCS.UnStun();
+    }
+
+    private void PlayHitSound()
+    {
+        Instantiate(m_hitEnemySFX, transform.position, transform.rotation);
     }
 }
