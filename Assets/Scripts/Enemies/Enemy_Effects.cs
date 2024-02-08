@@ -3,8 +3,8 @@ using UnityEngine;
 public class Enemy_Effects : MonoBehaviour
 {
     [SerializeField] private EnemyStats m_enemyStatsCS;
-    [SerializeField] private GameObject m_slowedVFX;
-    [SerializeField] private GameObject m_stunnedVFX;
+    [SerializeField] private GameObject m_slowedVFXGO;
+    [SerializeField] private GameObject m_stunnedVFXGO;
 
     private float m_stunTimer;
     private bool m_isStunned;
@@ -26,7 +26,7 @@ public class Enemy_Effects : MonoBehaviour
     {
         m_enemyStatsCS.NavMeshAgent.speed = 0;
         m_enemyStatsCS.NavMeshAgent.velocity = Vector3.zero;
-        m_stunnedVFX.SetActive(true);
+        m_stunnedVFXGO.SetActive(true);
         if (!m_isStunned)
         {
             m_enemyStatsCS.PopupSpawnerCS.SpawnStunnedPopup();
@@ -40,7 +40,7 @@ public class Enemy_Effects : MonoBehaviour
         if (m_stunTimer >= m_enemyStatsCS.StunDuration)
         {
             m_isStunned = false;
-            m_stunnedVFX.SetActive(false);
+            m_stunnedVFXGO.SetActive(false);
             m_enemyStatsCS.NavMeshAgent.speed = m_enemyStatsCS.EnemySpeed;
             m_stunTimer = 0;
         }
@@ -56,7 +56,7 @@ public class Enemy_Effects : MonoBehaviour
             return;
         }
 
-        m_slowedVFX.SetActive(true);
+        m_slowedVFXGO.SetActive(true);
         m_enemyStatsCS.NavMeshAgent.speed = m_enemyStatsCS.EnemySpeed - m_enemyStatsCS.EnemySlowAmount;
         if (!m_isSlowed)
         {
@@ -71,13 +71,13 @@ public class Enemy_Effects : MonoBehaviour
         if (m_isStunned)
         {
             m_isSlowed = false;
-            m_slowedVFX.SetActive(false);
+            m_slowedVFXGO.SetActive(false);
             m_slowTimer = 0;
         }
         if (m_slowTimer >= m_enemyStatsCS.SlowDuration)
         {
             m_isSlowed = false;
-            m_slowedVFX.SetActive(false);
+            m_slowedVFXGO.SetActive(false);
             m_enemyStatsCS.NavMeshAgent.speed = m_enemyStatsCS.EnemySpeed;
             m_slowTimer = 0;
         }
@@ -86,11 +86,11 @@ public class Enemy_Effects : MonoBehaviour
     public void TurnOffAllEffects()
     {
         m_isSlowed = false;
-        m_slowedVFX.SetActive(false);
+        m_slowedVFXGO.SetActive(false);
         m_enemyStatsCS.NavMeshAgent.speed = m_enemyStatsCS.EnemySpeed;
         m_slowTimer = 0;
         m_isStunned = false;
-        m_stunnedVFX.SetActive(false);
+        m_stunnedVFXGO.SetActive(false);
         m_enemyStatsCS.NavMeshAgent.speed = m_enemyStatsCS.EnemySpeed;
         m_stunTimer = 0;
     }
