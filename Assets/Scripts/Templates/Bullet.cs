@@ -2,20 +2,19 @@ using UnityEngine;
 
 public abstract class Bullet : MonoBehaviour
 {
-
     [Header("Bullet Settings")]
     [SerializeField] protected int m_bulletDamage;
     [SerializeField] protected float m_bulletSpeed;
     [SerializeField] protected bool m_lifeTimeDestroy;
     [SerializeField] protected float m_bulletLifeTime;
     [SerializeField] protected bool m_doesSlow;
+    [SerializeField] protected bool m_doesStun;
     protected float m_despawnTimer;
 
     [Space(20)]
     [Header(" ----- Bullet ImpactVFX Settings -----")]
     [SerializeField] protected string m_impactSFX;
     [Space(5)]
-
     [SerializeField] protected bool m_hasImpactVFX;
     [SerializeField] protected GameObject m_bulletImpactVFX;
 
@@ -69,9 +68,15 @@ public abstract class Bullet : MonoBehaviour
         if (health != null)
         {
             health.TakeDamage(m_bulletDamage);
-            if(_otherCollider.CompareTag("Enemy") && m_doesSlow)
+            bool isEnemy = _otherCollider.CompareTag("Enemy");
+            if (isEnemy && m_doesSlow)
             {
                 health.Slow();
+            }
+
+            if (isEnemy && m_doesStun)
+            {
+                health.Stun();
             }
         }
 
@@ -83,14 +88,13 @@ public abstract class Bullet : MonoBehaviour
 
     protected virtual void PlayImpactVFX()
     {
-        if(!m_bulletImpactVFX) return;
+        if (!m_bulletImpactVFX) return;
 
         float vfxOffsetFromWall = 0.1f;
-        
-        var obj = Instantiate(m_bulletImpactVFX, m_bulletTF.position, m_bulletTF.rotation);
+
+        GameObject obj = Instantiate(m_bulletImpactVFX, m_bulletTF.position, m_bulletTF.rotation);
         Transform objTF = obj.transform;
         Vector3 playerDir = PlayerStats.I.PlayerTF.position - objTF.position;
         objTF.position += playerDir * vfxOffsetFromWall;
     }
-
 }

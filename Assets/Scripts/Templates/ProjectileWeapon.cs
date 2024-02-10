@@ -3,7 +3,6 @@ using UnityEngine;
 
 public abstract class ProjectileWeapon : MonoBehaviour
 {
-
     [Header(" ----- Firing Settings -----")]
     [Space(5)]
     [SerializeField] protected Transform[] m_firePoints;
@@ -12,15 +11,12 @@ public abstract class ProjectileWeapon : MonoBehaviour
     [SerializeField] protected LayerMask m_firePointVisibleLayer;
 
     [Space(20)]
-
     [Header(" ----- Shot Animation Settings -----")]
     [Space(5)]
-
     [SerializeField] protected bool m_hasShotAnimation;
     [SerializeField] protected WeaponMovement m_weaponMovementCS;
 
     [Space(20)]
-
     [Header(" ----- Shot Feedback Settings -----")]
     [Space(5)]
     [SerializeField] protected bool m_hasShotFeedback;
@@ -30,7 +26,6 @@ public abstract class ProjectileWeapon : MonoBehaviour
     protected float _shot_timer;
 
     [Space(20)]
-
     [Header(" ----- Muzzle VFX Settings -----")]
     [Space(5)]
     [SerializeField] protected bool m_hasMuzzleVFX;
@@ -38,11 +33,9 @@ public abstract class ProjectileWeapon : MonoBehaviour
     [SerializeField] protected Transform m_muzzleTF;
 
     [Space(20)]
-
     [Space(20)]
     [Header(" ----- FirePointVisibleSettings ----- ")]
     [Space(5)]
-
     [SerializeField] private GameObject m_crossHairImage;
     [SerializeField] private GameObject m_cantShootImage;
 
@@ -75,7 +68,6 @@ public abstract class ProjectileWeapon : MonoBehaviour
             {
                 m_cantShootImage.SetActive(false);
             }
-
         }
         else
         {
@@ -93,11 +85,10 @@ public abstract class ProjectileWeapon : MonoBehaviour
 
     protected virtual bool CheckIfFirePointVisible()
     {
-
         Vector3 cameraToMuzzle = m_firePoints[0].position - PlayerStats.I.PlayerCamera.transform.position;
 
-
-        if (Physics.Raycast(PlayerStats.I.PlayerCamera.transform.position, cameraToMuzzle, out RaycastHit hit, 100f, m_firePointVisibleLayer))
+        if (Physics.Raycast(PlayerStats.I.PlayerCamera.transform.position, cameraToMuzzle, out RaycastHit hit, 100f,
+                m_firePointVisibleLayer))
         {
             if (hit.collider.CompareTag("Muzzle"))
             {
@@ -125,16 +116,13 @@ public abstract class ProjectileWeapon : MonoBehaviour
         }
     }
 
-    protected bool CanShoot()
+    private bool CanShoot()
     {
         if (m_fireRateTimer >= m_fireRateInSeconds)
         {
             return true;
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 
     protected virtual void Shoot()
@@ -143,11 +131,9 @@ public abstract class ProjectileWeapon : MonoBehaviour
 
         m_fireRateTimer = 0f;
 
-        foreach (var firePoint in m_firePoints)
+        foreach (Transform firePoint in m_firePoints)
         {
-
             Instantiate(m_bulletPrefab, firePoint.position, firePoint.rotation);
-
         }
 
         if (m_hasShotAnimation) PlayShotAnimation();
@@ -160,7 +146,6 @@ public abstract class ProjectileWeapon : MonoBehaviour
             AudioManager.I.Play(m_shootSFX);
             _shot_timer = 0;
         }
-
     }
 
     protected virtual void PlayShotAnimation()
@@ -193,7 +178,6 @@ public abstract class ProjectileWeapon : MonoBehaviour
             var obj = Instantiate(vfx, m_muzzleTF.position, m_muzzleTF.rotation);
             obj.transform.SetParent(m_muzzleTF);
         }
-
     }
 
     private void OnEnable()
