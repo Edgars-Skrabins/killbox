@@ -13781,9 +13781,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dontDestroyOnLoad: 0
   m_Weapons:
-  - m_weaponName: AutoShotgun
-    m_weaponGO: {fileID: 7911494817198787517}
-    m_weaponIcon: {fileID: 413080099}
   - m_weaponName: Shotgun
     m_weaponGO: {fileID: 6678218799953199830}
     m_weaponIcon: {fileID: 1749427245}
@@ -13814,6 +13811,9 @@ MonoBehaviour:
   - m_weaponName: Randomizer
     m_weaponGO: {fileID: 7577709981728208440}
     m_weaponIcon: {fileID: 794440349}
+  - m_weaponName: AutoShotgun
+    m_weaponGO: {fileID: 7911494817198787517}
+    m_weaponIcon: {fileID: 413080099}
   m_currentWeaponName: 
 --- !u!114 &54157285
 MonoBehaviour:
@@ -13827,7 +13827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ad8d66189d9974aa808926382b387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_randomizeFrequencyInSeconds: 120
+  m_randomizeFrequencyInSeconds: 11
   m_randomizeTimer: 0
   m_weaponClockFeedback: {fileID: 732516356}
   m_nextWeapon: 
