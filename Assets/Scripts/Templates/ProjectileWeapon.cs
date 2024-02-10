@@ -158,24 +158,13 @@ public abstract class ProjectileWeapon : MonoBehaviour
         if (m_shotFeedback) m_shotFeedback.PlayFeedbacks();
     }
 
-    // protected virtual void PlayMuzzleVFX()
-    // {
-    //     if (m_muzzleVFXArray.Length <= 0) return;
-    //
-    //     foreach (var vfx in m_muzzleVFXArray)
-    //     {
-    //         vfx.GetComponent<ParticleSystem>().Play();
-    //     }
-    //
-    // }
-
     protected virtual void PlayMuzzleVFX()
     {
         if (m_muzzleVFXArray.Length <= 0) return;
 
-        foreach (var vfx in m_muzzleVFXArray)
+        foreach (GameObject vfx in m_muzzleVFXArray)
         {
-            var obj = Instantiate(vfx, m_muzzleTF.position, m_muzzleTF.rotation);
+            GameObject obj = Instantiate(vfx, m_muzzleTF.position, m_muzzleTF.rotation);
             obj.transform.SetParent(m_muzzleTF);
         }
     }

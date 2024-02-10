@@ -230,7 +230,7 @@ MonoBehaviour:
         DebugActive: 0
         Mode: 0
         AnimateScaleTarget: {fileID: 5415617673295924201}
-        AnimateScaleDuration: 0.21
+        AnimateScaleDuration: 0.5
         RemapCurveZero: 1.3
         RemapCurveOne: 11
         Offset: 0
@@ -242,31 +242,22 @@ MonoBehaviour:
             serializedVersion: 2
             m_Curve:
             - serializedVersion: 3
-              time: 0.0041656494
+              time: 0
               value: 0.5
-              inSlope: 0.79784006
-              outSlope: 0.79784006
+              inSlope: 0.5
+              outSlope: 0.5
               tangentMode: 34
               weightedMode: 0
               inWeight: 0
               outWeight: 0.33333334
             - serializedVersion: 3
-              time: 0.21552694
-              value: 0.6686325
-              inSlope: 0.3973686
-              outSlope: 0.3973686
+              time: 1
+              value: 1
+              inSlope: 0.5
+              outSlope: 0.5
               tangentMode: 34
               weightedMode: 0
               inWeight: 0.33333334
-              outWeight: 0.33333334
-            - serializedVersion: 3
-              time: 0.9709451
-              value: 0.66628855
-              inSlope: -0.062062033
-              outSlope: -0.062062033
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0.1777068
               outWeight: 0
             m_PreInfinity: 2
             m_PostInfinity: 2
@@ -280,31 +271,22 @@ MonoBehaviour:
             serializedVersion: 2
             m_Curve:
             - serializedVersion: 3
-              time: 0.0041656494
+              time: 0
               value: 0.5
-              inSlope: 0.79784006
-              outSlope: 0.79784006
+              inSlope: 0.5
+              outSlope: 0.5
               tangentMode: 34
               weightedMode: 0
               inWeight: 0
               outWeight: 0.33333334
             - serializedVersion: 3
-              time: 0.21552694
-              value: 0.6686325
-              inSlope: 0.3973686
-              outSlope: 0.3973686
+              time: 1
+              value: 1
+              inSlope: 0.5
+              outSlope: 0.5
               tangentMode: 34
               weightedMode: 0
               inWeight: 0.33333334
-              outWeight: 0.33333334
-            - serializedVersion: 3
-              time: 0.9709451
-              value: 0.66628855
-              inSlope: -0.062062033
-              outSlope: -0.062062033
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0.1777068
               outWeight: 0
             m_PreInfinity: 2
             m_PostInfinity: 2
@@ -318,31 +300,22 @@ MonoBehaviour:
             serializedVersion: 2
             m_Curve:
             - serializedVersion: 3
-              time: 0.0041656494
+              time: 0
               value: 0.5
-              inSlope: 0.79784006
-              outSlope: 0.79784006
+              inSlope: 0.5
+              outSlope: 0.5
               tangentMode: 34
               weightedMode: 0
               inWeight: 0
               outWeight: 0.33333334
             - serializedVersion: 3
-              time: 0.21552694
-              value: 0.6686325
-              inSlope: 0.3973686
-              outSlope: 0.3973686
+              time: 1
+              value: 1
+              inSlope: 0.5
+              outSlope: 0.5
               tangentMode: 34
               weightedMode: 0
               inWeight: 0.33333334
-              outWeight: 0.33333334
-            - serializedVersion: 3
-              time: 0.9709451
-              value: 0.66628855
-              inSlope: -0.062062033
-              outSlope: -0.062062033
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0.1777068
               outWeight: 0
             m_PreInfinity: 2
             m_PostInfinity: 2
@@ -398,7 +371,7 @@ Transform:
   m_GameObject: {fileID: 5415617673295924202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.834, z: 1.283}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8402070006605770105}
@@ -447,8 +420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c87876a0111447dea1d1a259a4b00b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_bulletDamage: 40
-  m_bulletSpeed: 40
+  m_bulletDamage: 100
+  m_bulletSpeed: 20
   m_lifeTimeDestroy: 1
   m_bulletLifeTime: 15
   m_doesSlow: 0
