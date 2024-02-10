@@ -1,6 +1,4 @@
 namespace Killbox.Enums
 {
-    public enum EGameWaveStates {SPAWNING, WAITING, COUNTING}
-
+    public enum EDamageTypes { NORMAL, SLOW, STUN, INSTANTKILL }
 }
-
