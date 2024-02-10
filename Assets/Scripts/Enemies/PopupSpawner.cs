@@ -6,7 +6,7 @@ public class PopupSpawner : MonoBehaviour
     [Space(5)]
     [Header("General Popup settings")]
     [Space(5)]
-    [SerializeField] private Transform m_popupLocationTF;
+    [SerializeField] private Transform m_popupSpawnLocationTF;
     [Space(10)]
     [Header("Damage Popup settings")]
     [Space(5)]
@@ -16,8 +16,8 @@ public class PopupSpawner : MonoBehaviour
 
     public void SpawnDamagePopup(int _damage)
     {
-        GameObject obj = Instantiate(m_damagePopupGO, Random.insideUnitSphere + m_popupLocationTF.position,
-            m_popupLocationTF.transform.rotation);
+        GameObject obj = Instantiate(m_damagePopupGO, Random.insideUnitSphere + m_popupSpawnLocationTF.position,
+            m_popupSpawnLocationTF.transform.rotation);
 
         TextMeshProUGUI popupText = obj.GetComponentInChildren<TextMeshProUGUI>();
         popupText.text = _damage.ToString();
@@ -33,8 +33,8 @@ public class PopupSpawner : MonoBehaviour
 
     public void SpawnSlowedPopup()
     {
-        GameObject obj = Instantiate(m_slowedPopupGO, Random.insideUnitSphere + m_popupLocationTF.position,
-            m_popupLocationTF.transform.rotation);
+        GameObject obj = Instantiate(m_slowedPopupGO, Random.insideUnitSphere + m_popupSpawnLocationTF.position,
+            m_popupSpawnLocationTF.transform.rotation);
         TextMeshProUGUI popupText = obj.GetComponentInChildren<TextMeshProUGUI>();
         popupText.fontSize = Random.Range(m_slowedPopupMinFontSize, m_slowedPopupMaxFontSize);
     }
@@ -48,8 +48,8 @@ public class PopupSpawner : MonoBehaviour
 
     public void SpawnStunnedPopup()
     {
-        GameObject obj = Instantiate(m_stunnedPopupGO, Random.insideUnitSphere + m_popupLocationTF.position,
-            m_popupLocationTF.transform.rotation);
+        GameObject obj = Instantiate(m_stunnedPopupGO, Random.insideUnitSphere + m_popupSpawnLocationTF.position,
+            m_popupSpawnLocationTF.transform.rotation);
 
         TextMeshProUGUI popupText = obj.GetComponentInChildren<TextMeshProUGUI>();
         popupText.fontSize = Random.Range(m_stunnedPopupMinFontSize, m_stunnedPopupMaxFontSize);

@@ -20109,7 +20109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955c04abd90d34df1a79e58bbd21247f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_popupLocationTF: {fileID: 6919792487562118017}
+  m_popupSpawnLocationTF: {fileID: 6919792487562118017}
   m_damagePopupGO: {fileID: 3311481054084654804, guid: 51ed79abbd3327449a030df006cb2ace, type: 3}
   m_damagePopupMinFontSize: 0.7
   m_damagePopupMinFontSizeMaxFontSize: 0.78

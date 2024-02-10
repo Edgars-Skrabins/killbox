@@ -3,9 +3,9 @@ using UnityEngine;
 
 public abstract class Health_Enemy : Health
 {
-    [SerializeField] private EnemyStats m_enemyStatsCS;
-    [SerializeField] private MMF_Player m_takeDamageFeedback;
-    [SerializeField] private GameObject m_hitEnemySFX;
+    [SerializeField] protected EnemyStats m_enemyStatsCS;
+    [SerializeField] protected MMF_Player m_takeDamageFeedback;
+    [SerializeField] protected GameObject m_hitEnemySFX;
 
     // TODO: Try to do this OnDisable instead and see if it works
     private void OnEnable()

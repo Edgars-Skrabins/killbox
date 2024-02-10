@@ -19751,12 +19751,14 @@ GameObject:
   m_Component:
   - component: {fileID: 812098267957970373}
   - component: {fileID: 812098267957970375}
+  - component: {fileID: 7679108930785183073}
+  - component: {fileID: 6216985070699392060}
   - component: {fileID: 3995212011223021168}
   - component: {fileID: 3995212011223021171}
   - component: {fileID: 3995212011223021174}
-  - component: {fileID: 6216985070699392060}
-  - component: {fileID: 7679108930785183073}
   - component: {fileID: 8396999927325134232}
+  - component: {fileID: 7364080196228721297}
+  - component: {fileID: 4155359102833486595}
   m_Layer: 9
   m_Name: Enemy_Melee_Exploder
   m_TagString: Enemy
@@ -19806,61 +19808,19 @@ NavMeshAgent:
   m_BaseOffset: 1.7
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 3
---- !u!114 &3995212011223021168
-MonoBehaviour:
+--- !u!135 &7679108930785183073
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812098267957970374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd268bafb0eea3642842d236ff19c13d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_enemyName: Enemy_Melee_Exploder
-  m_enemyHealth: 300
-  m_enemyStartingHealth: 300
-  m_enemyScoreValue: 100
-  m_enemySlowAmount: 1.8
-  m_slowDuration: 2.5
-  m_stunDuration: 1.5
-  m_enemySpeed: 5
-  m_navMeshAgent: {fileID: 812098267957970375}
-  m_explosiveDamage: 100
---- !u!114 &3995212011223021171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812098267957970374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c5d73189cefefa49a3e758f1cee54c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_enemyStatsCS: {fileID: 3995212011223021168}
---- !u!114 &3995212011223021174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812098267957970374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2edec520ac9f89c4bb40dac828bbe67b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_attackOriginTF: {fileID: 6724339502626970072}
-  m_damage: 20
-  m_attackDistance: 1
-  m_deathVFX: {fileID: 5117238746486703226, guid: aa647d56090c21a4ba5bb75f1f70ec37, type: 3}
-  m_damageableLayers:
-    serializedVersion: 2
-    m_Bits: 8
-  m_enemyDebri: {fileID: 1905437603074157092, guid: 23651350fce806a4c825e7e95723738b, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.69
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &6216985070699392060
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19984,19 +19944,63 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!135 &7679108930785183073
-SphereCollider:
+--- !u!114 &3995212011223021168
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812098267957970374}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.69
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd268bafb0eea3642842d236ff19c13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enemyName: Enemy_Melee_Exploder
+  m_enemyHealth: 300
+  m_enemyStartingHealth: 300
+  m_enemyScoreValue: 100
+  m_enemySlowAmount: 1.8
+  m_slowDuration: 2.5
+  m_stunDuration: 1.5
+  m_enemySpeed: 5
+  m_navMeshAgent: {fileID: 812098267957970375}
+  m_explosiveDamage: 100
+  m_popupSpawnerCS: {fileID: 4155359102833486595}
+  m_enemyEffectsCS: {fileID: 7364080196228721297}
+--- !u!114 &3995212011223021171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812098267957970374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5d73189cefefa49a3e758f1cee54c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enemyStatsCS: {fileID: 3995212011223021168}
+--- !u!114 &3995212011223021174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812098267957970374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2edec520ac9f89c4bb40dac828bbe67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_attackOriginTF: {fileID: 6724339502626970072}
+  m_damage: 20
+  m_attackDistance: 1
+  m_deathVFX: {fileID: 5117238746486703226, guid: aa647d56090c21a4ba5bb75f1f70ec37, type: 3}
+  m_damageableLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_enemyDebri: {fileID: 1905437603074157092, guid: 23651350fce806a4c825e7e95723738b, type: 3}
 --- !u!114 &8396999927325134232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20012,24 +20016,49 @@ MonoBehaviour:
   m_enemyStatsCS: {fileID: 3995212011223021168}
   m_takeDamageFeedback: {fileID: 4805839039293310984}
   m_hitEnemySFX: {fileID: 6327968405535749834, guid: 70d56905843fc45279809960caa7acfb, type: 3}
+  m_enemyDeathVFX: {fileID: 2500987475735017499, guid: 7caafd8a1f4483d46a1aa3e25e9f662d, type: 3}
   m_dieEnemySFX: {fileID: 6544815667084830316, guid: f7dbec1259cb05949b203b011703f413, type: 3}
-  m_slowedVFX: {fileID: 1188300113}
-  m_stunnedVFX: {fileID: 1469633829}
+  m_enemyDebris: {fileID: 1905437603074157092, guid: 22c9ecb2db2bbc84fa0a573657723d8c, type: 3}
   m_explosionRadius: 7.1
   m_explosionLayers:
     serializedVersion: 2
     m_Bits: 512
   m_explosionDamage: 100
-  m_enemyDeathVFX: {fileID: 2500987475735017499, guid: 7caafd8a1f4483d46a1aa3e25e9f662d, type: 3}
-  m_enemyDebri: {fileID: 1905437603074157092, guid: 22c9ecb2db2bbc84fa0a573657723d8c, type: 3}
-  m_popupTF: {fileID: 6303300818992753363}
-  m_damagePopup: {fileID: 3311481054084654804, guid: 51ed79abbd3327449a030df006cb2ace, type: 3}
+--- !u!114 &7364080196228721297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812098267957970374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43d41bc1e0ea4e17b2b6c2ac5970466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enemyStatsCS: {fileID: 3995212011223021168}
+  m_slowedVFXGO: {fileID: 1188300113}
+  m_stunnedVFXGO: {fileID: 1469633829}
+--- !u!114 &4155359102833486595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812098267957970374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 955c04abd90d34df1a79e58bbd21247f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_popupSpawnLocationTF: {fileID: 6303300818992753363}
+  m_damagePopupGO: {fileID: 3311481054084654804, guid: 51ed79abbd3327449a030df006cb2ace, type: 3}
   m_damagePopupMinFontSize: 0.7
   m_damagePopupMinFontSizeMaxFontSize: 0.78
-  m_slowedPopup: {fileID: 6494428530199335970, guid: af32b86e0ae96754f84586a886356733, type: 3}
+  m_slowedPopupGO: {fileID: 6494428530199335970, guid: af32b86e0ae96754f84586a886356733, type: 3}
   m_slowedPopupMinFontSize: 0.75
   m_slowedPopupMaxFontSize: 0.8
-  m_stunnedPopup: {fileID: 8140709818029415262, guid: 4710701587235fd47bc74865a535cf1d, type: 3}
+  m_stunnedPopupGO: {fileID: 8140709818029415262, guid: 4710701587235fd47bc74865a535cf1d, type: 3}
   m_stunnedPopupMinFontSize: 0.75
   m_stunnedPopupMaxFontSize: 0.8
 --- !u!1 &1945312260990403555
@@ -20105,7 +20134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6303300818992753363}
   m_Layer: 9
-  m_Name: Popup location
+  m_Name: PopupSpawnLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
