@@ -42,12 +42,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1646220439748735024}
   - component: {fileID: 1646220439748735026}
+  - component: {fileID: 5465823130148411849}
+  - component: {fileID: 8578239318468243604}
   - component: {fileID: 3092974583121167237}
   - component: {fileID: 3092974583121167238}
   - component: {fileID: 3092974583121167235}
   - component: {fileID: 8578239318468243605}
-  - component: {fileID: 5465823130148411849}
-  - component: {fileID: 8578239318468243604}
+  - component: {fileID: 5052728676165386647}
+  - component: {fileID: 8579989397270092537}
   m_Layer: 9
   m_Name: Enemy_Melee_Wiper
   m_TagString: Enemy
@@ -97,92 +99,6 @@ NavMeshAgent:
   m_BaseOffset: 1.7
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 3
---- !u!114 &3092974583121167237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646220439748735027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd268bafb0eea3642842d236ff19c13d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_enemyName: Enemy_Melee_Wiper
-  m_enemyHealth: 600
-  m_enemyStartingHealth: 600
-  m_enemyScoreValue: 1000
-  m_enemySlowAmount: 1
-  m_slowDuration: 2.5
-  m_stunDuration: 2
-  m_enemySpeed: 5
-  m_navMeshAgent: {fileID: 1646220439748735026}
-  m_explosiveDamage: 5
---- !u!114 &3092974583121167238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646220439748735027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c5d73189cefefa49a3e758f1cee54c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_enemyStatsCS: {fileID: 3092974583121167237}
---- !u!114 &3092974583121167235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646220439748735027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2edec520ac9f89c4bb40dac828bbe67b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_attackOriginTF: {fileID: 4669121140459351085}
-  m_damage: 30
-  m_attackDistance: 1
-  m_deathVFX: {fileID: 5117238746486703226, guid: aa647d56090c21a4ba5bb75f1f70ec37, type: 3}
-  m_damageableLayers:
-    serializedVersion: 2
-    m_Bits: 8
-  m_enemyDebri: {fileID: 1905437603074157092, guid: 23651350fce806a4c825e7e95723738b, type: 3}
---- !u!114 &8578239318468243605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646220439748735027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8a7f0c0ee753284d81f29e5264e62ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_enemyStatsCS: {fileID: 3092974583121167237}
-  m_takeDamageFeedback: {fileID: 6857978319139634685}
-  m_hitEnemySFX: {fileID: 6327968405535749834, guid: 70d56905843fc45279809960caa7acfb, type: 3}
-  m_dieEnemySFX: {fileID: 5717224733305059531, guid: d145fd6463e544e47a6198626c442585, type: 3}
-  m_slowedVFX: {fileID: 9081662150423772076}
-  m_stunnedVFX: {fileID: 9081662149034364435}
-  m_enemyDeathVFX: {fileID: 5117238746486703226, guid: aa647d56090c21a4ba5bb75f1f70ec37, type: 3}
-  m_enemyDebri: {fileID: 2689076200352593105, guid: b2eb9d93bea2de8479df507b7a951d5b, type: 3}
-  m_deathSphere: {fileID: 2514249337253583587, guid: 7a62c81054cd8e242b6c08d82d931aec, type: 3}
-  m_popupTF: {fileID: 5396571724723543846}
-  m_damagePopup: {fileID: 3311481054084654804, guid: 51ed79abbd3327449a030df006cb2ace, type: 3}
-  m_damagePopupMinFontSize: 0.7
-  m_damagePopupMinFontSizeMaxFontSize: 0.78
-  m_slowedPopup: {fileID: 6494428530199335970, guid: af32b86e0ae96754f84586a886356733, type: 3}
-  m_slowedPopupMinFontSize: 0.75
-  m_slowedPopupMaxFontSize: 0.8
-  m_stunnedPopup: {fileID: 8140709818029415262, guid: 4710701587235fd47bc74865a535cf1d, type: 3}
-  m_stunnedPopupMinFontSize: 0.75
-  m_stunnedPopupMaxFontSize: 0.8
 --- !u!82 &5465823130148411849
 AudioSource:
   m_ObjectHideFlags: 0
@@ -319,6 +235,131 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.69
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3092974583121167237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646220439748735027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd268bafb0eea3642842d236ff19c13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enemyName: Enemy_Melee_Wiper
+  m_enemyHealth: 600
+  m_enemyStartingHealth: 600
+  m_enemyScoreValue: 1000
+  m_enemySlowAmount: 1
+  m_slowDuration: 2.5
+  m_stunDuration: 2
+  m_enemySpeed: 5
+  m_navMeshAgent: {fileID: 1646220439748735026}
+  m_explosiveDamage: 5
+  m_popupSpawnerCS: {fileID: 8579989397270092537}
+  m_enemyEffectsCS: {fileID: 5052728676165386647}
+--- !u!114 &3092974583121167238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646220439748735027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5d73189cefefa49a3e758f1cee54c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enemyStatsCS: {fileID: 3092974583121167237}
+--- !u!114 &3092974583121167235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646220439748735027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2edec520ac9f89c4bb40dac828bbe67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_attackOriginTF: {fileID: 4669121140459351085}
+  m_damage: 30
+  m_attackDistance: 1
+  m_deathVFX: {fileID: 5117238746486703226, guid: aa647d56090c21a4ba5bb75f1f70ec37, type: 3}
+  m_damageableLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_enemyDebri: {fileID: 1905437603074157092, guid: 23651350fce806a4c825e7e95723738b, type: 3}
+--- !u!114 &8578239318468243605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646220439748735027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a7f0c0ee753284d81f29e5264e62ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enemyStatsCS: {fileID: 3092974583121167237}
+  m_takeDamageFeedback: {fileID: 6857978319139634685}
+  m_hitEnemySFX: {fileID: 6327968405535749834, guid: 70d56905843fc45279809960caa7acfb, type: 3}
+  m_dieEnemySFX: {fileID: 5717224733305059531, guid: d145fd6463e544e47a6198626c442585, type: 3}
+  m_slowedVFX: {fileID: 9081662150423772076}
+  m_stunnedVFX: {fileID: 9081662149034364435}
+  m_enemyDeathVFX: {fileID: 5117238746486703226, guid: aa647d56090c21a4ba5bb75f1f70ec37, type: 3}
+  m_enemyDebri: {fileID: 2689076200352593105, guid: b2eb9d93bea2de8479df507b7a951d5b, type: 3}
+  m_deathSphere: {fileID: 2514249337253583587, guid: 7a62c81054cd8e242b6c08d82d931aec, type: 3}
+  m_popupTF: {fileID: 5396571724723543846}
+  m_damagePopup: {fileID: 3311481054084654804, guid: 51ed79abbd3327449a030df006cb2ace, type: 3}
+  m_damagePopupMinFontSize: 0.7
+  m_damagePopupMinFontSizeMaxFontSize: 0.78
+  m_slowedPopup: {fileID: 6494428530199335970, guid: af32b86e0ae96754f84586a886356733, type: 3}
+  m_slowedPopupMinFontSize: 0.75
+  m_slowedPopupMaxFontSize: 0.8
+  m_stunnedPopup: {fileID: 8140709818029415262, guid: 4710701587235fd47bc74865a535cf1d, type: 3}
+  m_stunnedPopupMinFontSize: 0.75
+  m_stunnedPopupMaxFontSize: 0.8
+--- !u!114 &5052728676165386647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646220439748735027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43d41bc1e0ea4e17b2b6c2ac5970466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enemyStatsCS: {fileID: 3092974583121167237}
+  m_slowedVFXGO: {fileID: 9081662150423772076}
+  m_stunnedVFXGO: {fileID: 9081662149034364435}
+--- !u!114 &8579989397270092537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646220439748735027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 955c04abd90d34df1a79e58bbd21247f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_popupSpawnLocationTF: {fileID: 5396571724723543846}
+  m_damagePopupGO: {fileID: 3311481054084654804, guid: 51ed79abbd3327449a030df006cb2ace, type: 3}
+  m_damagePopupMinFontSize: 0.7
+  m_damagePopupMinFontSizeMaxFontSize: 0.78
+  m_slowedPopupGO: {fileID: 6494428530199335970, guid: af32b86e0ae96754f84586a886356733, type: 3}
+  m_slowedPopupMinFontSize: 0.75
+  m_slowedPopupMaxFontSize: 0.8
+  m_stunnedPopupGO: {fileID: 8140709818029415262, guid: 4710701587235fd47bc74865a535cf1d, type: 3}
+  m_stunnedPopupMinFontSize: 0.75
+  m_stunnedPopupMaxFontSize: 0.8
 --- !u!1 &1646220441288390332
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,7 +823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5396571724723543846}
   m_Layer: 9
-  m_Name: Popup location
+  m_Name: PopupSpawnLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
