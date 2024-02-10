@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Weapon_Shotgun : ProjectileWeapon
+public class Weapon_AutoShotgun : ProjectileWeapon
 {
     [Space(20)]
     [Header("Shot spread settings")]
