@@ -14078,15 +14078,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6804699575747186637, guid: 566607f2791a78b43b69aaf1f3f31504, type: 3}
       propertyPath: m_enemiesToSpawn.Array.data[4].m_SpawnFrequency.m_Curve.Array.data[0].value
-      value: 140
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 6804699575747186637, guid: 566607f2791a78b43b69aaf1f3f31504, type: 3}
       propertyPath: m_enemiesToSpawn.Array.data[4].m_SpawnFrequency.m_Curve.Array.data[1].value
-      value: 140
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 6804699575747186637, guid: 566607f2791a78b43b69aaf1f3f31504, type: 3}
       propertyPath: m_enemiesToSpawn.Array.data[4].m_SpawnFrequency.m_Curve.Array.data[2].value
-      value: 190
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 6804699575747186637, guid: 566607f2791a78b43b69aaf1f3f31504, type: 3}
       propertyPath: m_enemiesToSpawn.Array.data[4].m_SpawnFrequency.m_Curve.Array.data[3].value
@@ -14110,7 +14110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6804699575747186637, guid: 566607f2791a78b43b69aaf1f3f31504, type: 3}
       propertyPath: m_enemiesToSpawn.Array.data[4].m_SpawnFrequency.m_Curve.Array.data[2].inSlope
-      value: 0.10869565
+      value: -0.04347826
       objectReference: {fileID: 0}
     - target: {fileID: 6804699575747186637, guid: 566607f2791a78b43b69aaf1f3f31504, type: 3}
       propertyPath: m_enemiesToSpawn.Array.data[4].m_SpawnFrequency.m_Curve.Array.data[3].inSlope
@@ -14130,7 +14130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6804699575747186637, guid: 566607f2791a78b43b69aaf1f3f31504, type: 3}
       propertyPath: m_enemiesToSpawn.Array.data[4].m_SpawnFrequency.m_Curve.Array.data[1].outSlope
-      value: 0.10869565
+      value: -0.04347826
       objectReference: {fileID: 0}
     - target: {fileID: 6804699575747186637, guid: 566607f2791a78b43b69aaf1f3f31504, type: 3}
       propertyPath: m_enemiesToSpawn.Array.data[4].m_SpawnFrequency.m_Curve.Array.data[2].inWeight
@@ -14138,7 +14138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6804699575747186637, guid: 566607f2791a78b43b69aaf1f3f31504, type: 3}
       propertyPath: m_enemiesToSpawn.Array.data[4].m_SpawnFrequency.m_Curve.Array.data[2].outSlope
-      value: 0.10869565
+      value: -0.04347826
       objectReference: {fileID: 0}
     - target: {fileID: 6804699575747186637, guid: 566607f2791a78b43b69aaf1f3f31504, type: 3}
       propertyPath: m_enemiesToSpawn.Array.data[4].m_SpawnFrequency.m_Curve.Array.data[3].inWeight
