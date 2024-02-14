@@ -11057,6 +11057,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2709967722939215406, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
   m_PrefabInstance: {fileID: 355532120}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &355949923
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2121821595591100892}
+    m_Modifications:
+    - target: {fileID: 2709967722939215405, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+      propertyPath: m_Name
+      value: Spike_01 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709967722939215406, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+      propertyPath: m_RootOrder
+      value: 159
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709967722939215406, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -51.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709967722939215406, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709967722939215406, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 132.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709967722939215406, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9842214
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709967722939215406, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.1367375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709967722939215406, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.06917255
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709967722939215406, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.08846698
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709967722939215406, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 16.344
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709967722939215406, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -6.701
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709967722939215406, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 9.309
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+--- !u!4 &355949924 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2709967722939215406, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+  m_PrefabInstance: {fileID: 355949923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &357497308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22655,6 +22717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 752052740}
+  - component: {fileID: 752052741}
   m_Layer: 0
   m_Name: OrbitingStarCenter
   m_TagString: Untagged
@@ -22678,6 +22741,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &752052741
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752052739}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 53bdfc52e27764c25a02c5fc22547da2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &753222431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70227,6 +70310,7 @@ Transform:
   - {fileID: 2096246602}
   - {fileID: 1079098141}
   - {fileID: 1812123731}
+  - {fileID: 355949924}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
