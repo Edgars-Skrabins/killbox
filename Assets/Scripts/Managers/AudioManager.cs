@@ -4,13 +4,12 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager I { get; private set; }
+    public static AudioManager I {get; private set;}
 
     public string Master_Volume = "MasterVolume";
     public AudioMixer Mixer;
 
     public Sound[] sounds;
-    
 
     private void Awake()
     {
@@ -38,7 +37,6 @@ public class AudioManager : MonoBehaviour
         }
 
         #endregion
-
     }
 
     public void Play(string name)
@@ -69,5 +67,24 @@ public class AudioManager : MonoBehaviour
             return false;
         }
         return s.source.isPlaying;
+    }
+
+    public void PauseAllSounds()
+    {
+        foreach (Sound sound in sounds)
+        {
+            if (sound.name != "BGM_Game")
+            {
+                sound.source.Pause();
+            }
+        }
+    }
+
+    public void UnPauseAllSounds()
+    {
+        foreach (Sound sound in sounds)
+        {
+            sound.source.UnPause();
+        }
     }
 }

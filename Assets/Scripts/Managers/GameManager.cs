@@ -1,17 +1,13 @@
-using System;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    public bool IsGamePaused {get; set;}
 
-    private bool m_isGamePaused;
-    public bool IsGamePaused { get => m_isGamePaused; set => m_isGamePaused = value; }
-
-    private bool m_isPlayerAlive;
-    public bool IsPlayerAlive { get => m_isPlayerAlive; set => m_isPlayerAlive = value; }
+    public bool IsPlayerAlive {get; set;}
 
     [SerializeField] private float m_timeSinceGameStart;
-    public float TimeSinceGameStart { get => m_timeSinceGameStart; set => m_timeSinceGameStart = value;}
+    public float TimeSinceGameStart {get => m_timeSinceGameStart; set => m_timeSinceGameStart = value;}
 
     private GameObject m_player;
 
@@ -32,11 +28,11 @@ public class GameManager : Singleton<GameManager>
 
     public void PauseGame()
     {
-        if (!m_isPlayerAlive) return;
+        if (!IsPlayerAlive) return;
         IsGamePaused = true;
+        AudioManager.I.PauseAllSounds();
 
         Time.timeScale = 0;
-        //GamePaused.Invoke();
 
         m_player = GameObject.FindWithTag("Player");
         if (m_player != null)
@@ -51,11 +47,11 @@ public class GameManager : Singleton<GameManager>
 
     public void UnpauseGame()
     {
-        if (!m_isPlayerAlive) return;
-
+        if (!IsPlayerAlive) return;
         IsGamePaused = false;
+        AudioManager.I.UnPauseAllSounds();
+
         Time.timeScale = 1;
-        //GameResumed.Invoke()
 
         m_player = GameObject.FindWithTag("Player");
         if (m_player != null)
@@ -75,7 +71,7 @@ public class GameManager : Singleton<GameManager>
 
     public void PlayerAlive()
     {
-        m_isPlayerAlive = true;
+        IsPlayerAlive = true;
     }
 
     public void PlayerDead()
@@ -83,8 +79,7 @@ public class GameManager : Singleton<GameManager>
         IsGamePaused = true;
         Time.timeScale = 0;
 
-        m_isPlayerAlive = false;
-
+        IsPlayerAlive = false;
 
         if (!AudioManager.I.Playing("BGM_Death"))
         {
@@ -104,5 +99,4 @@ public class GameManager : Singleton<GameManager>
             m_player.GetComponent<PlayerUI>().m_deathMenu.SetActive(true);
         }
     }
-
 }
