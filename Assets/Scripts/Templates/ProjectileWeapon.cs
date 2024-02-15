@@ -40,6 +40,7 @@ public abstract class ProjectileWeapon : MonoBehaviour
     [SerializeField] private GameObject m_cantShootImage;
 
     protected float m_fireRateTimer;
+    protected bool m_isShooting;
 
     protected void Awake()
     {
@@ -86,7 +87,6 @@ public abstract class ProjectileWeapon : MonoBehaviour
     protected virtual bool CheckIfFirePointVisible()
     {
         Vector3 cameraToMuzzle = m_firePoints[0].position - PlayerStats.I.PlayerCamera.transform.position;
-
         if (Physics.Raycast(PlayerStats.I.PlayerCamera.transform.position, cameraToMuzzle, out RaycastHit hit, 100f,
                 m_firePointVisibleLayer))
         {
@@ -114,6 +114,11 @@ public abstract class ProjectileWeapon : MonoBehaviour
         {
             _shot_timer = m_shootSFXRate;
         }
+
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            m_isShooting = false;
+        }
     }
 
     private bool CanShoot()
@@ -130,7 +135,7 @@ public abstract class ProjectileWeapon : MonoBehaviour
         if (!CheckIfFirePointVisible() || GameManager.I.IsGamePaused || !GameManager.I.IsPlayerAlive) return;
 
         m_fireRateTimer = 0f;
-
+        m_isShooting = true;
         foreach (Transform firePoint in m_firePoints)
         {
             Instantiate(m_bulletPrefab, firePoint.position, firePoint.rotation);
