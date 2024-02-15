@@ -1,3 +1,4 @@
+using Killbox.Enums;
 using MoreMountains.Feedbacks;
 using UnityEngine;
 
@@ -10,7 +11,6 @@ public class Orb : Health
     [SerializeField] private GameObject m_announceDifficulty;
     [SerializeField] private GameObject m_orbHitVFX;
     [SerializeField] private GameObject m_orbDestroyVFX;
-
 
     public override void TakeDamage(int _damage)
     {
@@ -32,7 +32,12 @@ public class Orb : Health
         Instantiate(m_orbHitVFX, transform.position, transform.rotation);
     }
 
-    protected override void Die()
+    public override void TakeDamage(int _damage, EDamageTypes _damageType, bool _chargeTarget)
+    {
+        // TODO: Implement taking damage
+    }
+
+    protected override void Die(EDamageTypes _damageType)
     {
         if (!m_hasBeenActivated)
         {
@@ -41,23 +46,6 @@ public class Orb : Health
             SetHardestDifficulty();
         }
     }
-
-    public override void Slow()
-    {
-    }
-
-    protected override void UnSlow()
-    {
-    }
-
-    public override void Stun()
-    {
-    }
-
-    protected override void UnStun()
-    {
-    }
-
 
     private void SetHardestDifficulty()
     {

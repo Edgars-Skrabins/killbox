@@ -1,14 +1,15 @@
+using Killbox.Enums;
 using UnityEngine;
 
 public abstract class Bullet : MonoBehaviour
 {
     [Header("Bullet Settings")]
     [SerializeField] protected int m_bulletDamage;
+    [SerializeField] protected EDamageTypes m_bulletDamageType;
+    [SerializeField] protected bool m_bulletDoesCharge;
     [SerializeField] protected float m_bulletSpeed;
     [SerializeField] protected bool m_lifeTimeDestroy;
     [SerializeField] protected float m_bulletLifeTime;
-    [SerializeField] protected bool m_doesSlow;
-    [SerializeField] protected bool m_doesStun;
     protected float m_despawnTimer;
 
     [Space(20)]
@@ -67,17 +68,7 @@ public abstract class Bullet : MonoBehaviour
 
         if (health != null)
         {
-            health.TakeDamage(m_bulletDamage);
-            bool isEnemy = _otherCollider.CompareTag("Enemy");
-            if (isEnemy && m_doesSlow)
-            {
-                health.Slow();
-            }
-
-            if (isEnemy && m_doesStun)
-            {
-                health.Stun();
-            }
+            health.TakeDamage(m_bulletDamage, m_bulletDamageType, m_bulletDoesCharge);
         }
 
         if (m_hasImpactVFX) PlayImpactVFX();

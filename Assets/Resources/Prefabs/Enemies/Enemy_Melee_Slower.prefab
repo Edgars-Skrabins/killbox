@@ -20047,6 +20047,13 @@ MonoBehaviour:
   m_enemyStatsCS: {fileID: 8408079668972110194}
   m_takeDamageFeedback: {fileID: 103410056231288586}
   m_hitEnemySFX: {fileID: 6327968405535749834, guid: 70d56905843fc45279809960caa7acfb, type: 3}
+  m_hasExplosion: 1
+  m_explosionDamageType: 1
+  m_explosionRadius: 6.4
+  m_explosionLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  m_explosionDamage: 5
   m_enemyDeathVFX: {fileID: 4625090336328309593, guid: b185dadc48fae7d4c91ab3db2e0aa718, type: 3}
   m_dieEnemySFX: {fileID: 6544815667084830316, guid: b7d8caa8c184c4bd38be9a909589e68a, type: 3}
   m_enemyDebris: {fileID: 4237517670094771517, guid: 854211f083c1e92458f02c2fb25cc4f1, type: 3}

@@ -1,8 +1,3 @@
-using UnityEngine;
-
-public class Enemy_Melee_Exploder_Stats : MonoBehaviour
+public class Enemy_Melee_Exploder_Stats : EnemyStats
 {
-
-
-
 }
