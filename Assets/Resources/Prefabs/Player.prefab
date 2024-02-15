@@ -13799,12 +13799,12 @@ MonoBehaviour:
   - m_weaponName: ElectroGun
     m_weaponGO: {fileID: 3004312297689128654}
     m_weaponIcon: {fileID: 582119934}
-  - m_weaponName: GrenadeLauncher
-    m_weaponGO: {fileID: 1476448015}
-    m_weaponIcon: {fileID: 643997295}
   - m_weaponName: RocketLauncher
     m_weaponGO: {fileID: 214909330}
     m_weaponIcon: {fileID: 655978523}
+  - m_weaponName: GrenadeLauncher
+    m_weaponGO: {fileID: 1476448015}
+    m_weaponIcon: {fileID: 643997295}
   - m_weaponName: Blaster
     m_weaponGO: {fileID: 6969048674004191598}
     m_weaponIcon: {fileID: 331290487}

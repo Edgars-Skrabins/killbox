@@ -4974,10 +4974,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bulletDamage: 300
+  m_damageType: 0
+  m_doesCharge: 0
   m_bulletSpeed: 35
   m_lifeTimeDestroy: 1
   m_bulletLifeTime: 30
-  m_doesSlow: 0
   m_impactSFX: 
   m_hasImpactVFX: 0
   m_bulletImpactVFX: {fileID: 7476324828658660865, guid: fbca3f58b43f6604598937019e94edae, type: 3}
@@ -4988,6 +4989,6 @@ MonoBehaviour:
   m_explosionLayers:
     serializedVersion: 2
     m_Bits: 16896
-  m_explotionSFX: {fileID: 7840447872023756622, guid: 766694fd0b5684547a8a29b764a4d0a5, type: 3}
+  m_explosionSFX: {fileID: 7476324828658660865, guid: fbca3f58b43f6604598937019e94edae, type: 3}
   m_explosionForce: 1700
   m_upwardsModifier: 0
