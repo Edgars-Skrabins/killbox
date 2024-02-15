@@ -12,7 +12,7 @@ public class Bullet_GrenadeLauncher : Bullet
     [SerializeField] private GameObject m_explosionSFX;
     [SerializeField] private AudioSource m_audioSource;
     private bool m_isExploding;
-    
+
     protected override void Start()
     {
         base.Start();
@@ -40,7 +40,7 @@ public class Bullet_GrenadeLauncher : Bullet
         Health health = _otherCollider.GetComponent<Health>();
         if (health != null && !_otherCollider.CompareTag("Player"))
         {
-            health.TakeDamage(m_bulletDamage);
+            health.TakeDamage(m_bulletDamage, m_damageType, m_doesCharge);
         }
 
         m_bounces--;
@@ -58,9 +58,8 @@ public class Bullet_GrenadeLauncher : Bullet
     }
 
     [Space(10)]
-    [Header("Debri explosion settings")]
+    [Header("Debris explosion settings")]
     [Space(5)]
-
     [SerializeField] private float m_explosionForce;
     [SerializeField] private float m_upwardsModifier;
 
@@ -73,29 +72,27 @@ public class Bullet_GrenadeLauncher : Bullet
             Transform bulletTransform = transform;
 
             Collider[] colliders = Physics.OverlapSphere(bulletTransform.position, m_explosionRadius);
-            Collider[] debriColliders = Physics.OverlapSphere(bulletTransform.position, m_explosionRadius,LayerMask.GetMask("Debri"));
-            
-            foreach(var debriCollider in debriColliders)
+            Collider[] debrisColliders = Physics.OverlapSphere(bulletTransform.position, m_explosionRadius, LayerMask.GetMask("Debri"));
+
+            foreach (Collider debriCollider in debrisColliders)
             {
-                if(debriCollider.TryGetComponent(out Rigidbody rb))
+                if (debriCollider.TryGetComponent(out Rigidbody rb))
                 {
-                    rb.AddExplosionForce(m_explosionForce, bulletTransform.position,m_explosionRadius,m_upwardsModifier);
+                    rb.AddExplosionForce(m_explosionForce, bulletTransform.position, m_explosionRadius, m_upwardsModifier);
                 }
             }
 
-            foreach (var hit in colliders)
+            foreach (Collider hit in colliders)
             {
                 Health health = hit.GetComponent<Health>();
 
                 if (health && !hit.CompareTag("Player"))
                 {
-                    health.TakeDamage(m_explosionDamage);
+                    health.TakeDamage(m_explosionDamage, m_damageType, m_doesCharge);
                 }
             }
 
-            // set the GFX of the bullet to false (hide it for explition to play)
-            //gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            if(m_explosionVFX)
+            if (m_explosionVFX)
             {
                 Instantiate(m_explosionVFX, gameObject.transform.position, m_explosionVFX.transform.rotation);
             }
@@ -104,12 +101,10 @@ public class Bullet_GrenadeLauncher : Bullet
 
             Destroy(gameObject);
         }
-
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, m_explosionRadius);
     }
-
 }

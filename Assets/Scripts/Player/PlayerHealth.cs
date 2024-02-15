@@ -1,4 +1,4 @@
-using System;
+using Killbox.Enums;
 using MoreMountains.Feedbacks;
 using UnityEngine;
 
@@ -12,33 +12,15 @@ public class PlayerHealth : Health
 
     [SerializeField] private MMF_Player m_damageFeedback;
 
-    public override void TakeDamage(int _damage)
+    public override void TakeDamage(int _damage, EDamageTypes _damageType, bool _chargeTarget)
     {
         AudioManager.I.Play("Ugh");
         PlayerStats.I.PlayerHealth -= _damage;
         m_damageFeedback.PlayFeedbacks();
-        if (PlayerStats.I.PlayerHealth <= 0) Die();
-    }
-
-    public override void TakeDamage(int _damage, int _explosiveDamage)
-    {
-        throw new NotImplementedException();
-    }
-
-    public override void Slow()
-    {
-    }
-
-    protected override void UnSlow()
-    {
-    }
-
-    public override void Stun()
-    {
-    }
-
-    protected override void UnStun()
-    {
+        if (PlayerStats.I.PlayerHealth <= 0)
+        {
+            Die(_damageType);
+        }
     }
 
     [SerializeField] private MMF_Player m_healFeedback;
@@ -50,7 +32,7 @@ public class PlayerHealth : Health
         m_healFeedback.PlayFeedbacks();
     }
 
-    protected override void Die()
+    protected override void Die(EDamageTypes _damageType)
     {
         GameManager.I.PlayerDead();
     }

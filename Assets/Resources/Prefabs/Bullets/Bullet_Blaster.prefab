@@ -4976,10 +4976,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bulletDamage: 80
+  m_damageType: 1
+  m_doesCharge: 0
   m_bulletSpeed: 33
   m_lifeTimeDestroy: 1
   m_bulletLifeTime: 30
-  m_doesSlow: 1
   m_impactSFX: 
   m_hasImpactVFX: 1
   m_bulletImpactVFX: {fileID: 2782878512958954570, guid: e0fe3bdb39d9b4031b3b8714ba90bb90, type: 3}

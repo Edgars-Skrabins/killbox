@@ -12,29 +12,17 @@ public class Orb : Health
     [SerializeField] private GameObject m_orbHitVFX;
     [SerializeField] private GameObject m_orbDestroyVFX;
 
-    public override void TakeDamage(int _damage)
-    {
-        m_health -= _damage;
-        if (m_health <= 0) Die();
-
-        m_getShotFeedback.Initialization();
-        m_getShotFeedback.PlayFeedbacks();
-        Instantiate(m_orbHitVFX, transform.position, transform.rotation);
-    }
-
-    public override void TakeDamage(int _damage, int _explosiveDamage)
-    {
-        m_health -= _damage;
-        if (m_health <= 0) Die();
-
-        m_getShotFeedback.Initialization();
-        m_getShotFeedback.PlayFeedbacks();
-        Instantiate(m_orbHitVFX, transform.position, transform.rotation);
-    }
-
     public override void TakeDamage(int _damage, EDamageTypes _damageType, bool _chargeTarget)
     {
-        // TODO: Implement taking damage
+        m_health -= _damage;
+        if (m_health <= 0)
+        {
+            Die(_damageType);
+        }
+
+        m_getShotFeedback.Initialization();
+        m_getShotFeedback.PlayFeedbacks();
+        Instantiate(m_orbHitVFX, transform.position, transform.rotation);
     }
 
     protected override void Die(EDamageTypes _damageType)

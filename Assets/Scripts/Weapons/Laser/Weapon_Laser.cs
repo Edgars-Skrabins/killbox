@@ -1,27 +1,27 @@
 using System;
+using Killbox.Enums;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Weapon_Laser : MonoBehaviour
 {
-
     [SerializeField] private int m_weaponDamage;
+    [SerializeField] private EDamageTypes m_damageType;
+    [SerializeField] private bool m_doesChargeTarget;
     [SerializeField] private int m_specialEnemyExplosionDamage;
     [SerializeField] private float m_fireRateInSeconds;
 
     [Space(10)]
     [Header("Laser graphics")]
     [Space(5)]
-
     [SerializeField] private LayerMask m_laserLayers;
     [SerializeField] private Transform m_firePointTF;
     [SerializeField] private LineRenderer m_laserPrefab;
 
     [Space(5)]
     [Header("Laser settings")]
-
     [SerializeField] private int m_extraDamageScaling;
     [SerializeField] private float m_laserRange;
-
 
     #region Laser class
 
@@ -38,14 +38,12 @@ public class Weapon_Laser : MonoBehaviour
     [Space(20)]
     [Header(" ----- FirePointVisibleSettings ----- ")]
     [Space(5)]
-
     [SerializeField] private GameObject m_crossHairImage;
     [SerializeField] private GameObject m_cantShootImage;
 
     [Space(20)]
     [Header(" ----- SoundSettings ----- ")]
     [Space(5)]
-
     [SerializeField] private string m_shootSFX;
     [SerializeField] private string[] m_firstShotSFX;
     [SerializeField] private string m_lastShotSFX;
@@ -80,7 +78,7 @@ public class Weapon_Laser : MonoBehaviour
         FirePointVisibleGFX();
     }
 
-    protected void FirePointVisibleGFX()
+    private void FirePointVisibleGFX()
     {
         if (CheckIfFirePointVisible())
         {
@@ -93,7 +91,6 @@ public class Weapon_Laser : MonoBehaviour
             {
                 m_cantShootImage.SetActive(false);
             }
-
         }
         else
         {
@@ -119,7 +116,6 @@ public class Weapon_Laser : MonoBehaviour
 
     private void Inputs()
     {
-
         if (Input.GetKey(KeyCode.Mouse0) && CheckIfFirePointVisible())
         {
             ShootLaser();
@@ -139,7 +135,7 @@ public class Weapon_Laser : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            AudioManager.I.Play(m_firstShotSFX[UnityEngine.Random.Range(0, m_firstShotSFX.Length)]);
+            AudioManager.I.Play(m_firstShotSFX[Random.Range(0, m_firstShotSFX.Length)]);
         }
 
         if (Input.GetKeyUp(KeyCode.Mouse0))
@@ -147,7 +143,6 @@ public class Weapon_Laser : MonoBehaviour
             AudioManager.I.Play(m_lastShotSFX);
         }
     }
-
 
 
     private Vector3 laserDirection;
@@ -171,25 +166,19 @@ public class Weapon_Laser : MonoBehaviour
                     {
                         if (!CanShoot(m_fireRateTimers[i])) return;
 
-                        health.TakeDamage(m_weaponDamage, m_specialEnemyExplosionDamage);
-                        health.Stun();
+                        health.TakeDamage(m_weaponDamage, m_damageType, m_doesChargeTarget);
                         m_fireRateTimers[i] = 0;
 
                         for (int j = 1; j < m_laserArray.Length; j++)
                         {
-                            var obj = m_laserArray[j];
+                            Laser obj = m_laserArray[j];
 
                             obj.m_Line.enabled = false;
                         }
 
                         return;
-
                     }
-                    else
-                    {
-                        hasShotFirstLaser = true;
-                    }
-
+                    hasShotFirstLaser = true;
                 }
                 else
                 {
@@ -198,62 +187,51 @@ public class Weapon_Laser : MonoBehaviour
 
                     for (int j = 1; j < m_laserArray.Length; j++)
                     {
-                        var obj = m_laserArray[j];
+                        Laser obj = m_laserArray[j];
 
                         obj.m_Line.enabled = false;
                     }
 
                     return;
-
                 }
             }
             else
             {
                 if (Physics.Raycast(raycastHits[i - 1].point, laserDirection, out raycastHits[i], m_laserRange, m_laserLayers))
                 {
-
                     TurnLaserOn(raycastHits[i - 1].point, raycastHits[i].point, i);
 
                     if (raycastHits[i].collider.TryGetComponent(out Health health))
                     {
-
                         if (!CanShoot(m_fireRateTimers[i])) return;
 
-                        health.TakeDamage(m_weaponDamage + m_extraDamageScaling * i, m_specialEnemyExplosionDamage);
-                        health.Stun();
+                        health.TakeDamage(m_weaponDamage + m_extraDamageScaling * i, m_damageType, m_doesChargeTarget);
                         m_fireRateTimers[i] = 0;
 
                         for (int j = i + 1; j < m_laserArray.Length; j++)
                         {
-                            var objB = m_laserArray[j];
+                            Laser objB = m_laserArray[j];
 
                             objB.m_Line.enabled = false;
                         }
 
                         return;
-
                     }
-
                     laserDirection = Vector3.Reflect(laserDirection, raycastHits[i].normal);
-
                 }
                 else
                 {
                     Vector3 inFrontOfFirePoint = raycastHits[i - 1].point + laserDirection * m_laserRange;
                     TurnLaserOn(raycastHits[i - 1].point, inFrontOfFirePoint, i);
-
                     for (int j = i + 1; j < m_laserArray.Length; j++)
                     {
-                        var objB = m_laserArray[j];
+                        Laser objB = m_laserArray[j];
 
                         objB.m_Line.enabled = false;
                     }
-
                     return;
-
                 }
             }
-
         }
     }
 
@@ -278,23 +256,17 @@ public class Weapon_Laser : MonoBehaviour
 
     private bool CanShoot(float timer)
     {
-        if (timer >= m_fireRateInSeconds)
-        {
-            return true;
-        }
-
-        return false;
-
+        return timer >= m_fireRateInSeconds;
     }
 
     [SerializeField] private LayerMask m_firePointVisibleLayer;
 
     private bool CheckIfFirePointVisible()
     {
-
         Vector3 cameraToMuzzle = m_firePointTF.position - PlayerStats.I.PlayerCamera.transform.position;
 
-        if (Physics.Raycast(PlayerStats.I.PlayerCamera.transform.position, cameraToMuzzle, out RaycastHit hit, 100f, m_firePointVisibleLayer))
+        if (Physics.Raycast(PlayerStats.I.PlayerCamera.transform.position, cameraToMuzzle, out RaycastHit hit, 100f,
+                m_firePointVisibleLayer))
         {
             if (hit.collider.CompareTag("Muzzle"))
             {
@@ -307,7 +279,6 @@ public class Weapon_Laser : MonoBehaviour
 
     private void OnEnable()
     {
-
         if (m_fireRateTimers == null)
         {
             m_fireRateTimers = new float[m_laserArray.Length];

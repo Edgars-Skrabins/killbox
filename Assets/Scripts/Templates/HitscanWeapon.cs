@@ -1,37 +1,35 @@
+using Killbox.Enums;
 using MoreMountains.Feedbacks;
 using UnityEngine;
 
 public abstract class HitscanWeapon : MonoBehaviour
 {
-
     [Header(" ----- Firing Settings -----")]
     [Space(5)]
     [SerializeField] protected Transform m_firePointTF;
     [SerializeField] protected int m_weaponDamage;
+    [SerializeField] protected EDamageTypes m_damageType;
+    [SerializeField] protected bool m_doesCharge;
     [SerializeField] protected float m_fireRateInSeconds;
     [SerializeField] protected float m_weaponRange;
     [SerializeField] protected LayerMask m_damageLayer;
     [SerializeField] protected LayerMask m_firePointVisibleLayer;
 
     [Space(20)]
-
     [Header(" ----- Shot Animation Settings -----")]
     [Space(5)]
-
     [SerializeField] protected bool m_hasShotAnimation;
     [SerializeField] protected WeaponMovement m_weaponMovementCS;
 
     [Space(20)]
     [Header(" ----- Shot Feedback Settings -----")]
     [Space(5)]
-
     [SerializeField] protected bool m_hasShotFeedback;
     [SerializeField] protected MMF_Player m_shotFeedback;
 
     [Space(20)]
     [Header(" ----- Shot ImpactVFX Settings -----")]
     [Space(5)]
-    
     [SerializeField] protected bool m_hasHitImpactVFX;
     [SerializeField] protected GameObject[] m_hitImpactVFXArray;
     [SerializeField] protected string m_impactSFX;
@@ -39,7 +37,6 @@ public abstract class HitscanWeapon : MonoBehaviour
     [Space(20)]
     [Header(" ----- Muzzle VFX Settings -----")]
     [Space(5)]
-
     [SerializeField] protected bool m_hasMuzzleVFX;
     [SerializeField] protected GameObject[] m_muzzleVFXArray;
     [SerializeField] protected Transform m_muzzleTF;
@@ -54,7 +51,6 @@ public abstract class HitscanWeapon : MonoBehaviour
     [Space(20)]
     [Header(" ----- FirePointVisibleSettings ----- ")]
     [Space(5)]
-
     [SerializeField] private GameObject m_crossHairImage;
     [SerializeField] private GameObject m_cantShootImage;
 
@@ -67,9 +63,8 @@ public abstract class HitscanWeapon : MonoBehaviour
 
     protected virtual void Update()
     {
+        if (GameManager.I.IsGamePaused) return;
 
-        if(GameManager.I.IsGamePaused) return;
-        
         FirePointVisibleGFX();
         CountFireTimer();
         Inputs();
@@ -77,46 +72,45 @@ public abstract class HitscanWeapon : MonoBehaviour
 
     protected virtual void FirePointVisibleGFX()
     {
-        if(CheckIfFirePointVisible())
+        if (CheckIfFirePointVisible())
         {
-            if(!m_crossHairImage.activeInHierarchy)
+            if (!m_crossHairImage.activeInHierarchy)
             {
                 m_crossHairImage.SetActive(true);
             }
 
-            if(m_cantShootImage.activeInHierarchy)
+            if (m_cantShootImage.activeInHierarchy)
             {
                 m_cantShootImage.SetActive(false);
             }
-
         }
         else
         {
-            if(!m_cantShootImage.activeInHierarchy)
+            if (!m_cantShootImage.activeInHierarchy)
             {
                 m_cantShootImage.SetActive(true);
             }
 
-            if(m_crossHairImage.activeInHierarchy)
+            if (m_crossHairImage.activeInHierarchy)
             {
                 m_crossHairImage.SetActive(false);
             }
         }
     }
-    
+
     protected virtual bool CheckIfFirePointVisible()
     {
-
         Vector3 cameraToMuzzle = m_firePointTF.position - PlayerStats.I.PlayerCamera.transform.position;
-        
-        if(Physics.Raycast(PlayerStats.I.PlayerCamera.transform.position, cameraToMuzzle,out RaycastHit hit, 100f, m_firePointVisibleLayer))
+
+        if (Physics.Raycast(PlayerStats.I.PlayerCamera.transform.position, cameraToMuzzle, out RaycastHit hit, 100f,
+                m_firePointVisibleLayer))
         {
-            if(hit.collider.CompareTag("Muzzle"))
+            if (hit.collider.CompareTag("Muzzle"))
             {
                 return true;
             }
         }
-        
+
         return false;
     }
 
@@ -135,39 +129,30 @@ public abstract class HitscanWeapon : MonoBehaviour
 
     protected virtual bool CanShoot()
     {
-        if (m_fireRateTimer >= m_fireRateInSeconds)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return m_fireRateTimer >= m_fireRateInSeconds;
     }
 
     protected virtual void Shoot()
     {
+        if (!CheckIfFirePointVisible() || GameManager.I.IsGamePaused || !GameManager.I.IsPlayerAlive) return;
 
-        if(!CheckIfFirePointVisible() || GameManager.I.IsGamePaused || !GameManager.I.IsPlayerAlive) return;
-        
         m_fireRateTimer = 0f;
 
-        if (Physics.Raycast(m_firePointTF.position, m_firePointTF.forward, out var hit,Mathf.Infinity, m_damageLayer))
+        if (Physics.Raycast(m_firePointTF.position, m_firePointTF.forward, out RaycastHit hit, Mathf.Infinity, m_damageLayer))
         {
             bool inWeaponRange = (hit.point - m_firePointTF.position).magnitude <= m_weaponRange;
-            
+
             if (inWeaponRange)
             {
                 Health health = hit.collider.GetComponent<Health>();
 
                 if (health)
                 {
-                    health.TakeDamage(m_weaponDamage);
+                    health.TakeDamage(m_weaponDamage, m_damageType, m_doesCharge);
                 }
             }
-
         }
-        
+
         if (m_hasHitImpactVFX) PlayImpactVFX(hit);
         if (m_hasProjectileVFX) PlayProjectileVFX();
         if (m_hasShotAnimation) PlayShotAnimation();
@@ -186,20 +171,21 @@ public abstract class HitscanWeapon : MonoBehaviour
     {
         if (m_shotFeedback) m_shotFeedback.PlayFeedbacks();
     }
+
     protected virtual void PlayImpactVFX(RaycastHit _hit)
     {
         if (m_hitImpactVFXArray.Length <= 0) return;
 
-        float vfxOffsetFromWall = 0.1f;
-        
-        foreach (var vfx in m_hitImpactVFXArray)
+        const float vfxOffsetFromWall = 0.1f;
+
+        foreach (GameObject vfx in m_hitImpactVFXArray)
         {
-            var obj = Instantiate(vfx, _hit.point, Quaternion.identity);
+            GameObject obj = Instantiate(vfx, _hit.point, Quaternion.identity);
             Transform objTF = obj.transform;
             Vector3 playerDir = PlayerStats.I.PlayerTF.position - objTF.position;
             objTF.position += playerDir * vfxOffsetFromWall;
         }
-        
+
         AudioManager.I.Play(m_impactSFX);
     }
 
@@ -207,23 +193,21 @@ public abstract class HitscanWeapon : MonoBehaviour
     {
         if (m_muzzleVFXArray.Length <= 0) return;
 
-        foreach (var vfx in m_muzzleVFXArray)
+        foreach (GameObject vfx in m_muzzleVFXArray)
         {
-            var obj = Instantiate(vfx, m_muzzleTF.position, m_muzzleTF.rotation);
+            GameObject obj = Instantiate(vfx, m_muzzleTF.position, m_muzzleTF.rotation);
             obj.transform.SetParent(m_muzzleTF);
         }
-
     }
 
     protected virtual void PlayProjectileVFX()
     {
         if (m_ProjectileVFXArray.Length <= 0) return;
 
-        foreach (var vfx in m_ProjectileVFXArray)
+        foreach (GameObject vfx in m_ProjectileVFXArray)
         {
             Instantiate(vfx, m_muzzleTF.position, m_muzzleTF.rotation);
         }
-
     }
 
     private void OnEnable()

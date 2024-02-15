@@ -5,8 +5,8 @@ public abstract class Bullet : MonoBehaviour
 {
     [Header("Bullet Settings")]
     [SerializeField] protected int m_bulletDamage;
-    [SerializeField] protected EDamageTypes m_bulletDamageType;
-    [SerializeField] protected bool m_bulletDoesCharge;
+    [SerializeField] protected EDamageTypes m_damageType;
+    [SerializeField] protected bool m_doesCharge;
     [SerializeField] protected float m_bulletSpeed;
     [SerializeField] protected bool m_lifeTimeDestroy;
     [SerializeField] protected float m_bulletLifeTime;
@@ -68,7 +68,7 @@ public abstract class Bullet : MonoBehaviour
 
         if (health != null)
         {
-            health.TakeDamage(m_bulletDamage, m_bulletDamageType, m_bulletDoesCharge);
+            health.TakeDamage(m_bulletDamage, m_damageType, m_doesCharge);
         }
 
         if (m_hasImpactVFX) PlayImpactVFX();

@@ -193,11 +193,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bulletDamage: 40
+  m_damageType: 1
+  m_doesCharge: 0
   m_bulletSpeed: 20
   m_lifeTimeDestroy: 1
   m_bulletLifeTime: 15
-  m_doesSlow: 1
-  m_doesStun: 0
   m_impactSFX: 
   m_hasImpactVFX: 0
   m_bulletImpactVFX: {fileID: 0}
