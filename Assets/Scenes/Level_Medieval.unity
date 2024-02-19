@@ -12368,6 +12368,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5139904612043939360, guid: 65ac01fdd6e98f248acaaeafb95abe56, type: 3}
   m_PrefabInstance: {fileID: 387656422}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &387959718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 387959718, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+  m_PrefabInstance: {fileID: 1451703767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &388016078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48795,197 +48800,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 54157285, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_randomizeFrequencyInSeconds
-      value: 11
+    - target: {fileID: 387959718, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1608569464, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1749824376}
-    - target: {fileID: 1765089408, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1765089413, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_fireRateInSeconds
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 722195683254145259, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Animation
-      value: 
+    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_Weapons.Array.size
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[0].m_weaponGO
+      propertyPath: m_Weapons.Array.data[12].m_weaponGO
       value: 
-      objectReference: {fileID: 1451703789}
+      objectReference: {fileID: 387959718}
     - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[1].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703788}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[2].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703787}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[3].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703786}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[4].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703785}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[5].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703784}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[6].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703783}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[7].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703782}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[8].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703781}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[9].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703779}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[10].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703780}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[11].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703778}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[0].m_weaponIcon
-      value: 
-      objectReference: {fileID: 1451703777}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[0].m_weaponName
-      value: Shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[1].m_weaponIcon
-      value: 
-      objectReference: {fileID: 1451703776}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[1].m_weaponName
-      value: DualSMG
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[2].m_weaponIcon
-      value: 
-      objectReference: {fileID: 1451703775}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[2].m_weaponName
-      value: ElectroGun
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[3].m_weaponIcon
-      value: 
-      objectReference: {fileID: 1451703774}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[3].m_weaponName
-      value: GrenadeLauncher
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[4].m_weaponIcon
-      value: 
-      objectReference: {fileID: 1451703773}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[4].m_weaponName
-      value: RocketLauncher
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[5].m_weaponIcon
-      value: 
-      objectReference: {fileID: 1451703772}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[5].m_weaponName
-      value: Blaster
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[6].m_weaponIcon
-      value: 
-      objectReference: {fileID: 1451703771}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[6].m_weaponName
-      value: Laser
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[7].m_weaponIcon
-      value: 
-      objectReference: {fileID: 1451703770}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[7].m_weaponName
-      value: Sniper
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[8].m_weaponIcon
+      propertyPath: m_Weapons.Array.data[12].m_weaponIcon
       value: 
       objectReference: {fileID: 1451703769}
     - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[8].m_weaponName
-      value: IonRifle
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[9].m_weaponIcon
-      value: 
-      objectReference: {fileID: 1451703769}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[9].m_weaponName
-      value: AutoShotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[10].m_weaponIcon
-      value: 
-      objectReference: {fileID: 1451703768}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[10].m_weaponName
-      value: Randomizer
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[11].m_weaponName
-      value: MiniGun
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830117963131566449, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830117963131566449, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830117963131566449, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830117963131566449, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830117963131566449, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830117963131566449, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187485226186988272, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187485226186988272, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.2
+      propertyPath: m_Weapons.Array.data[12].m_weaponName
+      value: Pippy
       objectReference: {fileID: 0}
     - target: {fileID: 5498752474161022366, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
       propertyPath: m_RootOrder
@@ -49035,140 +48872,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5787989028631605134, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -4649751396490570770, guid: 5e2ca99aff0eed745950c6fa565ee0aa, type: 3}
     - target: {fileID: 6678218799953199830, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7577709981728208440, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8081172012760088421, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8081172012760088421, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5a8f2aebe56271e458353d3b45d7a76a, type: 2}
-    - target: {fileID: 8081172012760088421, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 09c17dfa4ce5f6f4c8c40d1c10063e4c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
---- !u!1 &1451703768 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 794440349, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1451703769 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 413080099, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703770 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 470917302, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703771 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1705328314, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703772 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 331290487, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703773 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 655978523, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703774 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 643997295, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703775 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 582119934, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703776 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1840320082, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703777 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1749427245, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703778 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1765089408, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703779 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7911494817198787517, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703780 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7577709981728208440, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703781 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1673754204, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703782 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1098039416, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703783 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1899831945, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703784 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6969048674004191598, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703785 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 214909330, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703786 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1476448015, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703787 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3004312297689128654, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703788 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 316333113386541497, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703789 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6678218799953199830, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
   m_PrefabInstance: {fileID: 1451703767}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1451884839
