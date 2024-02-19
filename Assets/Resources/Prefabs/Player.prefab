@@ -8570,7 +8570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1765089409
 Transform:
   m_ObjectHideFlags: 0
@@ -8655,7 +8655,7 @@ MonoBehaviour:
   m_firePoints:
   - {fileID: 509841980}
   m_bulletPrefab: {fileID: 4589737236847229155, guid: e5272e8b3417cd8438afeb6530c2c20e, type: 3}
-  m_fireRateInSeconds: 0.35
+  m_fireRateInSeconds: 0.1
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1884659
@@ -14461,9 +14461,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dontDestroyOnLoad: 0
   m_Weapons:
-  - m_weaponName: MiniGun
-    m_weaponGO: {fileID: 1765089408}
-    m_weaponIcon: {fileID: 413080099}
   - m_weaponName: Shotgun
     m_weaponGO: {fileID: 6678218799953199830}
     m_weaponIcon: {fileID: 1749427245}
@@ -14491,11 +14488,14 @@ MonoBehaviour:
   - m_weaponName: IonRifle
     m_weaponGO: {fileID: 1673754204}
     m_weaponIcon: {fileID: 413080099}
+  - m_weaponName: AutoShotgun
+    m_weaponGO: {fileID: 7911494817198787517}
+    m_weaponIcon: {fileID: 413080099}
   - m_weaponName: Randomizer
     m_weaponGO: {fileID: 7577709981728208440}
     m_weaponIcon: {fileID: 794440349}
-  - m_weaponName: AutoShotgun
-    m_weaponGO: {fileID: 7911494817198787517}
+  - m_weaponName: MiniGun
+    m_weaponGO: {fileID: 1765089408}
     m_weaponIcon: {fileID: 413080099}
   m_currentWeaponName: 
 --- !u!114 &54157285
@@ -14510,7 +14510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ad8d66189d9974aa808926382b387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_randomizeFrequencyInSeconds: 1000
+  m_randomizeFrequencyInSeconds: 11
   m_randomizeTimer: 0
   m_weaponClockFeedback: {fileID: 732516356}
   m_nextWeapon: 
@@ -14599,7 +14599,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6211831067339407783}
-  m_Mesh: {fileID: -8803937527578110353, guid: c657f49ffe36adb4faed4c92eb0f69ac, type: 3}
+  m_Mesh: {fileID: -4649751396490570770, guid: 5e2ca99aff0eed745950c6fa565ee0aa, type: 3}
 --- !u!23 &8081172012760088421
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14620,7 +14620,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eb57c689262dc433b934d04eb0942fe1, type: 2}
+  - {fileID: 2100000, guid: 5a8f2aebe56271e458353d3b45d7a76a, type: 2}
+  - {fileID: 2100000, guid: 09c17dfa4ce5f6f4c8c40d1c10063e4c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15585,7 +15586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7577709981728208440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.354, y: -0.167, z: 0.67}
+  m_LocalPosition: {x: 0.3, y: -0.2, z: 0.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15606,7 +15607,7 @@ Animation:
   m_GameObject: {fileID: 7577709981728208440}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: ffa073bbb3558f04f9c10a15177f5f74, type: 2}
+  m_Animation: {fileID: 0}
   m_Animations:
   - {fileID: 7400000, guid: eed72b2aa567544448d212c23de1c25a, type: 2}
   - {fileID: 7400000, guid: ffa073bbb3558f04f9c10a15177f5f74, type: 2}
