@@ -16,12 +16,18 @@ public abstract class Health_Enemy : Health
     [SerializeField] private float m_explosionRadius;
     [SerializeField] private LayerMask m_explosionLayers;
     [SerializeField] private int m_explosionDamage;
+    [SerializeField] private int m_explosionChargedDamage;
 
 
     // TODO: Try to do this OnDisable instead and see if it works
     private void OnEnable()
     {
         m_enemyStatsCS.EnemyEffectsCS.TurnOffAllEffects();
+    }
+
+    public bool HasExplosion()
+    {
+        return m_hasExplosion;
     }
 
     private void AddScore()
@@ -34,6 +40,10 @@ public abstract class Health_Enemy : Health
 
     public override void TakeDamage(int _damage, EDamageTypes _damageType, bool _chargeTarget)
     {
+        if (_chargeTarget)
+        {
+            m_enemyStatsCS.EnemyEffectsCS.Charge();
+        }
         switch (_damageType)
         {
             case EDamageTypes.NORMAL:
@@ -85,19 +95,18 @@ public abstract class Health_Enemy : Health
         Instantiate(m_enemyDeathVFX, thisPosition, Quaternion.identity);
         Instantiate(m_dieEnemySFX, thisPosition, transform.rotation);
 
-        if (m_hasExplosion && _damageType != EDamageTypes.DISINTEGRATION)
+        if (!m_hasExplosion || _damageType == EDamageTypes.DISINTEGRATION)
         {
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, m_explosionRadius, m_explosionLayers);
-            foreach (Collider hit in hitColliders)
+            return;
+        }
+
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, m_explosionRadius, m_explosionLayers);
+        foreach (Collider hit in hitColliders)
+        {
+            if (hit.TryGetComponent(out Health health))
             {
-                if (hit.TryGetComponent(out Health health))
-                {
-                    // TODO: This if health check seems unecessary, try to take this out and test if it still works
-                    if (health)
-                    {
-                        health.TakeDamage(m_explosionDamage, m_explosionDamageType, false);
-                    }
-                }
+                int explosionDamage = m_enemyStatsCS.EnemyEffectsCS.IsCharged() ? m_explosionChargedDamage : m_explosionDamage;
+                health.TakeDamage(explosionDamage, m_explosionDamageType, false);
             }
         }
     }

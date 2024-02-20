@@ -1706,7 +1706,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &387959719
 Transform:
   m_ObjectHideFlags: 0
@@ -15048,12 +15048,12 @@ MonoBehaviour:
   - m_weaponName: RocketLauncher
     m_weaponGO: {fileID: 214909330}
     m_weaponIcon: {fileID: 655978523}
-  - m_weaponName: Blaster
-    m_weaponGO: {fileID: 6969048674004191598}
-    m_weaponIcon: {fileID: 331290487}
   - m_weaponName: Laser
     m_weaponGO: {fileID: 1899831945}
     m_weaponIcon: {fileID: 1705328314}
+  - m_weaponName: Blaster
+    m_weaponGO: {fileID: 6969048674004191598}
+    m_weaponIcon: {fileID: 331290487}
   - m_weaponName: Sniper
     m_weaponGO: {fileID: 1098039416}
     m_weaponIcon: {fileID: 470917302}
@@ -15068,6 +15068,9 @@ MonoBehaviour:
     m_weaponIcon: {fileID: 794440349}
   - m_weaponName: MiniGun
     m_weaponGO: {fileID: 1765089408}
+    m_weaponIcon: {fileID: 413080099}
+  - m_weaponName: Pippy
+    m_weaponGO: {fileID: 387959718}
     m_weaponIcon: {fileID: 413080099}
   m_currentWeaponName: 
 --- !u!114 &54157285
@@ -15735,7 +15738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6678218799953199831
 Transform:
   m_ObjectHideFlags: 0

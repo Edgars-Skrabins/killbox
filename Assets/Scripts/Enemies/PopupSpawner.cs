@@ -54,4 +54,20 @@ public class PopupSpawner : MonoBehaviour
         TextMeshProUGUI popupText = obj.GetComponentInChildren<TextMeshProUGUI>();
         popupText.fontSize = Random.Range(m_stunnedPopupMinFontSize, m_stunnedPopupMaxFontSize);
     }
+
+    [Space(10)]
+    [Header("Charged Popup settings")]
+    [Space(5)]
+    [SerializeField] private GameObject m_chargedPopupGO;
+    [SerializeField] private float m_chargedPopupMinFontSize;
+    [SerializeField] private float m_chargedPopupMaxFontSize;
+
+    public void SpawnchargedPopup()
+    {
+        GameObject obj = Instantiate(m_chargedPopupGO, Random.insideUnitSphere + m_popupSpawnLocationTF.position,
+            m_popupSpawnLocationTF.transform.rotation);
+
+        TextMeshProUGUI popupText = obj.GetComponentInChildren<TextMeshProUGUI>();
+        popupText.fontSize = Random.Range(m_chargedPopupMinFontSize, m_chargedPopupMaxFontSize);
+    }
 }

@@ -3,11 +3,14 @@ using UnityEngine;
 public class Enemy_Effects : MonoBehaviour
 {
     [SerializeField] private EnemyStats m_enemyStatsCS;
+
     [SerializeField] private GameObject m_slowedVFXGO;
     [SerializeField] private GameObject m_stunnedVFXGO;
+    [SerializeField] private GameObject m_chargedVFXGO;
 
     private float m_stunTimer;
     private bool m_isStunned;
+    private bool m_isCharged;
 
     private void Update()
     {
@@ -22,6 +25,28 @@ public class Enemy_Effects : MonoBehaviour
         }
     }
 
+    public void Charge()
+    {
+        if (!m_enemyStatsCS.EnemyHealthCS.HasExplosion())
+        {
+            return;
+        }
+        m_enemyStatsCS.PopupSpawnerCS.SpawnchargedPopup();
+        m_isCharged = true;
+        m_chargedVFXGO.SetActive(true);
+    }
+
+    private void UnCharge()
+    {
+        m_isCharged = false;
+        m_chargedVFXGO.SetActive(false);
+    }
+
+    public bool IsCharged()
+    {
+        return m_isCharged;
+    }
+
     public void Stun()
     {
         m_enemyStatsCS.NavMeshAgent.speed = 0;
@@ -34,7 +59,7 @@ public class Enemy_Effects : MonoBehaviour
         m_isStunned = true;
     }
 
-    public void UnStun()
+    private void UnStun()
     {
         m_stunTimer += Time.deltaTime;
         if (m_stunTimer >= m_enemyStatsCS.StunDuration)
@@ -65,7 +90,7 @@ public class Enemy_Effects : MonoBehaviour
         m_isSlowed = true;
     }
 
-    public void UnSlow()
+    private void UnSlow()
     {
         m_slowTimer += Time.deltaTime;
         if (m_isStunned)
@@ -93,5 +118,6 @@ public class Enemy_Effects : MonoBehaviour
         m_stunnedVFXGO.SetActive(false);
         m_enemyStatsCS.NavMeshAgent.speed = m_enemyStatsCS.EnemySpeed;
         m_stunTimer = 0;
+        UnCharge();
     }
 }
