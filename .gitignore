@@ -76,3 +76,5 @@ crashlytics-build.properties
 .idea/
 .vscode
 Assets/Tools/Feel/
+Assets/Scripts/Utilities/LeaderboardKey.cs
+Assets/Scripts/Utilities/LeaderboardKey.cs.meta
