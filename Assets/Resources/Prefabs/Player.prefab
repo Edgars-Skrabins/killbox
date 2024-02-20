@@ -1699,7 +1699,7 @@ GameObject:
   - component: {fileID: 387959719}
   - component: {fileID: 387959722}
   - component: {fileID: 387959721}
-  - component: {fileID: 387959720}
+  - component: {fileID: 387959723}
   m_Layer: 10
   m_Name: Pippy
   m_TagString: Untagged
@@ -1715,7 +1715,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387959718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.33, y: -0.135, z: 0.67}
+  m_LocalPosition: {x: 0.3, y: -0.12, z: 0.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1724,6 +1724,7 @@ Transform:
   - {fileID: 209178478}
   - {fileID: 383762831}
   - {fileID: 753721766}
+  - {fileID: 1617332020}
   m_Father: {fileID: 5739218527818362544}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1773,7 +1774,7 @@ MonoBehaviour:
   m_overridePlayingAnimation: 1
   m_idleAnimationName: Blaster_Idle
   m_idleAnimationFadeLength: 0
---- !u!114 &387959720
+--- !u!114 &387959723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1782,28 +1783,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 387959718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5ca0995444185d409403bf370b123e0, type: 3}
+  m_Script: {fileID: 11500000, guid: eeef562b2690e4d9c9080fc0d0b9a206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_firePoints:
   - {fileID: 1197340304}
-  m_bulletPrefab: {fileID: 4589737236847229155, guid: 567bb0892858cf4428f3573babb78868, type: 3}
-  m_fireRateInSeconds: 0.29
+  m_bulletPrefab: {fileID: 4589737236847229155, guid: 19e491727258a4a92ab7697145af5b73, type: 3}
+  m_fireRateInSeconds: 0.08
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1622259
-  m_hasShotAnimation: 1
-  m_weaponMovementCS: {fileID: 387959721}
-  m_hasShotFeedback: 1
-  m_shotFeedback: {fileID: 1952023316}
-  m_shootSFX: Shoot_Blaster
+  m_hasShotAnimation: 0
+  m_weaponMovementCS: {fileID: 0}
+  m_hasShotFeedback: 0
+  m_shotFeedback: {fileID: 0}
+  m_shootSFX: 
   m_shootSFXRate: 0
-  m_hasMuzzleVFX: 1
-  m_muzzleVFXArray:
-  - {fileID: 2181664935827156082, guid: ba64d002e210c4138a0b5185fa97892a, type: 3}
+  m_hasMuzzleVFX: 0
+  m_muzzleVFXArray: []
   m_muzzleTF: {fileID: 1197340304}
   m_crossHairImage: {fileID: 5739218526946030839}
   m_cantShootImage: {fileID: 1754289437}
+  m_spraySphere: {fileID: 1617332020}
 --- !u!1 &395097757
 GameObject:
   m_ObjectHideFlags: 0
@@ -8163,6 +8164,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!1 &1617332019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1617332020}
+  m_Layer: 10
+  m_Name: Spray Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1617332020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617332019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 19.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 387959719}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1620145567
 GameObject:
   m_ObjectHideFlags: 0
@@ -15738,7 +15770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6678218799953199831
 Transform:
   m_ObjectHideFlags: 0
