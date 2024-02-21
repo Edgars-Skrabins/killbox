@@ -12,6 +12,11 @@ public class Enemy_Effects : MonoBehaviour
     private bool m_isStunned;
     private bool m_isCharged;
 
+    private void OnDisable()
+    {
+        TurnOffAllEffects();
+    }
+
     private void Update()
     {
         if (m_isSlowed)

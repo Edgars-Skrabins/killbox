@@ -3,14 +3,16 @@ using UnityEngine;
 
 public class Enemy_Melee_Attack : MonoBehaviour
 {
+    [SerializeField] private EnemyStats m_enemyStatsCS;
     [SerializeField] private Transform m_attackOriginTF;
 
     [SerializeField] private int m_damage;
+    [SerializeField] private int m_damageToEnemies;
     [SerializeField] private EDamageTypes m_damageType;
     [SerializeField] private float m_attackDistance;
     [SerializeField] private GameObject m_deathVFX;
-    [SerializeField] private LayerMask m_damageableLayers;
-
+    [SerializeField] private LayerMask m_damageableLayersPlayer;
+    [SerializeField] private LayerMask m_damageableLayersEnemy;
 
     private void Update()
     {
@@ -21,17 +23,23 @@ public class Enemy_Melee_Attack : MonoBehaviour
 #endif
     }
 
-    [SerializeField] private GameObject m_enemyDebri;
+    [SerializeField] private GameObject m_enemyDebris;
 
     private void Attack()
     {
-        if (Physics.Raycast(m_attackOriginTF.position, m_attackOriginTF.forward, out RaycastHit hit, m_attackDistance, m_damageableLayers))
+        int damage = m_enemyStatsCS.EnemyHealthCS.IsFriend() ? m_damageToEnemies : m_damage;
+        LayerMask damageLayerMask = m_enemyStatsCS.EnemyHealthCS.IsFriend() ? m_damageableLayersEnemy : m_damageableLayersPlayer;
+        if (Physics.Raycast(
+                m_attackOriginTF.position,
+                m_attackOriginTF.forward,
+                out RaycastHit hit, m_attackDistance,
+                damageLayerMask))
         {
             Health health = hit.transform.GetComponent<Health>();
-            health.TakeDamage(m_damage, m_damageType, false);
+            health.TakeDamage(damage, m_damageType, false);
             Instantiate(m_deathVFX, transform.position, Quaternion.identity);
             AudioManager.I.Play("Explode_Enemy");
-            Instantiate(m_enemyDebri, transform.position, Random.rotation);
+            Instantiate(m_enemyDebris, transform.position, Random.rotation);
             gameObject.SetActive(false);
         }
     }

@@ -172,3 +172,4 @@ MonoBehaviour:
   m_bulletTF: {fileID: 4589737236847229152}
   m_bounces: 3
   m_sizeIncrease: 2
+  m_chanceOfTurningEnemyIntoFriend: 100
