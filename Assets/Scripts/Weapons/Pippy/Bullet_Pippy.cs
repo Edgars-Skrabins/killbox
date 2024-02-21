@@ -3,6 +3,7 @@ using UnityEngine;
 public class Bullet_Pippy : Bullet
 {
     [SerializeField] private int m_bounces;
+    [SerializeField] private float m_sizeIncrease;
 
     protected override void Impact(Collider _otherCollider)
     {
@@ -21,7 +22,13 @@ public class Bullet_Pippy : Bullet
             return;
         }
 
+        IncreaseSize();
         LaunchBullet();
         m_bounces -= 1;
+    }
+
+    private void IncreaseSize()
+    {
+        m_bulletTF.localScale += new Vector3(m_sizeIncrease, m_sizeIncrease, m_sizeIncrease);
     }
 }

@@ -15647,6 +15647,7 @@ MonoBehaviour:
   m_dontDestroyOnLoad: 0
   m_leaderboardContentTF: {fileID: 5942634665874127414}
   m_leaderboardEntryPrefab: {fileID: 2464898738937898538, guid: cc71447c13bf448a48550f665e4afc15, type: 3}
+  m_leaderboardPanel: {fileID: 0}
   m_leaderboardSubmissionPanel: {fileID: 5942634666216527115}
   m_playerNameInputField: {fileID: 5942634666728355950}
   m_maxEntryCount: 30
