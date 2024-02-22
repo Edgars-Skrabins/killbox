@@ -1,3 +1,4 @@
+using Killbox.Enums;
 using UnityEngine;
 
 public class Bullet_Pippy : Bullet
@@ -11,15 +12,16 @@ public class Bullet_Pippy : Bullet
     {
         if (_otherCollider.TryGetComponent(out Health_Enemy health))
         {
-            if (health.CanBeTurnedIntoFriend())
+            int randomNum = Random.Range(0, 101);
+            if (randomNum <= m_chanceOfTurningEnemyIntoFriend)
             {
-                int randomNum = Random.Range(0, 101);
-                if (randomNum <= m_chanceOfTurningEnemyIntoFriend)
-                {
-                    Debug.Log("Turned!");
-                    health.TurnIntoFriend();
-                }
+                health.TakeDamage(m_bulletDamage, EDamageTypes.BEFRIEND, m_doesCharge);
+                if (m_hasImpactVFX) PlayImpactVFX();
+                AudioManager.I.Play(m_impactSFX);
+                Destroy(gameObject);
+                return;
             }
+
             health.TakeDamage(m_bulletDamage, m_damageType, m_doesCharge);
             if (m_hasImpactVFX) PlayImpactVFX();
             AudioManager.I.Play(m_impactSFX);

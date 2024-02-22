@@ -18,13 +18,6 @@ public abstract class Health_Enemy : Health
     [SerializeField] private int m_explosionDamage;
     [SerializeField] private int m_explosionChargedDamage;
 
-
-    // TODO: Try to do this OnDisable instead and see if it works
-    private void OnEnable()
-    {
-        TurnIntoEnemy();
-    }
-
     public bool HasExplosion()
     {
         return m_hasExplosion;
@@ -53,6 +46,9 @@ public abstract class Health_Enemy : Health
                 break;
             case EDamageTypes.STUN:
                 m_enemyStatsCS.EnemyEffectsCS.Stun();
+                break;
+            case EDamageTypes.BEFRIEND:
+                m_enemyStatsCS.EnemyEffectsCS.BeFriend();
                 break;
             case EDamageTypes.DISINTEGRATION:
                 break;
@@ -109,35 +105,6 @@ public abstract class Health_Enemy : Health
                 health.TakeDamage(explosionDamage, m_explosionDamageType, false);
             }
         }
-    }
-
-    private bool m_isFriend;
-    [SerializeField] private bool m_canBeTurnedIntoFriend;
-    [SerializeField] private GameObject m_normalGraphicsGO;
-    [SerializeField] private GameObject m_friendGraphicsGO;
-
-    public virtual void TurnIntoFriend()
-    {
-        m_isFriend = true;
-        m_friendGraphicsGO.SetActive(true);
-        m_normalGraphicsGO.SetActive(false);
-    }
-
-    protected virtual void TurnIntoEnemy()
-    {
-        m_isFriend = false;
-        m_friendGraphicsGO.SetActive(false);
-        m_normalGraphicsGO.SetActive(true);
-    }
-
-    public bool CanBeTurnedIntoFriend()
-    {
-        return m_canBeTurnedIntoFriend;
-    }
-
-    public bool IsFriend()
-    {
-        return m_isFriend;
     }
 
     private void PlayHitSound()

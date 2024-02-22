@@ -27,8 +27,8 @@ public class Enemy_Melee_Attack : MonoBehaviour
 
     private void Attack()
     {
-        int damage = m_enemyStatsCS.EnemyHealthCS.IsFriend() ? m_damageToEnemies : m_damage;
-        LayerMask damageLayerMask = m_enemyStatsCS.EnemyHealthCS.IsFriend() ? m_damageableLayersEnemy : m_damageableLayersPlayer;
+        int damage = m_enemyStatsCS.EnemyEffectsCS.IsFriend() ? m_damageToEnemies : m_damage;
+        LayerMask damageLayerMask = m_enemyStatsCS.EnemyEffectsCS.IsFriend() ? m_damageableLayersEnemy : m_damageableLayersPlayer;
         if (Physics.Raycast(
                 m_attackOriginTF.position,
                 m_attackOriginTF.forward,

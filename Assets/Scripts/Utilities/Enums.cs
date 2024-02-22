@@ -1,4 +1,4 @@
 namespace Killbox.Enums
 {
-    public enum EDamageTypes { NORMAL, SLOW, STUN, DISINTEGRATION }
+    public enum EDamageTypes { NORMAL, SLOW, STUN, BEFRIEND, DISINTEGRATION }
 }

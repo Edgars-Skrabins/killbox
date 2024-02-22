@@ -7,10 +7,14 @@ public class Enemy_Effects : MonoBehaviour
     [SerializeField] private GameObject m_slowedVFXGO;
     [SerializeField] private GameObject m_stunnedVFXGO;
     [SerializeField] private GameObject m_chargedVFXGO;
+    [SerializeField] private GameObject m_normalGraphicsGO;
+    [SerializeField] private GameObject m_friendGraphicsGO;
+    [SerializeField] private bool m_canBeTurnedIntoFriend;
 
     private float m_stunTimer;
     private bool m_isStunned;
     private bool m_isCharged;
+    private bool m_isFriend;
 
     private void OnDisable()
     {
@@ -28,6 +32,29 @@ public class Enemy_Effects : MonoBehaviour
         {
             UnStun();
         }
+    }
+
+    public void BeFriend()
+    {
+        if (!m_canBeTurnedIntoFriend)
+        {
+            return;
+        }
+        m_isFriend = true;
+        m_friendGraphicsGO.SetActive(true);
+        m_normalGraphicsGO.SetActive(false);
+    }
+
+    public void UnFriend()
+    {
+        m_isFriend = false;
+        m_friendGraphicsGO.SetActive(false);
+        m_normalGraphicsGO.SetActive(true);
+    }
+
+    public bool IsFriend()
+    {
+        return m_isFriend;
     }
 
     public void Charge()
@@ -124,5 +151,6 @@ public class Enemy_Effects : MonoBehaviour
         m_enemyStatsCS.NavMeshAgent.speed = m_enemyStatsCS.EnemySpeed;
         m_stunTimer = 0;
         UnCharge();
+        UnFriend();
     }
 }
