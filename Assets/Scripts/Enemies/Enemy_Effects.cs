@@ -32,12 +32,12 @@ public class Enemy_Effects : MonoBehaviour
 
     public void Charge()
     {
-        if (!m_enemyStatsCS.EnemyHealthCS.HasExplosion())
+        if (!m_enemyStatsCS.EnemyHealthCS.HasExplosion() || m_isCharged)
         {
             return;
         }
-        m_enemyStatsCS.PopupSpawnerCS.SpawnchargedPopup();
         m_isCharged = true;
+        m_enemyStatsCS.PopupSpawnerCS.SpawnchargedPopup();
         m_chargedVFXGO.SetActive(true);
     }
 
