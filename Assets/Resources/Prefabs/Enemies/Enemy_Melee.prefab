@@ -20183,9 +20183,6 @@ MonoBehaviour:
   m_enemyDeathVFX: {fileID: 5117238746486703226, guid: aa647d56090c21a4ba5bb75f1f70ec37, type: 3}
   m_dieEnemySFX: {fileID: 6544815667084830316, guid: b7d8caa8c184c4bd38be9a909589e68a, type: 3}
   m_enemyDebris: {fileID: 1905437603074157092, guid: 23651350fce806a4c825e7e95723738b, type: 3}
-  m_canBeTurnedIntoFriend: 1
-  m_normalGraphicsGO: {fileID: 4338372965996816923}
-  m_friendGraphicsGO: {fileID: 273036376857975747}
 --- !u!114 &8590736862061398622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20202,6 +20199,9 @@ MonoBehaviour:
   m_slowedVFXGO: {fileID: 547611072}
   m_stunnedVFXGO: {fileID: 303963282}
   m_chargedVFXGO: {fileID: 7257329598247852926}
+  m_normalGraphicsGO: {fileID: 4338372965996816923}
+  m_friendGraphicsGO: {fileID: 273036376857975747}
+  m_canBeTurnedIntoFriend: 1
 --- !u!114 &988239443289153458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20227,6 +20227,9 @@ MonoBehaviour:
   m_chargedPopupGO: {fileID: 212657775283020476, guid: e83ccffa0a610b0469ef7b67d47e5770, type: 3}
   m_chargedPopupMinFontSize: 0.78
   m_chargedPopupMaxFontSize: 0.81
+  m_befriendPopupGO: {fileID: 3400726681318740462, guid: 5692bf87461cb423ebefee0de10eab6a, type: 3}
+  m_befriendPopupMinFontSize: 0.79
+  m_befriendPopupMaxFontSize: 0.82
 --- !u!1 &6612190262734086599
 GameObject:
   m_ObjectHideFlags: 0
