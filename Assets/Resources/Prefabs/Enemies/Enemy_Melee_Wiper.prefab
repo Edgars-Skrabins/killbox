@@ -9929,7 +9929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edec520ac9f89c4bb40dac828bbe67b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_enemyStatsCS: {fileID: 0}
+  m_enemyStatsCS: {fileID: 3092974583121167237}
   m_attackOriginTF: {fileID: 4669121140459351085}
   m_damage: 30
   m_damageToEnemies: 0

@@ -19996,7 +19996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edec520ac9f89c4bb40dac828bbe67b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_enemyStatsCS: {fileID: 0}
+  m_enemyStatsCS: {fileID: 8204921569235610676}
   m_attackOriginTF: {fileID: 6724339502626970072}
   m_damage: 20
   m_damageToEnemies: 0
