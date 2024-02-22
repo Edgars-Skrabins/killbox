@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_ElectroGun_Sphere_Trail
+  m_Name: M_ElectroGun_Sphere_Trail 1
   m_Shader: {fileID: -6465566751694194690, guid: d439ea64366664d4187c9b7d7355dad1, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
