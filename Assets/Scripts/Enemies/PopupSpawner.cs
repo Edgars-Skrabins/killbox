@@ -62,12 +62,28 @@ public class PopupSpawner : MonoBehaviour
     [SerializeField] private float m_chargedPopupMinFontSize;
     [SerializeField] private float m_chargedPopupMaxFontSize;
 
-    public void SpawnchargedPopup()
+    public void SpawnChargedPopup()
     {
         GameObject obj = Instantiate(m_chargedPopupGO, Random.insideUnitSphere + m_popupSpawnLocationTF.position,
             m_popupSpawnLocationTF.transform.rotation);
 
         TextMeshProUGUI popupText = obj.GetComponentInChildren<TextMeshProUGUI>();
         popupText.fontSize = Random.Range(m_chargedPopupMinFontSize, m_chargedPopupMaxFontSize);
+    }
+
+    [Space(10)]
+    [Header("Befriend Popup settings")]
+    [Space(5)]
+    [SerializeField] private GameObject m_befriendPopupGO;
+    [SerializeField] private float m_befriendPopupMinFontSize;
+    [SerializeField] private float m_befriendPopupMaxFontSize;
+
+    public void SpawnBefriendPopup()
+    {
+        GameObject obj = Instantiate(m_befriendPopupGO, Random.insideUnitSphere + m_popupSpawnLocationTF.position,
+            m_popupSpawnLocationTF.transform.rotation);
+
+        TextMeshProUGUI popupText = obj.GetComponentInChildren<TextMeshProUGUI>();
+        popupText.fontSize = Random.Range(m_befriendPopupMinFontSize, m_befriendPopupMaxFontSize);
     }
 }

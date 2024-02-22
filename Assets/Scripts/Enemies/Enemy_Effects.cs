@@ -36,11 +36,13 @@ public class Enemy_Effects : MonoBehaviour
 
     public void BeFriend()
     {
-        if (!m_canBeTurnedIntoFriend)
+        if (!m_canBeTurnedIntoFriend || m_isFriend)
         {
             return;
         }
+
         m_isFriend = true;
+        m_enemyStatsCS.PopupSpawnerCS.SpawnBefriendPopup();
         m_friendGraphicsGO.SetActive(true);
         m_normalGraphicsGO.SetActive(false);
     }
@@ -64,7 +66,7 @@ public class Enemy_Effects : MonoBehaviour
             return;
         }
         m_isCharged = true;
-        m_enemyStatsCS.PopupSpawnerCS.SpawnchargedPopup();
+        m_enemyStatsCS.PopupSpawnerCS.SpawnChargedPopup();
         m_chargedVFXGO.SetActive(true);
     }
 
