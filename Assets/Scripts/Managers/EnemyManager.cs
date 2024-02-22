@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyManager : Singleton<EnemyManager>
 {
-    
     [Serializable]
     public class EnemyLists
     {
@@ -16,9 +15,7 @@ public class EnemyManager : Singleton<EnemyManager>
 
     public List<GameObject> GetEnemyList(string _enemyListName)
     {
-        var list = Array.Find(m_EnemyLists, EnemyList => EnemyList.m_EnemyName == _enemyListName);
+        EnemyLists list = Array.Find(m_EnemyLists, EnemyList => EnemyList.m_EnemyName == _enemyListName);
         return list.m_EnemyList;
     }
-    
-    
 }
