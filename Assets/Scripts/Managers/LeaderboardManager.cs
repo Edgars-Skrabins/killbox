@@ -116,6 +116,6 @@ public class LeaderboardManager : Singleton<LeaderboardManager>
     {
         m_leaderboardSubmissionPanel.SetActive(true);
         m_leaderboardPanel.SetActive(false);
-        m_leaderboardSubmissionText?.SetActive(false);
+        m_leaderboardSubmissionText.SetActive(false);
     }
 }
