@@ -20155,7 +20155,7 @@ MonoBehaviour:
     m_Bits: 8
   m_damageableLayersEnemy:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 520
   m_enemyDebris: {fileID: 1905437603074157092, guid: 23651350fce806a4c825e7e95723738b, type: 3}
 --- !u!114 &463544099
 MonoBehaviour:

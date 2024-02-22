@@ -20036,11 +20036,11 @@ MonoBehaviour:
   m_deathVFX: {fileID: 5117238746486703226, guid: aa647d56090c21a4ba5bb75f1f70ec37, type: 3}
   m_damageableLayersPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_damageableLayersEnemy:
     serializedVersion: 2
-    m_Bits: 0
-  m_enemyDebris: {fileID: 0}
+    m_Bits: 512
+  m_enemyDebris: {fileID: 4237517670094771517, guid: 854211f083c1e92458f02c2fb25cc4f1, type: 3}
 --- !u!114 &8325659276563280668
 MonoBehaviour:
   m_ObjectHideFlags: 0
