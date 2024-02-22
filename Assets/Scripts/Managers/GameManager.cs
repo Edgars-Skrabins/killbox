@@ -29,8 +29,10 @@ public class GameManager : Singleton<GameManager>
     public void PauseGame()
     {
         if (!IsPlayerAlive) return;
+
         IsGamePaused = true;
         AudioManager.I.PauseAllSounds();
+        EventManager.I.OnGamePaused_Invoke();
 
         Time.timeScale = 0;
 
@@ -48,8 +50,10 @@ public class GameManager : Singleton<GameManager>
     public void UnpauseGame()
     {
         if (!IsPlayerAlive) return;
+
         IsGamePaused = false;
         AudioManager.I.UnPauseAllSounds();
+        EventManager.I.OnGameUnPaused_Invoke();
 
         Time.timeScale = 1;
 
@@ -78,6 +82,7 @@ public class GameManager : Singleton<GameManager>
     {
         IsGamePaused = true;
         Time.timeScale = 0;
+        EventManager.I.OnGamePaused_Invoke();
 
         IsPlayerAlive = false;
 

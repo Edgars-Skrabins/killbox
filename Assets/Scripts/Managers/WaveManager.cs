@@ -32,9 +32,10 @@ public class WaveManager : MonoBehaviour
     {
         for (int i = 0; i < m_enemiesToSpawn.Length; i++)
         {
-            var enemy = m_enemiesToSpawn[i];
+            EnemiesToSpawn enemy = m_enemiesToSpawn[i];
 
-            if (enemy.m_SpawnTimer >= enemy.m_SpawnFrequency.Evaluate(GameManager.I.TimeSinceGameStart) && EnemyManager.I.GetEnemyList(enemy.m_EnemyName).Count < enemy.m_maxAmountOfEnemies.Evaluate(GameManager.I.TimeSinceGameStart))
+            if (enemy.m_SpawnTimer >= enemy.m_SpawnFrequency.Evaluate(GameManager.I.TimeSinceGameStart)
+                && EnemyManager.I.GetEnemyList(enemy.m_EnemyName).Count < enemy.m_maxAmountOfEnemies.Evaluate(GameManager.I.TimeSinceGameStart))
             {
                 enemy.m_SpawnTimer = 0f;
                 SpawnEnemy(i);
@@ -48,9 +49,8 @@ public class WaveManager : MonoBehaviour
 
     private void SpawnEnemy(int _enemyArrayIndex)
     {
-        var obj = ObjectPoolManager.I.GetPooledObject(m_enemiesToSpawn[_enemyArrayIndex].m_EnemyName);
+        GameObject obj = ObjectPoolManager.I.GetPooledObject(m_enemiesToSpawn[_enemyArrayIndex].m_EnemyName);
         obj.transform.position = m_spawnPoints[Random.Range(0, m_spawnPoints.Length)].position;
         obj.SetActive(true);
     }
-
 }

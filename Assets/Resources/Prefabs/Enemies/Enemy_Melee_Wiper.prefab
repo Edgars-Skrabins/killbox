@@ -9693,6 +9693,7 @@ GameObject:
   - component: {fileID: 8578239318468243605}
   - component: {fileID: 5052728676165386647}
   - component: {fileID: 8579989397270092537}
+  - component: {fileID: 4103847745271947086}
   m_Layer: 9
   m_Name: Enemy_Melee_Wiper
   m_TagString: Enemy
@@ -10017,6 +10018,18 @@ MonoBehaviour:
   m_befriendPopupGO: {fileID: 3400726681318740462, guid: 5692bf87461cb423ebefee0de10eab6a, type: 3}
   m_befriendPopupMinFontSize: 0.79
   m_befriendPopupMaxFontSize: 0.82
+--- !u!114 &4103847745271947086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646220439748735027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38324ee0e61ee46048d0fb7cfdf68dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1646220441288390332
 GameObject:
   m_ObjectHideFlags: 0
