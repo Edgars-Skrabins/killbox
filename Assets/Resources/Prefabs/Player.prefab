@@ -1708,7 +1708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &387959719
 Transform:
   m_ObjectHideFlags: 0
@@ -1739,10 +1739,10 @@ Animation:
   m_GameObject: {fileID: 387959718}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: e5954fee5a6dc4c40b140de2e2337763, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: eed72b2aa567544448d212c23de1c25a, type: 2}
-  - {fileID: 7400000, guid: ffa073bbb3558f04f9c10a15177f5f74, type: 2}
+  - {fileID: 7400000, guid: 8b1f3e5b1a29b4955a5260e48dd17917, type: 2}
+  - {fileID: 7400000, guid: e5954fee5a6dc4c40b140de2e2337763, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -1768,13 +1768,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 704
   m_weaponSway: 1
-  m_SwayRoughness: 1
-  m_swayMultiplier: 4
+  m_SwayRoughness: 2
+  m_swayMultiplier: 6
   m_weaponAnimation: {fileID: 387959722}
-  m_shotAnimationName: Blaster_Shot
+  m_shotAnimationName: Pippy_Shot
   m_shotAnimationFadeLength: 0
   m_overridePlayingAnimation: 1
-  m_idleAnimationName: Blaster_Idle
+  m_idleAnimationName: Pippy_Idle
   m_idleAnimationFadeLength: 0
 --- !u!114 &387959723
 MonoBehaviour:
@@ -1795,8 +1795,8 @@ MonoBehaviour:
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1622259
-  m_hasShotAnimation: 0
-  m_weaponMovementCS: {fileID: 0}
+  m_hasShotAnimation: 1
+  m_weaponMovementCS: {fileID: 387959721}
   m_hasShotFeedback: 0
   m_shotFeedback: {fileID: 0}
   m_shootSFX: 
@@ -11775,7 +11775,8 @@ MonoBehaviour:
         m_Calls: []
   DebugActive: 0
   FeedbacksList:
-  - rid: 7505937283391684608
+  - rid: 5796410314122592256
+  - rid: 5796410314122592258
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   ForceStopFeedbacksOnDisable: 1
@@ -11783,12 +11784,12 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 7505937283391684608
-      type: {class: MMF_CameraShake, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
+    - rid: 5796410314122592256
+      type: {class: MMF_ChromaticAberration_URP, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Feedbacks.URP}
       data:
         Active: 1
-        UniqueID: 2141233232
-        Label: Camera Shake
+        UniqueID: 1874237783
+        Label: Chromatic Aberration URP
         ChannelMode: 0
         Channel: 0
         MMChannelDefinition: {fileID: 0}
@@ -11851,14 +11852,153 @@ MonoBehaviour:
         RemapRangeFalloff: {x: 0, y: 1}
         Owner: {fileID: 7211758576386154632}
         DebugActive: 0
-        CameraShakeProperties:
-          Duration: 0.1
-          Amplitude: 30
-          Frequency: 45
-          AmplitudeX: 0
-          AmplitudeY: 0
-          AmplitudeZ: 0
-        RepeatUntilStopped: 0
+        Duration: 0.12
+        ResetShakerValuesAfterShake: 1
+        ResetTargetValuesAfterShake: 1
+        RemapIntensityZero: 0
+        RemapIntensityOne: 1
+        Intensity:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.35
+            value: 1
+            inSlope: 2.857143
+            outSlope: -1.5384616
+            tangentMode: 69
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Amplitude: 0.8
+        RelativeIntensity: 0
+    - rid: 5796410314122592258
+      type: {class: MMF_CameraFieldOfView, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
+      data:
+        Active: 1
+        UniqueID: -1701833348
+        Label: Field of View
+        ChannelMode: 0
+        Channel: 0
+        MMChannelDefinition: {fileID: 0}
+        Chance: 100
+        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        AutomatedTargetAcquisition:
+          Mode: 0
+          ChildIndex: 0
+        RandomizeOutput: 0
+        RandomMultiplier: {x: 0.8, y: 1}
+        RandomizeDuration: 0
+        RandomDurationMultiplier: {x: 0.5, y: 2}
+        UseRange: 0
+        RangeDistance: 5
+        UseRangeFalloff: 0
+        RangeFalloff:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        RemapRangeFalloff: {x: 0, y: 1}
+        Owner: {fileID: 7211758576386154632}
+        DebugActive: 0
+        Duration: 0.14
+        RelativeFieldOfView: 1
+        RemapFieldOfViewOne: 0
+        RemapFieldOfViewZero: 2
+        ResetShakerValuesAfterShake: 1
+        ResetTargetValuesAfterShake: 1
+        ShakeFieldOfView:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 2
+            outSlope: -2
+            tangentMode: 69
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
 --- !u!1 &1157492600662187775
 GameObject:
   m_ObjectHideFlags: 0
@@ -12904,13 +13044,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704395913645653658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.0075, z: -0.0076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5203367628779576476}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -10.611, y: 0, z: 0}
 --- !u!33 &3149458209050896719
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13652,7 +13792,7 @@ MonoBehaviour:
         RemapRangeFalloff: {x: 0, y: 1}
         Owner: {fileID: 3916798008598596937}
         DebugActive: 0
-        Duration: 0.17
+        Duration: 0.15
         ResetShakerValuesAfterShake: 1
         ResetTargetValuesAfterShake: 1
         RemapIntensityZero: 0
@@ -13760,7 +13900,7 @@ MonoBehaviour:
         RemapRangeFalloff: {x: 0, y: 1}
         Owner: {fileID: 3916798008598596937}
         DebugActive: 0
-        Duration: 0.17
+        Duration: 0.15
         RelativeFieldOfView: 1
         RemapFieldOfViewOne: 3
         RemapFieldOfViewZero: 0
@@ -17896,7 +18036,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5187485226186988272}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.893, y: 0.902, z: -1.446}
 --- !u!33 &5787989028631605134
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19409,8 +19549,8 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400000, guid: eed72b2aa567544448d212c23de1c25a, type: 2}
-  - {fileID: 7400000, guid: ffa073bbb3558f04f9c10a15177f5f74, type: 2}
+  - {fileID: 7400000, guid: 9572c9216b6224dbd98f5bfa47cdde45, type: 2}
+  - {fileID: 7400000, guid: 8f4a931d765bc41ceb7348bfb59c9337, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -19436,10 +19576,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 704
   m_weaponSway: 1
-  m_SwayRoughness: 1
-  m_swayMultiplier: 2
+  m_SwayRoughness: 3
+  m_swayMultiplier: 1
   m_weaponAnimation: {fileID: 722195683254145259}
-  m_shotAnimationName: Blaster_Shot
+  m_shotAnimationName: Randomizer_Shot
   m_shotAnimationFadeLength: 0
   m_overridePlayingAnimation: 1
   m_idleAnimationName: Blaster_Idle
@@ -19463,8 +19603,8 @@ MonoBehaviour:
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1884659
-  m_hasShotAnimation: 0
-  m_weaponMovementCS: {fileID: 0}
+  m_hasShotAnimation: 1
+  m_weaponMovementCS: {fileID: 7803261975960594383}
   m_hasShotFeedback: 1
   m_shotFeedback: {fileID: 7211758576386154632}
   m_shootSFX: 
@@ -19570,8 +19710,8 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400000, guid: eb4a275076da61c439c888272a135709, type: 2}
-  - {fileID: 7400000, guid: 0ac540adc1f2f1d4a878a8ca06b1fbd3, type: 2}
+  - {fileID: 7400000, guid: 9f932a75884d140a9aadf97872f3d6c6, type: 2}
+  - {fileID: 7400000, guid: 5e7fd69ccd82a48aabbf48ac4d9b4656, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -19597,13 +19737,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 704
   m_weaponSway: 1
-  m_SwayRoughness: 1.5
-  m_swayMultiplier: 3
+  m_SwayRoughness: 1
+  m_swayMultiplier: 5
   m_weaponAnimation: {fileID: 1937691406044534611}
-  m_shotAnimationName: 
+  m_shotAnimationName: AutoShotgun_Shot
   m_shotAnimationFadeLength: 0
-  m_overridePlayingAnimation: 0
-  m_idleAnimationName: 
+  m_overridePlayingAnimation: 1
+  m_idleAnimationName: AutoShotgun_Idle
   m_idleAnimationFadeLength: 0
 --- !u!114 &5590914700693494624
 MonoBehaviour:
@@ -19640,8 +19780,8 @@ MonoBehaviour:
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1884659
-  m_hasShotAnimation: 0
-  m_weaponMovementCS: {fileID: 0}
+  m_hasShotAnimation: 1
+  m_weaponMovementCS: {fileID: 5229226384480981502}
   m_hasShotFeedback: 1
   m_shotFeedback: {fileID: 3916798008598596937}
   m_shootSFX: 
@@ -19651,8 +19791,8 @@ MonoBehaviour:
   m_muzzleTF: {fileID: 0}
   m_crossHairImage: {fileID: 5739218526946030839}
   m_cantShootImage: {fileID: 1754289437}
-  m_randomBulletSpreadX: 13
-  m_randomBulletSpreadY: 13
+  m_randomBulletSpreadX: 14
+  m_randomBulletSpreadY: 14
 --- !u!1 &8288925545446317413
 GameObject:
   m_ObjectHideFlags: 0
