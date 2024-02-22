@@ -6185,7 +6185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1812834112
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6824,6 +6824,7 @@ MonoBehaviour:
   m_leaderboardEntryPrefab: {fileID: 2464898738937898538, guid: cc71447c13bf448a48550f665e4afc15, type: 3}
   m_leaderboardPanel: {fileID: 1812834111}
   m_leaderboardSubmissionPanel: {fileID: 1089352881}
+  m_leaderboardSubmissionText: {fileID: 1089352881}
   m_playerNameInputField: {fileID: 1481359183}
   m_maxEntryCount: 30
 --- !u!1 &2030709534

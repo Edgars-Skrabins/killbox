@@ -11,7 +11,7 @@ public class LeaderboardManager : Singleton<LeaderboardManager>
     
     [SerializeField] private Transform m_leaderboardContentTF;
     [SerializeField] private GameObject m_leaderboardEntryPrefab;
-    [SerializeField] private GameObject m_leaderboardPanel, m_leaderboardSubmissionPanel;
+    [SerializeField] private GameObject m_leaderboardPanel, m_leaderboardSubmissionPanel, m_leaderboardSubmissionText;
     [SerializeField] private TMP_InputField m_playerNameInputField;
 
     [SerializeField] private int m_maxEntryCount = 30;
@@ -27,6 +27,7 @@ public class LeaderboardManager : Singleton<LeaderboardManager>
     private void Start()
     {
         m_currentEntries = new List<LeaderboardEntry>();
+        ResetLeaderboardUI();
         GetLeaderBoard();
     }
 
@@ -53,6 +54,7 @@ public class LeaderboardManager : Singleton<LeaderboardManager>
         {
             m_leaderboardSubmissionPanel.SetActive(false);
             m_leaderboardPanel.SetActive(true);
+            m_leaderboardSubmissionText.SetActive(true);
             GetLeaderBoard();
         }));
     }
@@ -108,5 +110,12 @@ public class LeaderboardManager : Singleton<LeaderboardManager>
     private void ErrorCallback(string error)
     {
         Debug.LogError(error);
+    }
+
+    private void ResetLeaderboardUI()
+    {
+        m_leaderboardSubmissionPanel.SetActive(true);
+        m_leaderboardPanel.SetActive(false);
+        m_leaderboardSubmissionText?.SetActive(false);
     }
 }
