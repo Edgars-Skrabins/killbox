@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager I {get; private set;}
 
     public string Master_Volume = "MasterVolume";
+    public string Music_Volume = "MusicVolume";
+    public string SFX_Volume = "SFXVolume";
     public AudioMixer Mixer;
 
     public Sound[] sounds;

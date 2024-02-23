@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager>
     public float TimeSinceGameStart {get => m_timeSinceGameStart; set => m_timeSinceGameStart = value;}
 
     private GameObject m_player;
+    private PlayerUI m_playerUI;
 
     private void Start()
     {
@@ -39,11 +40,12 @@ public class GameManager : Singleton<GameManager>
         m_player = GameObject.FindWithTag("Player");
         if (m_player != null)
         {
+            m_playerUI = m_player.GetComponent<PlayerUI>();
             Cursor.lockState = CursorLockMode.None;
             m_player.GetComponent<PlayerControls>().enabled = false;
-            m_player.GetComponent<PlayerUI>().m_playMenu.SetActive(false);
-            m_player.GetComponent<PlayerUI>().m_pauseMenu.SetActive(true);
-            m_player.GetComponent<PlayerUI>().m_deathMenu.SetActive(false);
+            m_playerUI.m_playMenu.SetActive(false);
+            m_playerUI.m_pauseMenu.SetActive(true);
+            m_playerUI.m_deathMenu.SetActive(false);
         }
     }
 
@@ -60,15 +62,19 @@ public class GameManager : Singleton<GameManager>
         m_player = GameObject.FindWithTag("Player");
         if (m_player != null)
         {
+            if (m_playerUI == null) m_playerUI = m_player.GetComponent<PlayerUI>();
+
             Cursor.lockState = CursorLockMode.Locked;
             m_player.GetComponent<PlayerControls>().enabled = true;
-            m_player.GetComponent<PlayerUI>().m_playMenu.SetActive(true);
-            m_player.GetComponent<PlayerUI>().m_pauseMenu.SetActive(false);
-            m_player.GetComponent<PlayerUI>().m_deathMenu.SetActive(false);
+            m_playerUI.m_playMenu.SetActive(true);
+            m_playerUI.m_pauseMenu.SetActive(false);
+            m_playerUI.m_deathMenu.SetActive(false);
 
             PlayerStats.I.MouseSensitivity = m_player.GetComponent<PlayerUI>().m_sensitivitySlider.value;
             PlayerPrefs.SetFloat("MouseSensitivity", m_player.GetComponent<PlayerUI>().m_sensitivitySlider.value);
-            PlayerPrefs.SetFloat("MasterVolume", m_player.GetComponent<PlayerUI>().m_audioSlider.value);
+            PlayerPrefs.SetFloat(AudioManager.I.Master_Volume, m_playerUI.m_audioSlider.value);
+            PlayerPrefs.SetFloat(AudioManager.I.Music_Volume, m_playerUI.m_musicSlider.value);
+            PlayerPrefs.SetFloat(AudioManager.I.SFX_Volume, m_playerUI.m_sfxSlider.value);
             PlayerPrefs.Save();
         }
     }
@@ -98,10 +104,12 @@ public class GameManager : Singleton<GameManager>
         m_player = GameObject.FindWithTag("Player");
         if (m_player != null)
         {
+            if (m_playerUI == null) m_playerUI = m_player.GetComponent<PlayerUI>();
+
             Cursor.lockState = CursorLockMode.None;
-            m_player.GetComponent<PlayerUI>().m_playMenu.SetActive(false);
-            m_player.GetComponent<PlayerUI>().m_pauseMenu.SetActive(false);
-            m_player.GetComponent<PlayerUI>().m_deathMenu.SetActive(true);
+            m_playerUI.m_playMenu.SetActive(false);
+            m_playerUI.m_pauseMenu.SetActive(false);
+            m_playerUI.m_deathMenu.SetActive(true);
         }
     }
 }

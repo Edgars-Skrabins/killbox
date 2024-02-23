@@ -21,11 +21,13 @@ public class PlayerUI : MonoBehaviour
 
     [SerializeField] public Slider m_sensitivitySlider;
     [SerializeField] public Slider m_audioSlider;
+    [SerializeField] public Slider m_musicSlider;
+    [SerializeField] public Slider m_sfxSlider;
 
 
     #endregion
 
-#region Death Menu
+    #region Death Menu
     [SerializeField] public GameObject m_deathMenu;
 
     [SerializeField] private TextMeshProUGUI m_deathHighscoreText;
@@ -37,13 +39,18 @@ public class PlayerUI : MonoBehaviour
 
     private void Awake()
     {
-        m_audioSlider.onValueChanged.AddListener(SetVolume);
+        m_audioSlider.onValueChanged.AddListener(SetMasterVolume);
+        m_musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        m_sfxSlider.onValueChanged.AddListener(SetSFXVolume);
     }
 
     private void Start()
     {
         m_sensitivitySlider.value = PlayerPrefs.GetFloat("MouseSensitivity");
-        m_audioSlider.value = PlayerPrefs.GetFloat("MasterVolume");
+        m_audioSlider.value = PlayerPrefs.GetFloat(AudioManager.I.Master_Volume);
+        m_musicSlider.value = PlayerPrefs.GetFloat(AudioManager.I.Music_Volume);
+        m_sfxSlider.value = PlayerPrefs.GetFloat(AudioManager.I.SFX_Volume);
+
         PlayerStats.I.MouseSensitivity = m_sensitivitySlider.value;
 
         if (!AudioManager.I.Playing("BGM_Game"))
@@ -122,18 +129,14 @@ public class PlayerUI : MonoBehaviour
 
     public void RestartLevel()
     {
-        PlayerPrefs.SetFloat("MouseSensitivity", m_sensitivitySlider.value);
-        PlayerPrefs.SetFloat("MasterVolume", m_audioSlider.value);
-        PlayerPrefs.Save();
+        SaveSettingPrefs();
+
         SceneManager.LoadScene("Level_Medieval");
     }
 
     public void QuitToMenu()
     {
-        PlayerPrefs.SetFloat("MouseSensitivity", m_sensitivitySlider.value);
-        PlayerPrefs.SetFloat("MasterVolume", m_audioSlider.value);
-        PlayerPrefs.Save();
-
+        SaveSettingPrefs();
 
         if (!AudioManager.I.Playing("BGM_MainMenu"))
         {
@@ -156,21 +159,41 @@ public class PlayerUI : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void QuitGame()
+    private void SaveSettingPrefs()
     {
         PlayerPrefs.SetFloat("MouseSensitivity", m_sensitivitySlider.value);
-        PlayerPrefs.SetFloat("MasterVolume", m_audioSlider.value);
+        PlayerPrefs.SetFloat(AudioManager.I.Master_Volume, m_audioSlider.value);
+        PlayerPrefs.SetFloat(AudioManager.I.Music_Volume, m_musicSlider.value);
+        PlayerPrefs.SetFloat(AudioManager.I.SFX_Volume, m_sfxSlider.value);
         PlayerPrefs.Save();
+    }
+
+    public void QuitGame()
+    {
+        SaveSettingPrefs();
+
         Application.Quit();
     }
 
 
-    private void SetVolume(float value)
+    private void SetMasterVolume(float value)
     {
         AudioManager.I.Mixer.SetFloat(AudioManager.I.Master_Volume, Mathf.Log10(value) * 20);
-        PlayerPrefs.SetFloat("MasterVolume", m_audioSlider.value);
+        PlayerPrefs.SetFloat(AudioManager.I.Master_Volume, m_audioSlider.value);
         PlayerPrefs.Save();
     }
 
+    private void SetMusicVolume(float value)
+    {
+        AudioManager.I.Mixer.SetFloat(AudioManager.I.Music_Volume, Mathf.Log10(value) * 20);
+        PlayerPrefs.SetFloat(AudioManager.I.Music_Volume, m_musicSlider.value);
+        PlayerPrefs.Save();
+    }
 
+    private void SetSFXVolume(float value)
+    {
+        AudioManager.I.Mixer.SetFloat(AudioManager.I.SFX_Volume, Mathf.Log10(value) * 20);
+        PlayerPrefs.SetFloat(AudioManager.I.SFX_Volume, m_sfxSlider.value);
+        PlayerPrefs.Save();
+    }
 }
