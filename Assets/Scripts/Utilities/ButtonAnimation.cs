@@ -1,14 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler,IPointerClickHandler
 {
     private Vector3 m_originalScale;
-    private float m_duration = .2f;
-    private float m_upScaleMultiplier = 1.5f;
-    private float m_downScaleMultiplier = 0.8f;
+    private float m_duration = ButtonAnimVars.M_Duration;
+    private float m_upScaleMultiplier = ButtonAnimVars.M_UpScaleMultiplier;
+    private float m_downScaleMultiplier = ButtonAnimVars.M_DownScaleMultiplier;
 
     private bool m_isHovering;
     private bool m_isClicked;
