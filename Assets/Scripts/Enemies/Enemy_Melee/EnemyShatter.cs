@@ -10,10 +10,10 @@ public class EnemyShatter : MonoBehaviour
 
     private void OnEnable()
     {
-        ExplodeDebri();
+        ExplodeDebris();
     }
 
-    private void ExplodeDebri()
+    private void ExplodeDebris()
     {
         
         Collider[] colliders = Physics.OverlapSphere(transform.position, m_explosionRadius,LayerMask.GetMask("Debri"));

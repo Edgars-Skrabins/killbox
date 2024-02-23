@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 1905437603074157099}
   - component: {fileID: 1924638033}
   m_Layer: 0
-  m_Name: Enemy_Melee_Debri
+  m_Name: Enemy_Melee_Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
