@@ -46,6 +46,8 @@ public class GameManager : Singleton<GameManager>
             m_playerUI.m_playMenu.SetActive(false);
             m_playerUI.m_pauseMenu.SetActive(true);
             m_playerUI.m_deathMenu.SetActive(false);
+            m_playerUI.m_settingsMenu.SetActive(false);
+            m_playerUI.m_leaderboardMenu.SetActive(false);
         }
     }
 
@@ -69,6 +71,8 @@ public class GameManager : Singleton<GameManager>
             m_playerUI.m_playMenu.SetActive(true);
             m_playerUI.m_pauseMenu.SetActive(false);
             m_playerUI.m_deathMenu.SetActive(false);
+            m_playerUI.m_settingsMenu.SetActive(false);
+            m_playerUI.m_leaderboardMenu.SetActive(false);
 
             PlayerStats.I.MouseSensitivity = m_player.GetComponent<PlayerUI>().m_sensitivitySlider.value;
             PlayerPrefs.SetFloat("MouseSensitivity", m_player.GetComponent<PlayerUI>().m_sensitivitySlider.value);

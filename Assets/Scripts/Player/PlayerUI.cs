@@ -35,7 +35,9 @@ public class PlayerUI : MonoBehaviour
 
 
 
-#endregion
+    #endregion
+    public GameObject m_settingsMenu;
+    public GameObject m_leaderboardMenu;
 
     private void Awake()
     {

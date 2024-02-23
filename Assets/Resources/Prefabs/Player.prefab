@@ -15782,6 +15782,8 @@ MonoBehaviour:
   m_deathMenu: {fileID: 99358744}
   m_deathHighscoreText: {fileID: 1336952069}
   m_deathFinalScore: {fileID: 256793407}
+  m_settingsMenu: {fileID: 7424038859405979554}
+  m_leaderboardMenu: {fileID: 5942634666441930121}
 --- !u!114 &1206223002
 MonoBehaviour:
   m_ObjectHideFlags: 0
