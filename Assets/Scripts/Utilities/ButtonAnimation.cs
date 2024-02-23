@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler,IPointerClickHandler
+public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
 {
     private Vector3 m_originalScale;
     private float m_duration = ButtonAnimVars.M_Duration;
@@ -10,7 +10,6 @@ public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler,IPointerExitH
     private float m_downScaleMultiplier = ButtonAnimVars.M_DownScaleMultiplier;
 
     private bool m_isHovering;
-    private bool m_isClicked;
 
     void Start()
     {
@@ -26,13 +25,14 @@ public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler,IPointerExitH
     public void OnPointerExit(PointerEventData eventData)
     {
         m_isHovering = false;
-        if(gameObject.activeInHierarchy) StartCoroutine(ScaleAnimation());
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        m_isClicked = true;
-        if (gameObject.activeInHierarchy) StartCoroutine(ScaleAnimation());
+        if (gameObject.activeInHierarchy)
+        {
+            if (!m_isHovering)
+            {
+                StopAllCoroutines();
+            }
+            StartCoroutine(ScaleAnimation());
+        }
     }
 
     private IEnumerator ScaleAnimation()
@@ -48,18 +48,12 @@ public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler,IPointerExitH
             targetScale = m_originalScale;
         }
 
-        if (m_isClicked)
-        {
-            targetScale = m_originalScale * m_downScaleMultiplier;
-            m_isClicked = false;
-        }
-
         float elapsedTime = 0f;
 
         while (elapsedTime < m_duration)
         {
             transform.localScale = Vector3.Lerp(transform.localScale, targetScale, elapsedTime / m_duration);
-            elapsedTime += Time.time;
+            elapsedTime += Time.fixedDeltaTime;
             yield return null;
         }
 
