@@ -72,7 +72,7 @@ public class Bullet_GrenadeLauncher : Bullet
             Transform bulletTransform = transform;
 
             Collider[] colliders = Physics.OverlapSphere(bulletTransform.position, m_explosionRadius);
-            Collider[] debrisColliders = Physics.OverlapSphere(bulletTransform.position, m_explosionRadius, LayerMask.GetMask("Debri"));
+            Collider[] debrisColliders = Physics.OverlapSphere(bulletTransform.position, m_explosionRadius, LayerMask.GetMask("Debris"));
 
             foreach (Collider debriCollider in debrisColliders)
             {

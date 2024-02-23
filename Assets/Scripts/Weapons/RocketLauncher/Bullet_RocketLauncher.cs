@@ -28,7 +28,7 @@ public class Bullet_RocketLauncher : Bullet
         }
 
         Collider[] colliders = Physics.OverlapSphere(transform.position, m_explosionRadius, m_explosionLayers);
-        Collider[] debrisColliders = Physics.OverlapSphere(bulletTransform.position, m_explosionRadius, LayerMask.GetMask("Debri"));
+        Collider[] debrisColliders = Physics.OverlapSphere(bulletTransform.position, m_explosionRadius, LayerMask.GetMask("Debris"));
 
         foreach (Collider debrisCollider in debrisColliders)
         {
