@@ -11,6 +11,7 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] public GameObject m_playMenu;
     [SerializeField] private Image m_weaponRandomizerTimer_UI;
     [SerializeField] private Image m_playerHealth_UI;
+    [SerializeField] private TextMeshProUGUI m_weaponText;
     [SerializeField] private TextMeshProUGUI m_scoreText;
     [SerializeField] private TextMeshProUGUI m_playScoreText;
 
@@ -99,6 +100,7 @@ public class PlayerUI : MonoBehaviour
 
         m_weaponRandomizerTimer_UI.fillAmount = m_weaponRandomizerCS.m_randomizeTimer / m_weaponRandomizerCS.m_randomizeFrequencyInSeconds;
         m_scoreText.text = PlayerStats.I.PlayerScore.ToString();
+        m_weaponText.text = WeaponManager.I.m_currentWeaponName;
 
         /*
         m_playerHealth_UItext = PlayerStats.I.PlayerHealth.ToString();
