@@ -46,8 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Master_Volume: MasterVolume
-  Music_Volume: MusicVolume
-  SFX_Volume: SFXVolume
   Mixer: {fileID: 24100000, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
   sounds:
   - name: BGM_MainMenu
@@ -56,7 +54,7 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     playOnAwake: 0
-    MixerGroup: {fileID: 3432648659700253772, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: BGM_Game
     clip: {fileID: 8300000, guid: 8813fe6099f964cbda1366e0a9ed1a34, type: 3}
@@ -64,7 +62,7 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     playOnAwake: 0
-    MixerGroup: {fileID: 3432648659700253772, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: BGM_Death
     clip: {fileID: 8300000, guid: e7913ea2ea00842f4a21f44419b3b10c, type: 3}
@@ -72,7 +70,7 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     playOnAwake: 0
-    MixerGroup: {fileID: 3432648659700253772, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_ElectroGun
     clip: {fileID: 8300000, guid: cfb89d4d60ee44ffb96d7970d773c35c, type: 3}
@@ -80,7 +78,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_SMG
     clip: {fileID: 8300000, guid: 0d156a82ad38748f284e3d6eb5c2dee9, type: 3}
@@ -88,7 +86,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_Shotgun
     clip: {fileID: 8300000, guid: c5743cb8b8d6b409e82df222b4cb80f0, type: 3}
@@ -96,7 +94,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_Grenade
     clip: {fileID: 8300000, guid: 7fbcdf51d9a464dca9c62c4ea29da54d, type: 3}
@@ -104,7 +102,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_Rocket
     clip: {fileID: 8300000, guid: 388b9269f047c4f508fc4802d0861f99, type: 3}
@@ -112,7 +110,7 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_Blaster
     clip: {fileID: 8300000, guid: a6a0f12213f484f3faf202a9d4a2cd3e, type: 3}
@@ -120,7 +118,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_Laser
     clip: {fileID: 8300000, guid: da8b3dd9aa6b8430b8c2e25f426043e0, type: 3}
@@ -128,7 +126,7 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_First_Laser_1
     clip: {fileID: 8300000, guid: 6764737bba9bb47b6a678c630d8679b8, type: 3}
@@ -136,7 +134,7 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_First_Laser_2
     clip: {fileID: 8300000, guid: 4fd7c09d785984db1ba56a3f8a9ea66d, type: 3}
@@ -144,7 +142,7 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_First_Laser_3
     clip: {fileID: 8300000, guid: 906d9baaa76204a6399c22b233e99f8b, type: 3}
@@ -152,7 +150,7 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_First_Laser_4
     clip: {fileID: 8300000, guid: 3aa0c463194e849b6aad01addce899db, type: 3}
@@ -160,7 +158,7 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_Last_Laser
     clip: {fileID: 8300000, guid: 69c2da6115544427c93151f26afa49cb, type: 3}
@@ -168,7 +166,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_Sniper
     clip: {fileID: 8300000, guid: 913fe453cd5fc4c01a7c08740b08604e, type: 3}
@@ -176,7 +174,7 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_Ion
     clip: {fileID: 8300000, guid: 58fd6a7205090403193a27370ebcacaf, type: 3}
@@ -184,7 +182,7 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Shoot_Laser
     clip: {fileID: 8300000, guid: da8b3dd9aa6b8430b8c2e25f426043e0, type: 3}
@@ -192,7 +190,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Hit_ElectroGun
     clip: {fileID: 8300000, guid: 4bd7681abc5124b709a1ced8074383c8, type: 3}
@@ -200,7 +198,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Hit_SMG
     clip: {fileID: 8300000, guid: 0711f19fba930417fb74726d55422fe9, type: 3}
@@ -208,7 +206,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Hit_Shotgun
     clip: {fileID: 8300000, guid: 6e9d5ac95480f4c0385c6081b3524aeb, type: 3}
@@ -216,7 +214,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Explode_Grenade
     clip: {fileID: 8300000, guid: f3eed63d08e144a23a9f006e28b8a87c, type: 3}
@@ -224,7 +222,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Explode_Rocket
     clip: {fileID: 8300000, guid: e6075f720904e4d78a1258c24e74fd3a, type: 3}
@@ -232,7 +230,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Explode_Enemy
     clip: {fileID: 8300000, guid: 0b7075bbd929b4504bdd4948b2ee39fe, type: 3}
@@ -240,7 +238,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Explode_Barrel
     clip: {fileID: 8300000, guid: 06d7db8579a3b4b4683fad14e79220f4, type: 3}
@@ -248,7 +246,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Bounce_Grenade
     clip: {fileID: 8300000, guid: 3c232f89e17ab4f279664316134f2723, type: 3}
@@ -256,7 +254,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Hit_Enemy
     clip: {fileID: 8300000, guid: d1544bd4b0a974dfca94b8cb2f171cdb, type: 3}
@@ -264,7 +262,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Attack_Enemy
     clip: {fileID: 8300000, guid: 87568b747a1664725a627c67a4b9396e, type: 3}
@@ -272,7 +270,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Ugh
     clip: {fileID: 8300000, guid: 2b317abad2c7b4b7296df6d7012d084e, type: 3}
@@ -280,7 +278,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Heal
     clip: {fileID: 8300000, guid: 237628ec3959e49b6a2a606dd2217a54, type: 3}
@@ -288,7 +286,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: WeaponChange
     clip: {fileID: 8300000, guid: 86196c367a43e44e2a7fee4deb8d0533, type: 3}
@@ -296,7 +294,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Wiper_Explosion
     clip: {fileID: 8300000, guid: 2b2b01e9b3f58624886e25017f2cc02c, type: 3}
@@ -304,7 +302,7 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
   - name: Announce_MaxDifficulty
     clip: {fileID: 8300000, guid: 9246d0cd58db04c6ea9d01abf7915fde, type: 3}
@@ -312,7 +310,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
-    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    MixerGroup: {fileID: 24300002, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
 --- !u!82 &3066876370385942851
 AudioSource:

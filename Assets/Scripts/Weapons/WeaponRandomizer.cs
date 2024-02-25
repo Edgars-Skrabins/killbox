@@ -9,7 +9,6 @@ public class WeaponRandomizer : MonoBehaviour
     [SerializeField] private MMF_Player m_weaponClockFeedback;
 
     [SerializeField] private string m_nextWeapon;
-    [SerializeField] private GameObject m_weaponTextUI;
 
     private void Start()
     {
@@ -44,7 +43,6 @@ public class WeaponRandomizer : MonoBehaviour
             m_nextWeapon = WeaponManager.I.GetRandomWeaponName();
             WeaponManager.I.ShowNextWeaponIcon(m_nextWeapon);
             m_randomizeTimer = m_randomizeFrequencyInSeconds;
-            m_weaponTextUI.SetActive(true);
         }
 
     }
