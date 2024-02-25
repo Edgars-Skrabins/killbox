@@ -17,6 +17,7 @@ public class AutoDisabler : MonoBehaviour
     private IEnumerator StartFadeAnimation()
     {
         float elapsedTime = 0f;
+        yield return new WaitForSeconds(m_waitDuration);
 
         while (elapsedTime < m_fadeDuration)
         {
