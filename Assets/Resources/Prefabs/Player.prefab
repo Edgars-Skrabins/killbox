@@ -4031,9 +4031,9 @@ RectTransform:
   m_Father: {fileID: 826224612289878435}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225, y: -214.52101}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &739535931
@@ -6593,9 +6593,9 @@ RectTransform:
   m_Father: {fileID: 826224612289878435}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225, y: -643.56305}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1257889663
@@ -8024,9 +8024,9 @@ RectTransform:
   m_Father: {fileID: 826224612289878435}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225, y: -71.507}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1608569466
@@ -11930,8 +11930,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -16517,9 +16517,9 @@ RectTransform:
   m_Father: {fileID: 826224612289878435}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225, y: -357.53503}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2288044459139835910
@@ -16981,16 +16981,16 @@ MonoBehaviour:
   - m_weaponName: Shotgun
     m_weaponGO: {fileID: 6678218799953199830}
     m_weaponIcon: {fileID: 1749427245}
-  - m_weaponName: DualSMG
+  - m_weaponName: Dual SMG
     m_weaponGO: {fileID: 316333113386541497}
     m_weaponIcon: {fileID: 1840320082}
-  - m_weaponName: ElectroGun
+  - m_weaponName: Electro Gun
     m_weaponGO: {fileID: 3004312297689128654}
     m_weaponIcon: {fileID: 582119934}
-  - m_weaponName: GrenadeLauncher
+  - m_weaponName: Grenade launcher
     m_weaponGO: {fileID: 1476448015}
     m_weaponIcon: {fileID: 643997295}
-  - m_weaponName: RocketLauncher
+  - m_weaponName: Rocket launcher
     m_weaponGO: {fileID: 214909330}
     m_weaponIcon: {fileID: 655978523}
   - m_weaponName: Laser
@@ -17002,16 +17002,16 @@ MonoBehaviour:
   - m_weaponName: Sniper
     m_weaponGO: {fileID: 1098039416}
     m_weaponIcon: {fileID: 470917302}
-  - m_weaponName: IonRifle
+  - m_weaponName: Ion rifle
     m_weaponGO: {fileID: 1673754204}
     m_weaponIcon: {fileID: 413080099}
-  - m_weaponName: AutoShotgun
+  - m_weaponName: Auto shotgun
     m_weaponGO: {fileID: 7911494817198787517}
     m_weaponIcon: {fileID: 413080099}
   - m_weaponName: Randomizer
     m_weaponGO: {fileID: 7577709981728208440}
     m_weaponIcon: {fileID: 794440349}
-  - m_weaponName: MiniGun
+  - m_weaponName: Mini-gun
     m_weaponGO: {fileID: 1765089408}
     m_weaponIcon: {fileID: 413080099}
   - m_weaponName: Pippy
@@ -19713,9 +19713,9 @@ RectTransform:
   m_Father: {fileID: 826224612289878435}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225, y: -500.549}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 450, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4112077644954918117
