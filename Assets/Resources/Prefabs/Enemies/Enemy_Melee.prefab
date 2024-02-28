@@ -20119,6 +20119,7 @@ MonoBehaviour:
   m_popupSpawnerCS: {fileID: 988239443289153458}
   m_enemyEffectsCS: {fileID: 8590736862061398622}
   m_enemyHealthCS: {fileID: 463544099}
+  m_enemyTF: {fileID: 4338372967528082583}
 --- !u!114 &463544097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20132,6 +20133,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_enemyStatsCS: {fileID: 463544098}
+  m_enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  m_defaultEnemyLookupRange: 30
 --- !u!114 &463544100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20150,13 +20155,14 @@ MonoBehaviour:
   m_damageToEnemies: 100
   m_damageType: 0
   m_attackDistance: 1
+  m_playerCollisionDistance: 1.9
   m_deathVFX: {fileID: 5117238746486703226, guid: aa647d56090c21a4ba5bb75f1f70ec37, type: 3}
   m_damageableLayersPlayer:
     serializedVersion: 2
     m_Bits: 8
   m_damageableLayersEnemy:
     serializedVersion: 2
-    m_Bits: 520
+    m_Bits: 512
   m_enemyDebris: {fileID: 1905437603074157092, guid: 23651350fce806a4c825e7e95723738b, type: 3}
 --- !u!114 &463544099
 MonoBehaviour:

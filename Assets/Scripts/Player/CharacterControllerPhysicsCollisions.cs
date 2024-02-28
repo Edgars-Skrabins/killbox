@@ -11,15 +11,15 @@ public class CharacterControllerPhysicsCollisions : MonoBehaviour
 
     private void HandlePhysicsCollision(ControllerColliderHit _hit)
     {
-        if(_hit.collider.TryGetComponent(out Rigidbody rigidBody))
+        if (_hit.collider.TryGetComponent(out Rigidbody rigidBody))
         {
             var playerPosition = PlayerStats.I.PlayerTF.position;
             var forceDirection = _hit.gameObject.transform.position - playerPosition;
-            
+
             forceDirection.y = 0;
             forceDirection.Normalize();
-            
-            rigidBody.AddForceAtPosition(forceDirection * m_forceMagnitude, playerPosition,ForceMode.Impulse);
+
+            rigidBody.AddForceAtPosition(forceDirection * m_forceMagnitude, playerPosition, ForceMode.Impulse);
         }
     }
 }

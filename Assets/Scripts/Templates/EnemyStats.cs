@@ -38,6 +38,9 @@ public abstract class EnemyStats : MonoBehaviour
     [SerializeField] protected Health_Enemy m_enemyHealthCS;
     public Health_Enemy EnemyHealthCS => m_enemyHealthCS;
 
+    [SerializeField] protected Transform m_enemyTF;
+    public Transform EnemyTf => m_enemyTF;
+
     protected virtual void OnEnable()
     {
         EnemyManager.I.GetEnemyList(m_enemyName).Add(gameObject);

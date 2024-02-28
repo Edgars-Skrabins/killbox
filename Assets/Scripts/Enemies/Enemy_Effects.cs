@@ -41,6 +41,8 @@ public class Enemy_Effects : MonoBehaviour
             return;
         }
 
+        m_enemyStatsCS.NavMeshAgent.velocity = Vector3.zero;
+
         m_isFriend = true;
         m_enemyStatsCS.PopupSpawnerCS.SpawnBefriendPopup();
         m_friendGraphicsGO.SetActive(true);
