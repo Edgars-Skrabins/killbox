@@ -49604,7 +49604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54157285, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
       propertyPath: m_randomizeFrequencyInSeconds
-      value: 11
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 387959718, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
       propertyPath: m_IsActive
