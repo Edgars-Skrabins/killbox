@@ -1708,7 +1708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &387959719
 Transform:
   m_ObjectHideFlags: 0
@@ -1801,8 +1801,9 @@ MonoBehaviour:
   m_shotFeedback: {fileID: 0}
   m_shootSFX: 
   m_shootSFXRate: 0
-  m_hasMuzzleVFX: 0
-  m_muzzleVFXArray: []
+  m_hasMuzzleVFX: 1
+  m_muzzleVFXArray:
+  - {fileID: 4036892608283993215, guid: 6caabc8ddc3924b5f928df8e699b79b6, type: 3}
   m_muzzleTF: {fileID: 1197340304}
   m_crossHairImage: {fileID: 5739218526946030839}
   m_cantShootImage: {fileID: 1754289437}
@@ -6186,7 +6187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197340303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0097, z: 0.061}
+  m_LocalPosition: {x: 0, y: 0.0097, z: 0.169}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17030,7 +17031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ad8d66189d9974aa808926382b387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_randomizeFrequencyInSeconds: 11
+  m_randomizeFrequencyInSeconds: 100
   m_randomizeTimer: 0
   m_weaponClockFeedback: {fileID: 732516356}
   m_nextWeapon: 
@@ -19433,7 +19434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6678218799953199831
 Transform:
   m_ObjectHideFlags: 0
