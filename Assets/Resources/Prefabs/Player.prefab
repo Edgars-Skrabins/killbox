@@ -17471,12 +17471,12 @@ MonoBehaviour:
   - m_weaponName: Rocket launcher
     m_weaponGO: {fileID: 214909330}
     m_weaponIcon: {fileID: 655978523}
-  - m_weaponName: Laser
-    m_weaponGO: {fileID: 1899831945}
-    m_weaponIcon: {fileID: 1705328314}
   - m_weaponName: Blaster
     m_weaponGO: {fileID: 6969048674004191598}
     m_weaponIcon: {fileID: 331290487}
+  - m_weaponName: Laser
+    m_weaponGO: {fileID: 1899831945}
+    m_weaponIcon: {fileID: 1705328314}
   - m_weaponName: Sniper
     m_weaponGO: {fileID: 1098039416}
     m_weaponIcon: {fileID: 470917302}
@@ -17511,7 +17511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ad8d66189d9974aa808926382b387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_randomizeFrequencyInSeconds: 11
+  m_randomizeFrequencyInSeconds: 14
   m_randomizeTimer: 0
   m_weaponClockFeedback: {fileID: 732516356}
   m_nextWeapon: 
