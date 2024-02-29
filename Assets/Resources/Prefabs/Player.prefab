@@ -1708,7 +1708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &387959719
 Transform:
   m_ObjectHideFlags: 0
@@ -17012,7 +17012,7 @@ MonoBehaviour:
   - m_weaponName: Randomizer
     m_weaponGO: {fileID: 7577709981728208440}
     m_weaponIcon: {fileID: 794440349}
-  - m_weaponName: Mini-gun
+  - m_weaponName: Minigun
     m_weaponGO: {fileID: 1765089408}
     m_weaponIcon: {fileID: 413080099}
   - m_weaponName: Pippy
@@ -17031,7 +17031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ad8d66189d9974aa808926382b387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_randomizeFrequencyInSeconds: 100
+  m_randomizeFrequencyInSeconds: 11
   m_randomizeTimer: 0
   m_weaponClockFeedback: {fileID: 732516356}
   m_nextWeapon: 
@@ -19434,7 +19434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6678218799953199831
 Transform:
   m_ObjectHideFlags: 0
@@ -20525,6 +20525,7 @@ MonoBehaviour:
   - {fileID: 5415617673295924202, guid: e71ed9b765b89422585db4b60cb93c3f, type: 3}
   - {fileID: 6214833265546425834, guid: dcfe16ea0a9164a3785f4ad0f4b236ca, type: 3}
   - {fileID: 3651990402435162647, guid: 235b19be5a2e946fbb8c5a8f7404db08, type: 3}
+  - {fileID: 1944193624867342981, guid: f17ec95105087408d9381e9b56ee9d3c, type: 3}
 --- !u!1 &7689174242239195002
 GameObject:
   m_ObjectHideFlags: 0
