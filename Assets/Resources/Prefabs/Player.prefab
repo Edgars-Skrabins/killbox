@@ -499,7 +499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203385653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 4.46}
+  m_LocalPosition: {x: 0, y: 0, z: 5.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6475,6 +6475,7 @@ MonoBehaviour:
   DebugActive: 0
   FeedbacksList:
   - rid: 5059031495928971265
+  - rid: 5796410470133923840
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   ForceStopFeedbacksOnDisable: 1
@@ -6558,6 +6559,114 @@ MonoBehaviour:
           AmplitudeY: 0
           AmplitudeZ: 0
         RepeatUntilStopped: 0
+    - rid: 5796410470133923840
+      type: {class: MMF_ChromaticAberration_URP, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Feedbacks.URP}
+      data:
+        Active: 1
+        UniqueID: -1503774317
+        Label: Chromatic Aberration URP
+        ChannelMode: 0
+        Channel: 0
+        MMChannelDefinition: {fileID: 0}
+        Chance: 100
+        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        AutomatedTargetAcquisition:
+          Mode: 0
+          ChildIndex: 0
+        RandomizeOutput: 0
+        RandomMultiplier: {x: 0.8, y: 1}
+        RandomizeDuration: 0
+        RandomDurationMultiplier: {x: 0.5, y: 2}
+        UseRange: 0
+        RangeDistance: 5
+        UseRangeFalloff: 0
+        RangeFalloff:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        RemapRangeFalloff: {x: 0, y: 1}
+        Owner: {fileID: 1226065824}
+        DebugActive: 0
+        Duration: 0.05
+        ResetShakerValuesAfterShake: 1
+        ResetTargetValuesAfterShake: 1
+        RemapIntensityZero: 0
+        RemapIntensityOne: 0.2
+        Intensity:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 2
+            outSlope: -2
+            tangentMode: 69
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        Amplitude: 0.2
+        RelativeIntensity: 0
 --- !u!1 &1257889659
 GameObject:
   m_ObjectHideFlags: 0
@@ -8976,8 +9085,8 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400000, guid: 9ab24bedb3c96c845b7fe39915161ee5, type: 2}
-  - {fileID: 7400000, guid: 9b64d535596f84e4fb0b71997aff31d3, type: 2}
+  - {fileID: 7400000, guid: 229094524420b47928b3e9c03019724a, type: 2}
+  - {fileID: 7400000, guid: cd392aea3bb7a4ce38fce486583e3494, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -9003,13 +9112,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 704
   m_weaponSway: 1
-  m_SwayRoughness: 1
+  m_SwayRoughness: 3
   m_swayMultiplier: 2
   m_weaponAnimation: {fileID: 1765089412}
-  m_shotAnimationName: IonRifle_Shot
+  m_shotAnimationName: MiniGun_Shot
   m_shotAnimationFadeLength: 0
-  m_overridePlayingAnimation: 0
-  m_idleAnimationName: IonRifle_Idle
+  m_overridePlayingAnimation: 1
+  m_idleAnimationName: MiniGun_Idle
   m_idleAnimationFadeLength: 0
 --- !u!114 &1765089413
 MonoBehaviour:
@@ -9025,15 +9134,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_firePoints:
   - {fileID: 509841980}
-  m_bulletPrefab: {fileID: 4589737236847229155, guid: e5272e8b3417cd8438afeb6530c2c20e, type: 3}
-  m_fireRateInSeconds: 0.1
+  m_bulletPrefab: {fileID: 4589737236847229155, guid: 611a097f534374a1b9efb3f04ed89536, type: 3}
+  m_fireRateInSeconds: 0.04
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1884659
-  m_hasShotAnimation: 0
+  m_hasShotAnimation: 1
   m_weaponMovementCS: {fileID: 1765089411}
-  m_hasShotFeedback: 0
-  m_shotFeedback: {fileID: 0}
+  m_hasShotFeedback: 1
+  m_shotFeedback: {fileID: 1226065824}
   m_shootSFX: 
   m_shootSFXRate: 0
   m_hasMuzzleVFX: 0
@@ -9044,8 +9153,10 @@ MonoBehaviour:
   m_spraySphereTF: {fileID: 1869319862}
   m_narrowestSpraySphereTF: {fileID: 1381893862}
   m_widestSpraySphereTF: {fileID: 203385654}
-  m_sprayRecoverySpeed: 14
-  m_sprayWorseningSpeed: 12
+  m_sprayRecoverySpeed: 12
+  m_sprayWorseningSpeed: 8
+  m_emissionMaterial: {fileID: 2100000, guid: 46724ffa7f535284082310ac2488b0ff, type: 2}
+  m_maxEmissionStrength: 11
 --- !u!1 &1765093745
 GameObject:
   m_ObjectHideFlags: 0

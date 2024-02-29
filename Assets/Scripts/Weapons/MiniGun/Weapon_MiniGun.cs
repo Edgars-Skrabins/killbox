@@ -11,6 +11,24 @@ public class Weapon_MiniGun : ProjectileWeapon
     [SerializeField] private Transform m_widestSpraySphereTF;
     [SerializeField] private float m_sprayRecoverySpeed;
     [SerializeField] private float m_sprayWorseningSpeed;
+    [Space(10)]
+    [Header("MiniGun overheat effect")]
+    [SerializeField] private Material m_emissionMaterial;
+    [SerializeField] private float m_maxEmissionStrength;
+    private float m_emissionStrength;
+    private float m_maxSpraySphereTravelDistance;
+    private float m_currentSpraySphereDistance;
+    private float m_traveledSpraySphereDistanceInPercent;
+
+    private void OnEnable()
+    {
+        ResetSpray();
+    }
+
+    private void Start()
+    {
+        m_maxSpraySphereTravelDistance = Vector3.Distance(m_spraySphereTF.position, m_widestSpraySphereTF.position);
+    }
 
     protected override void Update()
     {
@@ -23,6 +41,27 @@ public class Weapon_MiniGun : ProjectileWeapon
         {
             NarrowSpray();
         }
+
+        UpdateHeatColor();
+        TrackSpraySphereDistance();
+    }
+
+    private void ResetSpray()
+    {
+        m_spraySphereTF.position = m_narrowestSpraySphereTF.position;
+    }
+
+    private void UpdateHeatColor()
+    {
+        const float emissionOffset = 1;
+        m_emissionStrength = m_maxEmissionStrength * m_traveledSpraySphereDistanceInPercent + emissionOffset;
+        m_emissionMaterial.SetColor("_EmissionColor", Color.red * m_emissionStrength);
+    }
+
+    private void TrackSpraySphereDistance()
+    {
+        m_currentSpraySphereDistance = Vector3.Distance(m_spraySphereTF.position, m_narrowestSpraySphereTF.position);
+        m_traveledSpraySphereDistanceInPercent = m_currentSpraySphereDistance / m_maxSpraySphereTravelDistance;
     }
 
     private void WidenSpray()
