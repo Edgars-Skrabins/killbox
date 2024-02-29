@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AutoDisabler : MonoBehaviour
 {
-    private float m_waitDuration = 3f;
-    private float m_fadeDuration = 2f;
+    [SerializeField] private float m_waitDuration = 3f;
+    [SerializeField] private float m_fadeDuration = 2f;
     [SerializeField] private CanvasGroup m_canvasGroup;
 
     private void OnEnable()

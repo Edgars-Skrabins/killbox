@@ -12096,6 +12096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d07170749be4c34819aa7822d75791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_waitDuration: 1.5
+  m_fadeDuration: 2
   m_canvasGroup: {fileID: 7270049633585993617}
 --- !u!225 &7270049633585993617
 CanvasGroup:
