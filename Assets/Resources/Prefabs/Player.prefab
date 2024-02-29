@@ -20600,7 +20600,7 @@ MonoBehaviour:
   m_shotAnimationName: Randomizer_Shot
   m_shotAnimationFadeLength: 0
   m_overridePlayingAnimation: 1
-  m_idleAnimationName: Blaster_Idle
+  m_idleAnimationName: Randomizer_Idle
   m_idleAnimationFadeLength: 0
 --- !u!114 &5287480458998281190
 MonoBehaviour:
