@@ -16,7 +16,7 @@ public class Enemy_Effects : MonoBehaviour
     private bool m_isCharged;
     private bool m_isFriend;
 
-    private void OnDisable()
+    private void OnEnable()
     {
         TurnOffAllEffects();
     }
