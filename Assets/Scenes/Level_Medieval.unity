@@ -49469,18 +49469,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1749824376}
-    - target: {fileID: 1765089413, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_hasMuzzleVFX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1765089413, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_muzzleVFXArray.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1765089413, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_muzzleVFXArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 8141929415648169758, guid: da0b05e6516234fa182a7d2ec8573c37, type: 3}
     - target: {fileID: 5498752474161022366, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -49529,22 +49517,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_muzzleTF
-      value: 
-      objectReference: {fileID: 1457575250}
-    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_hasMuzzleVFX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_muzzleVFXArray.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_muzzleVFXArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 6928986767462696328, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
 --- !u!1001 &1451884839
@@ -49740,11 +49712,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8967703015491499291, guid: 897ec2552d0a8b240935f2112e34eaaa, type: 3}
   m_PrefabInstance: {fileID: 1455515157}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1457575250 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 161643987946963565, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1458043782
 PrefabInstance:

@@ -9145,8 +9145,9 @@ MonoBehaviour:
   m_shotFeedback: {fileID: 1226065824}
   m_shootSFX: 
   m_shootSFXRate: 0
-  m_hasMuzzleVFX: 0
-  m_muzzleVFXArray: []
+  m_hasMuzzleVFX: 1
+  m_muzzleVFXArray:
+  - {fileID: 8141929415648169758, guid: da0b05e6516234fa182a7d2ec8573c37, type: 3}
   m_muzzleTF: {fileID: 509841980}
   m_crossHairImage: {fileID: 5739218526946030839}
   m_cantShootImage: {fileID: 1754289437}
@@ -21222,9 +21223,10 @@ MonoBehaviour:
   m_shotFeedback: {fileID: 3916798008598596937}
   m_shootSFX: 
   m_shootSFXRate: 0
-  m_hasMuzzleVFX: 0
-  m_muzzleVFXArray: []
-  m_muzzleTF: {fileID: 0}
+  m_hasMuzzleVFX: 1
+  m_muzzleVFXArray:
+  - {fileID: 6928986767462696328, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
+  m_muzzleTF: {fileID: 161643987946963565}
   m_crossHairImage: {fileID: 5739218526946030839}
   m_cantShootImage: {fileID: 1754289437}
   m_randomBulletSpreadX: 14
