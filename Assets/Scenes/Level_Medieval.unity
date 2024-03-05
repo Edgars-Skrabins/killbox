@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1377345006}
-  m_IndirectSpecularColor: {r: 0.027252868, g: 0.051778454, b: 0.1319319, a: 1}
+  m_IndirectSpecularColor: {r: 0.027252832, g: 0.05177839, b: 0.13193178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7867,6 +7867,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6089000210829374988, guid: 2e990b3ca641f8046afcd97f179c6d1a, type: 3}
   m_PrefabInstance: {fileID: 225064956}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &226929264
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6928986767462696328, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
+      propertyPath: m_Name
+      value: vfx_AutoShotgunMuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928986767462696331, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928986767462696331, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -68.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928986767462696331, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928986767462696331, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 125.436
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928986767462696331, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928986767462696331, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928986767462696331, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928986767462696331, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928986767462696331, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928986767462696331, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928986767462696331, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
 --- !u!1001 &229499083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49412,6 +49469,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1749824376}
+    - target: {fileID: 1765089413, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_hasMuzzleVFX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765089413, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_muzzleVFXArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765089413, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_muzzleVFXArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 8141929415648169758, guid: da0b05e6516234fa182a7d2ec8573c37, type: 3}
     - target: {fileID: 5498752474161022366, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -49460,6 +49529,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_muzzleTF
+      value: 
+      objectReference: {fileID: 1457575250}
+    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_hasMuzzleVFX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_muzzleVFXArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_muzzleVFXArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 6928986767462696328, guid: 088aa909b6dfd48959ab07525a507a93, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
 --- !u!1001 &1451884839
@@ -49655,6 +49740,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8967703015491499291, guid: 897ec2552d0a8b240935f2112e34eaaa, type: 3}
   m_PrefabInstance: {fileID: 1455515157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1457575250 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 161643987946963565, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+  m_PrefabInstance: {fileID: 1451703767}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1458043782
 PrefabInstance:
