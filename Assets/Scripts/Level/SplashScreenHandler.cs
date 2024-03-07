@@ -32,7 +32,7 @@ public class SplashScreenHandler : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonUp("Jump"))
+        if (Input.anyKey)
         {
             SkipAnimation();
         }

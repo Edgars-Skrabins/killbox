@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canvasGroup: {fileID: 80269863}
-  m_duration: 5
+  m_duration: 4
   m_fadeCurve:
     serializedVersion: 2
     m_Curve:
@@ -567,7 +567,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_audioClip: {fileID: 8300000, guid: 38a0165475ef6fc4b9cd8a5acc66c094, type: 3}
-  m_volume: 1
+  m_volume: 0.8
 --- !u!4 &1955937780
 Transform:
   m_ObjectHideFlags: 0
