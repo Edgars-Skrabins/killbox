@@ -49460,49 +49460,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_fireRateInSeconds
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_firePoints.Array.size
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_firePoints.Array.data[17]
-      value: 
-      objectReference: {fileID: 1451703768}
-    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_firePoints.Array.data[18]
-      value: 
-      objectReference: {fileID: 1451703768}
-    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_firePoints.Array.data[19]
-      value: 
-      objectReference: {fileID: 1451703768}
-    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_firePoints.Array.data[20]
-      value: 
-      objectReference: {fileID: 1451703768}
-    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_firePoints.Array.data[21]
-      value: 
-      objectReference: {fileID: 1451703768}
-    - target: {fileID: 6678218799953199830, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8057978474564535697, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
---- !u!4 &1451703768 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 161643987946963565, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1451884839
 PrefabInstance:
   m_ObjectHideFlags: 0
