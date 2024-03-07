@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canvasGroup: {fileID: 80269863}
-  m_duration: 4
+  m_duration: 5
   m_fadeCurve:
     serializedVersion: 2
     m_Curve:
@@ -537,22 +537,22 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.0901146
     - serializedVersion: 3
-      time: 0.096797585
-      value: 1.0005846
-      inSlope: -0.23316754
+      time: 0.24
+      value: 1
+      inSlope: 0.57569
       outSlope: 0.007906368
       tangentMode: 1
       weightedMode: 0
-      inWeight: 1
+      inWeight: 0.24906653
       outWeight: 1
     - serializedVersion: 3
-      time: 0.7500391
-      value: 0.92763984
-      inSlope: -0.32969087
+      time: 0.78
+      value: 1
+      inSlope: -0.036763147
       outSlope: -0.56346804
       tangentMode: 1
       weightedMode: 0
-      inWeight: 0.08825124
+      inWeight: 1
       outWeight: 0.14798921
     - serializedVersion: 3
       time: 1

@@ -70,6 +70,6 @@ public class SplashScreenHandler : MonoBehaviour
 
     private void LoadNextScene()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
