@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1377345006}
-  m_IndirectSpecularColor: {r: 0.027252832, g: 0.05177839, b: 0.13193178, a: 1}
+  m_IndirectSpecularColor: {r: 0.027252868, g: 0.051778454, b: 0.1319319, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -49460,8 +49460,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_fireRateInSeconds
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_firePoints.Array.size
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_firePoints.Array.data[17]
+      value: 
+      objectReference: {fileID: 1451703768}
+    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_firePoints.Array.data[18]
+      value: 
+      objectReference: {fileID: 1451703768}
+    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_firePoints.Array.data[19]
+      value: 
+      objectReference: {fileID: 1451703768}
+    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_firePoints.Array.data[20]
+      value: 
+      objectReference: {fileID: 1451703768}
+    - target: {fileID: 5590914700693494624, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_firePoints.Array.data[21]
+      value: 
+      objectReference: {fileID: 1451703768}
+    - target: {fileID: 6678218799953199830, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8057978474564535697, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+--- !u!4 &1451703768 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 161643987946963565, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+  m_PrefabInstance: {fileID: 1451703767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1451884839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49531,6 +49572,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1907423255}
     m_Modifications:
+    - target: {fileID: 6637760632690196001, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671373087150203916, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: priority
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6089000210829374988, guid: 2e990b3ca641f8046afcd97f179c6d1a, type: 3}
       propertyPath: m_RootOrder
       value: 61
@@ -49578,14 +49627,6 @@ PrefabInstance:
     - target: {fileID: 6089000210829374991, guid: 2e990b3ca641f8046afcd97f179c6d1a, type: 3}
       propertyPath: m_Name
       value: Barrel (36)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637760632690196001, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671373087150203916, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: priority
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e990b3ca641f8046afcd97f179c6d1a, type: 3}
