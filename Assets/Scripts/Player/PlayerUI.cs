@@ -47,6 +47,7 @@ public class PlayerUI : MonoBehaviour
         m_audioSlider.onValueChanged.AddListener(SetMasterVolume);
         m_musicSlider.onValueChanged.AddListener(SetMusicVolume);
         m_sfxSlider.onValueChanged.AddListener(SetSFXVolume);
+
     }
 
     private void Start()
@@ -75,6 +76,7 @@ public class PlayerUI : MonoBehaviour
 
     private void Update()
     {
+        LoadingScreenAnimation.I.DisableLoadingScreen();
 
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
@@ -142,6 +144,9 @@ public class PlayerUI : MonoBehaviour
 
     public void QuitToMenu()
     {
+        Time.timeScale = 1;
+        LoadingScreenAnimation.I.EnableLoadingScreen();
+
         SaveSettingPrefs();
 
         if (!AudioManager.I.Playing("BGM_MainMenu"))

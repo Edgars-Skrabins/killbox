@@ -23,6 +23,11 @@ public class MainMenuManager : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        LoadingScreenAnimation.I.DisableLoadingScreen();
+    }
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -80,6 +85,8 @@ public class MainMenuManager : MonoBehaviour
         PlayerPrefs.SetFloat(AudioManager.I.SFX_Volume, m_sfxSlider.value);
 
         PlayerPrefs.Save();
+
+        LoadingScreenAnimation.I.EnableLoadingScreen();
 
         if (!AudioManager.I.Playing("BGM_Game"))
         {
