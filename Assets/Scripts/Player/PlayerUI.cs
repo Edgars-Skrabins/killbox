@@ -38,6 +38,8 @@ public class PlayerUI : MonoBehaviour
 
     #endregion
     public GameObject m_settingsMenu;
+    public GameObject m_settingsSoundMenu;
+    public GameObject m_settingsGeneralMenu;
     public GameObject m_leaderboardMenu;
 
     private void Awake()

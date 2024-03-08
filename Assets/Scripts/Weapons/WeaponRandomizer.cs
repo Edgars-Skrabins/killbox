@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class WeaponRandomizer : MonoBehaviour
 {
-
     [SerializeField] public float m_randomizeFrequencyInSeconds;
     [HideInInspector] public float m_randomizeTimer;
     [SerializeField] private MMF_Player m_weaponClockFeedback;
@@ -11,11 +10,16 @@ public class WeaponRandomizer : MonoBehaviour
     [SerializeField] private string m_nextWeapon;
     [SerializeField] private GameObject m_weaponTextUI;
 
+    private bool m_weaponIndicatorEnabled;
+
     private void Start()
     {
         m_randomizeTimer = m_randomizeFrequencyInSeconds;
         m_nextWeapon = WeaponManager.I.GetRandomWeaponName();
         WeaponManager.I.ShowNextWeaponIcon(m_nextWeapon);
+
+        m_weaponIndicatorEnabled = PlayerPrefs.GetInt(WeaponIndicatorUI.M_WINDICATOR_PREF) != 0;
+        m_weaponTextUI.SetActive(m_weaponIndicatorEnabled);
     }
 
     private void Update()
@@ -44,7 +48,9 @@ public class WeaponRandomizer : MonoBehaviour
             m_nextWeapon = WeaponManager.I.GetRandomWeaponName();
             WeaponManager.I.ShowNextWeaponIcon(m_nextWeapon);
             m_randomizeTimer = m_randomizeFrequencyInSeconds;
-            m_weaponTextUI.SetActive(true);
+
+            m_weaponIndicatorEnabled = PlayerPrefs.GetInt(WeaponIndicatorUI.M_WINDICATOR_PREF) != 0;
+            m_weaponTextUI.SetActive(m_weaponIndicatorEnabled);
         }
 
     }
