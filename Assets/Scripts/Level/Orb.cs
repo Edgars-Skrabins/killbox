@@ -2,13 +2,10 @@ using Killbox.Enums;
 using MoreMountains.Feedbacks;
 using UnityEngine;
 
-public class Orb : Health
+public abstract class Orb : Health
 {
-    [SerializeField] private MMF_Player m_getShotFeedback;
-
-    private bool m_hasBeenActivated;
     [SerializeField] private int m_health;
-    [SerializeField] private GameObject m_announceDifficulty;
+    [SerializeField] private MMF_Player m_getShotFeedback;
     [SerializeField] private GameObject m_orbHitVFX;
     [SerializeField] private GameObject m_orbDestroyVFX;
 
@@ -27,21 +24,12 @@ public class Orb : Health
 
     protected override void Die(EDamageTypes _damageType)
     {
-        if (!m_hasBeenActivated)
-        {
-            Instantiate(m_announceDifficulty, transform.position, transform.rotation);
-            Instantiate(m_orbDestroyVFX, transform.position, transform.rotation);
-            SetHardestDifficulty();
-        }
+        PlayEffect();
+        Destroy(gameObject);
     }
 
-    private void SetHardestDifficulty()
+    protected virtual void PlayEffect()
     {
-        GameManager.I.TimeSinceGameStart = 10000f;
-        m_getShotFeedback.Initialization();
-        m_getShotFeedback.PlayFeedbacks();
-        m_hasBeenActivated = true;
-
-        Destroy(gameObject);
+        // Implement effect
     }
 }
