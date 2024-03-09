@@ -22305,7 +22305,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sound Settings
+  m_text: Sound
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6d23530fe277b4d34b9f22b855ab7231, type: 2}
   m_sharedMaterial: {fileID: -156624604460194155, guid: 6d23530fe277b4d34b9f22b855ab7231, type: 2}
@@ -24240,7 +24240,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: General Settings
+  m_text: General
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6d23530fe277b4d34b9f22b855ab7231, type: 2}
   m_sharedMaterial: {fileID: -156624604460194155, guid: 6d23530fe277b4d34b9f22b855ab7231, type: 2}
