@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5941877601033442591}
   - component: {fileID: 318413215460021146}
   m_Layer: 16
-  m_Name: vfx_Pippiy_Muzzle
+  m_Name: vfx_Pippy_Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4837,7 +4837,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 25ba77ea73fa6d74faff101af0ec0370, type: 2}
+  - {fileID: 2100000, guid: 514a72642d0cd403cacad6e5583cc2c9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

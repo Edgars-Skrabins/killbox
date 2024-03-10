@@ -4918,7 +4918,7 @@ GameObject:
   - component: {fileID: 2661825788858494892}
   - component: {fileID: 8909766266125924368}
   m_Layer: 16
-  m_Name: vfx_IonRifleMuzzle_2
+  m_Name: vfx_Electrogun_Muzzle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
