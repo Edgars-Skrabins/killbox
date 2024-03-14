@@ -18716,6 +18716,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dontDestroyOnLoad: 0
   m_Weapons:
+  - m_weaponName: Randomizer
+    m_weaponGO: {fileID: 7577709981728208440}
+    m_weaponIcon: {fileID: 794440349}
   - m_weaponName: Shotgun
     m_weaponGO: {fileID: 6678218799953199830}
     m_weaponIcon: {fileID: 1749427245}
@@ -18746,9 +18749,6 @@ MonoBehaviour:
   - m_weaponName: Auto shotgun
     m_weaponGO: {fileID: 7911494817198787517}
     m_weaponIcon: {fileID: 413080099}
-  - m_weaponName: Randomizer
-    m_weaponGO: {fileID: 7577709981728208440}
-    m_weaponIcon: {fileID: 794440349}
   - m_weaponName: Minigun
     m_weaponGO: {fileID: 1765089408}
     m_weaponIcon: {fileID: 413080099}
@@ -22760,11 +22760,12 @@ MonoBehaviour:
   m_weaponMovementCS: {fileID: 7803261975960594383}
   m_hasShotFeedback: 1
   m_shotFeedback: {fileID: 7211758576386154632}
-  m_shootSFX: 
+  m_shootSFX: Shoot_Randomizer
   m_shootSFXRate: 0
-  m_hasMuzzleVFX: 0
-  m_muzzleVFXArray: []
-  m_muzzleTF: {fileID: 0}
+  m_hasMuzzleVFX: 1
+  m_muzzleVFXArray:
+  - {fileID: 712125570167244809, guid: 33208f782fcb14e9cb5ade8783be5df4, type: 3}
+  m_muzzleTF: {fileID: 5573131362792684586}
   m_crossHairImage: {fileID: 5739218526946030839}
   m_cantShootImage: {fileID: 1754289437}
   m_bulletPrefabs:

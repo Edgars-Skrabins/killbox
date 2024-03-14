@@ -194,6 +194,14 @@ MonoBehaviour:
     playOnAwake: 0
     MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
+  - name: Shoot_Randomizer
+    clip: {fileID: 8300000, guid: 949ba19850a7b438888bd60103b9b484, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
   - name: Hit_ElectroGun
     clip: {fileID: 8300000, guid: 4bd7681abc5124b709a1ced8074383c8, type: 3}
     volume: 0.1
