@@ -202,6 +202,38 @@ MonoBehaviour:
     playOnAwake: 0
     MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
+  - name: Shoot_AutoShotgun
+    clip: {fileID: 8300000, guid: b53f2c693aca441d3b5cd57eac86c024, type: 3}
+    volume: 0.15
+    pitch: 0.8
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
+  - name: Shoot_MiniGun
+    clip: {fileID: 8300000, guid: f0577003bf17a4ea79780753e08abfbf, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
+  - name: Shoot_Pippy
+    clip: {fileID: 8300000, guid: e1f2654bf01924677b9e015c025ae014, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
+  - name: Shoot_Blazer
+    clip: {fileID: 8300000, guid: 6fcc79105bd124c11a0fc75d30398c92, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
   - name: Hit_ElectroGun
     clip: {fileID: 8300000, guid: 4bd7681abc5124b709a1ced8074383c8, type: 3}
     volume: 0.1

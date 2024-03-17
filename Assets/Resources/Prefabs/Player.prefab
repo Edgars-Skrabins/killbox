@@ -1812,7 +1812,7 @@ MonoBehaviour:
   m_weaponMovementCS: {fileID: 387959721}
   m_hasShotFeedback: 0
   m_shotFeedback: {fileID: 0}
-  m_shootSFX: 
+  m_shootSFX: Shoot_Pippy
   m_shootSFXRate: 0
   m_hasMuzzleVFX: 1
   m_muzzleVFXArray:
@@ -9169,7 +9169,7 @@ MonoBehaviour:
   m_weaponMovementCS: {fileID: 1765089411}
   m_hasShotFeedback: 1
   m_shotFeedback: {fileID: 1226065824}
-  m_shootSFX: 
+  m_shootSFX: Shoot_MiniGun
   m_shootSFXRate: 0
   m_hasMuzzleVFX: 1
   m_muzzleVFXArray:
@@ -18716,6 +18716,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dontDestroyOnLoad: 0
   m_Weapons:
+  - m_weaponName: Blazer
+    m_weaponGO: {fileID: 8057978474564535697}
+    m_weaponIcon: {fileID: 794440349}
+  - m_weaponName: Pippy
+    m_weaponGO: {fileID: 387959718}
+    m_weaponIcon: {fileID: 413080099}
+  - m_weaponName: Minigun
+    m_weaponGO: {fileID: 1765089408}
+    m_weaponIcon: {fileID: 413080099}
+  - m_weaponName: Auto shotgun
+    m_weaponGO: {fileID: 7911494817198787517}
+    m_weaponIcon: {fileID: 413080099}
   - m_weaponName: Randomizer
     m_weaponGO: {fileID: 7577709981728208440}
     m_weaponIcon: {fileID: 794440349}
@@ -18728,12 +18740,12 @@ MonoBehaviour:
   - m_weaponName: Electro Gun
     m_weaponGO: {fileID: 3004312297689128654}
     m_weaponIcon: {fileID: 582119934}
-  - m_weaponName: Grenade launcher
-    m_weaponGO: {fileID: 1476448015}
-    m_weaponIcon: {fileID: 643997295}
   - m_weaponName: Rocket launcher
     m_weaponGO: {fileID: 214909330}
     m_weaponIcon: {fileID: 655978523}
+  - m_weaponName: Grenade launcher
+    m_weaponGO: {fileID: 1476448015}
+    m_weaponIcon: {fileID: 643997295}
   - m_weaponName: Blaster
     m_weaponGO: {fileID: 6969048674004191598}
     m_weaponIcon: {fileID: 331290487}
@@ -18746,18 +18758,6 @@ MonoBehaviour:
   - m_weaponName: Ion rifle
     m_weaponGO: {fileID: 1673754204}
     m_weaponIcon: {fileID: 413080099}
-  - m_weaponName: Auto shotgun
-    m_weaponGO: {fileID: 7911494817198787517}
-    m_weaponIcon: {fileID: 413080099}
-  - m_weaponName: Minigun
-    m_weaponGO: {fileID: 1765089408}
-    m_weaponIcon: {fileID: 413080099}
-  - m_weaponName: Pippy
-    m_weaponGO: {fileID: 387959718}
-    m_weaponIcon: {fileID: 413080099}
-  - m_weaponName: Blazer
-    m_weaponGO: {fileID: 8057978474564535697}
-    m_weaponIcon: {fileID: 794440349}
   m_currentWeaponName: 
 --- !u!114 &54157285
 MonoBehaviour:
@@ -23297,7 +23297,7 @@ MonoBehaviour:
   m_weaponMovementCS: {fileID: 5229226384480981502}
   m_hasShotFeedback: 1
   m_shotFeedback: {fileID: 3916798008598596937}
-  m_shootSFX: 
+  m_shootSFX: Shoot_AutoShotgun
   m_shootSFXRate: 0
   m_hasMuzzleVFX: 1
   m_muzzleVFXArray:
@@ -23415,7 +23415,7 @@ MonoBehaviour:
   m_weaponMovementCS: {fileID: 0}
   m_hasShotFeedback: 0
   m_shotFeedback: {fileID: 0}
-  m_shootSFX: 
+  m_shootSFX: Shoot_Blazer
   m_shootSFXRate: 0
   m_hasMuzzleVFX: 1
   m_muzzleVFXArray:
