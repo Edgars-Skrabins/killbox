@@ -89,7 +89,7 @@ MonoBehaviour:
   m_bulletLifeTime: 15
   m_impactSFX: 
   m_hasImpactVFX: 1
-  m_bulletImpactVFX: {fileID: 5896067716986424722}
+  m_bulletImpactVFX: {fileID: 3801257259933303825, guid: a3faf4bbb92304db6a69a1398f42b9dd, type: 3}
   m_bulletRB: {fileID: 6776429462407389013}
   m_bulletTF: {fileID: 1944193624867342982}
 --- !u!1 &2686727572672146441
