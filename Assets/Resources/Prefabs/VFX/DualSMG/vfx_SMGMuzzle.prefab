@@ -4902,3 +4902,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_destroyOnDisable: 1
+  m_vfxLifetime: 0
+  m_destroyAfterTime: 0

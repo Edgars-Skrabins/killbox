@@ -9860,8 +9860,8 @@ MonoBehaviour:
   m_lifeTimeDestroy: 1
   m_bulletLifeTime: 30
   m_impactSFX: 
-  m_hasImpactVFX: 0
-  m_bulletImpactVFX: {fileID: 0}
+  m_hasImpactVFX: 1
+  m_bulletImpactVFX: {fileID: 8560434966206261524, guid: 3f6951253ca3e48e4ac96864a7c962c6, type: 3}
   m_bulletRB: {fileID: 8882113105936379187}
   m_bulletTF: {fileID: 4589737236847229152}
   m_bounces: 3

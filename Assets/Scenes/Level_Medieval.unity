@@ -47956,54 +47956,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1749824376}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[0].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703774}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[1].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703770}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[2].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703771}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[3].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703772}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[4].m_weaponGO
-      value: 
-      objectReference: {fileID: 1451703773}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[0].m_weaponName
-      value: Randomizer
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[1].m_weaponIcon
-      value: 
-      objectReference: {fileID: 1451703768}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[1].m_weaponName
-      value: Blazer
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[2].m_weaponName
-      value: Pippy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[3].m_weaponName
-      value: Minigun
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[4].m_weaponIcon
-      value: 
-      objectReference: {fileID: 1451703769}
-    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_Weapons.Array.data[4].m_weaponName
-      value: Auto shotgun
-      objectReference: {fileID: 0}
     - target: {fileID: 5498752474161022366, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -48054,41 +48006,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
---- !u!1 &1451703768 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 794440349, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703769 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 413080099, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703770 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8057978474564535697, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703771 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 387959718, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703772 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1765089408, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703773 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7911494817198787517, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1451703774 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7577709981728208440, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-  m_PrefabInstance: {fileID: 1451703767}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1451884839
 PrefabInstance:
   m_ObjectHideFlags: 0
