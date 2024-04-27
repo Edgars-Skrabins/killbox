@@ -147,6 +147,10 @@ MonoBehaviour:
   m_getShotFeedback: {fileID: 8032577299397766847}
   m_orbHitVFX: {fileID: 734515705587495591, guid: b14aea191049d4e6091c0b8e3770cbdf, type: 3}
   m_orbDestroyVFX: {fileID: 2781375766544456499, guid: a4c04e5511c7143608e7bd331766c062, type: 3}
+  m_deathSounds:
+  - Announce_Replenish_1
+  - Announce_Replenish_2
+  - Announce_Replenish_3
   m_healAmount: 100
 --- !u!1 &8032577299397766846
 GameObject:

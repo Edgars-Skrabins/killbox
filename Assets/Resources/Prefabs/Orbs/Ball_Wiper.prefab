@@ -402,6 +402,10 @@ MonoBehaviour:
   m_getShotFeedback: {fileID: 8747883237917858657}
   m_orbHitVFX: {fileID: 734515705587495591, guid: 1bdce9b09b09345b3a108080e14c6eba, type: 3}
   m_orbDestroyVFX: {fileID: 2781375766544456499, guid: 4c6253426a3314a41b98cb2b328d940f, type: 3}
+  m_deathSounds:
+  - Announce_Wiper_1
+  - Announce_Wiper_2
+  - Announce_Wiper_3
 --- !u!1 &8747883238136535789
 GameObject:
   m_ObjectHideFlags: 0

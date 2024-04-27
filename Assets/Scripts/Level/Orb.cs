@@ -8,6 +8,7 @@ public abstract class Orb : Health
     [SerializeField] private MMF_Player m_getShotFeedback;
     [SerializeField] private GameObject m_orbHitVFX;
     [SerializeField] private GameObject m_orbDestroyVFX;
+    [SerializeField] private string[] m_deathSounds;
 
     public override void TakeDamage(int _damage, EDamageTypes _damageType, bool _chargeTarget)
     {
@@ -25,7 +26,13 @@ public abstract class Orb : Health
     protected override void Die(EDamageTypes _damageType)
     {
         PlayEffect();
+        PlayDeathSound();
         Destroy(gameObject);
+    }
+
+    private void PlayDeathSound()
+    {
+        AudioManager.I.Play(m_deathSounds[Random.Range(0, m_deathSounds.Length)]);
     }
 
     protected virtual void PlayEffect()

@@ -64,6 +64,10 @@ MonoBehaviour:
   m_getShotFeedback: {fileID: 8032872490408735164}
   m_orbHitVFX: {fileID: 734515705587495591, guid: 1bdce9b09b09345b3a108080e14c6eba, type: 3}
   m_orbDestroyVFX: {fileID: 2781375766544456499, guid: c76e20edd6908475194fc875649eb252, type: 3}
+  m_deathSounds:
+  - Announce_WeaponChange_1
+  - Announce_WeaponChange_2
+  - Announce_WeaponChange_3
 --- !u!1 &8032872490298616929
 GameObject:
   m_ObjectHideFlags: 0
