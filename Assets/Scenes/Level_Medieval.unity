@@ -22122,6 +22122,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2151158975755325704, guid: 909081ebecc318445a2218e71a2b8318, type: 3}
   m_PrefabInstance: {fileID: 714825923}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &715054823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 54157285, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+  m_PrefabInstance: {fileID: 1451703767}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ad8d66189d9974aa808926382b387a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &717813375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48144,6 +48155,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1749824376}
+    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_WeaponRandomizerCS
+      value: 
+      objectReference: {fileID: 715054823}
     - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
       propertyPath: m_Weapons.Array.data[0].m_weaponGO
       value: 
