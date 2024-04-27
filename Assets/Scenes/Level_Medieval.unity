@@ -47952,10 +47952,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 54157285, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_randomizeFrequencyInSeconds
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 413080099, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528534561, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1608569464, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1749824376}
+    - target: {fileID: 2110765718, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110765719, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1687678880763865525, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_Weapons.Array.data[9].m_weaponIcon
+      value: 
+      objectReference: {fileID: 1528534561}
     - target: {fileID: 5498752474161022366, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -48075,14 +48099,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1907423255}
     m_Modifications:
-    - target: {fileID: 6637760632690196001, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671373087150203916, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
-      propertyPath: priority
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6089000210829374988, guid: 2e990b3ca641f8046afcd97f179c6d1a, type: 3}
       propertyPath: m_RootOrder
       value: 61
@@ -48130,6 +48146,14 @@ PrefabInstance:
     - target: {fileID: 6089000210829374991, guid: 2e990b3ca641f8046afcd97f179c6d1a, type: 3}
       propertyPath: m_Name
       value: Barrel (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637760632690196001, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671373087150203916, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: priority
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e990b3ca641f8046afcd97f179c6d1a, type: 3}
@@ -50692,6 +50716,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aea60a4d7e3aaa478688674e30a598e, type: 3}
+--- !u!1 &1528534561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1528534561, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+  m_PrefabInstance: {fileID: 1451703767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1528783342
 PrefabInstance:
   m_ObjectHideFlags: 0
