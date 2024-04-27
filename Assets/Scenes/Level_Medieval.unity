@@ -48136,6 +48136,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 54157285, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
+      propertyPath: m_randomizeFrequencyInSeconds
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 1608569464, guid: 2c1367d3cb0f46d499ea06524621747c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

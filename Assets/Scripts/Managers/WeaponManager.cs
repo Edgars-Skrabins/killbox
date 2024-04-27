@@ -4,8 +4,7 @@ using Random = UnityEngine.Random;
 
 public class WeaponManager : Singleton<WeaponManager>
 {
-
-#region Weapon Class
+    #region Weapon Class
 
     [Serializable]
     public class Weapon
@@ -15,17 +14,17 @@ public class WeaponManager : Singleton<WeaponManager>
         public GameObject m_weaponIcon;
     }
 
-#endregion
+    #endregion
 
     public Weapon[] m_Weapons;
 
     [HideInInspector] public string m_currentWeaponName;
+    [SerializeField] private WeaponRandomizer m_WeaponRandomizerCS;
 
     protected override void Awake()
     {
-        
         base.Awake();
-        
+
         m_currentWeaponName = m_Weapons[0].m_weaponName;
         EquipWeapon(m_currentWeaponName);
     }
@@ -73,9 +72,8 @@ public class WeaponManager : Singleton<WeaponManager>
             }
         }
 
-
         EquipWeapon(m_Weapons[rand].m_weaponName);
-
+        m_WeaponRandomizerCS.ResetRandomizerTimer();
     }
 
     public void ShowNextWeaponIcon(string _weaponName)
@@ -119,7 +117,5 @@ public class WeaponManager : Singleton<WeaponManager>
         }
 
         return m_Weapons[rand].m_weaponName;
-
     }
-
 }

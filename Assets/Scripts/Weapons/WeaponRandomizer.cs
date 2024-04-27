@@ -52,6 +52,15 @@ public class WeaponRandomizer : MonoBehaviour
             m_weaponIndicatorEnabled = PlayerPrefs.GetInt(WeaponIndicatorUI.M_WINDICATOR_PREF) != 0;
             m_weaponTextUI.SetActive(m_weaponIndicatorEnabled);
         }
+    }
 
+    public void ResetRandomizerTimer()
+    {
+        m_nextWeapon = WeaponManager.I.GetRandomWeaponName();
+        WeaponManager.I.ShowNextWeaponIcon(m_nextWeapon);
+        m_randomizeTimer = m_randomizeFrequencyInSeconds;
+
+        m_weaponIndicatorEnabled = PlayerPrefs.GetInt(WeaponIndicatorUI.M_WINDICATOR_PREF) != 0;
+        m_weaponTextUI.SetActive(m_weaponIndicatorEnabled);
     }
 }
