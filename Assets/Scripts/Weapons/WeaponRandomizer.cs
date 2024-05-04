@@ -17,8 +17,8 @@ public class WeaponRandomizer : MonoBehaviour
         m_randomizeTimer = m_randomizeFrequencyInSeconds;
         m_nextWeapon = WeaponManager.I.GetRandomWeaponName();
         WeaponManager.I.ShowNextWeaponIcon(m_nextWeapon);
-
-        m_weaponIndicatorEnabled = PlayerPrefs.GetInt(WeaponIndicatorUI.M_WINDICATOR_PREF) != 0;
+        int weoponPref = PlayerPrefs.GetInt(WeaponIndicatorUI.M_WINDICATOR_PREF);
+        m_weaponIndicatorEnabled = weoponPref != 0;
         m_weaponTextUI.SetActive(m_weaponIndicatorEnabled);
     }
 
@@ -49,7 +49,8 @@ public class WeaponRandomizer : MonoBehaviour
             WeaponManager.I.ShowNextWeaponIcon(m_nextWeapon);
             m_randomizeTimer = m_randomizeFrequencyInSeconds;
 
-            m_weaponIndicatorEnabled = PlayerPrefs.GetInt(WeaponIndicatorUI.M_WINDICATOR_PREF) != 0;
+            int weoponPref = PlayerPrefs.GetInt(WeaponIndicatorUI.M_WINDICATOR_PREF);
+            m_weaponIndicatorEnabled = weoponPref != 0; ;
             m_weaponTextUI.SetActive(m_weaponIndicatorEnabled);
         }
     }
@@ -60,7 +61,8 @@ public class WeaponRandomizer : MonoBehaviour
         WeaponManager.I.ShowNextWeaponIcon(m_nextWeapon);
         m_randomizeTimer = m_randomizeFrequencyInSeconds;
 
-        m_weaponIndicatorEnabled = PlayerPrefs.GetInt(WeaponIndicatorUI.M_WINDICATOR_PREF) != 0;
+        int weoponPref = PlayerPrefs.GetInt(WeaponIndicatorUI.M_WINDICATOR_PREF);
+        m_weaponIndicatorEnabled = weoponPref != 0;
         m_weaponTextUI.SetActive(m_weaponIndicatorEnabled);
     }
 }
