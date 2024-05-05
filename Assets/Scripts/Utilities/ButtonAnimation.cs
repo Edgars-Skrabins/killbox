@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
+public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private Vector3 m_originalScale;
     private float m_duration = ButtonAnimVars.M_Duration;
@@ -15,23 +15,23 @@ public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler,IPointerExitH
 
     private bool m_isHovering;
 
-    void Start()
+    private void Start()
     {
-        SetCustomCursor(m_cursorTexturePath);
-        SetCustomHoverCursor(m_cursorHoverTexturePath);
+        // SetCustomCursor(m_cursorTexturePath);
+        // SetCustomHoverCursor(m_cursorHoverTexturePath);
         m_originalScale = transform.localScale;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Cursor.SetCursor(m_customCursorHover, new Vector2(m_customCursor.width / 2, m_customCursor.height / 2), CursorMode.Auto);
+        // Cursor.SetCursor(m_customCursorHover, new Vector2(m_customCursor.width / 2, m_customCursor.height / 2), CursorMode.Auto);
         m_isHovering = true;
         StartCoroutine(ScaleAnimation());
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Cursor.SetCursor(m_customCursor, new Vector2(m_customCursor.width/2, m_customCursor.height / 2), CursorMode.Auto);
+        // Cursor.SetCursor(m_customCursor, new Vector2(m_customCursor.width/2, m_customCursor.height / 2), CursorMode.Auto);
         m_isHovering = false;
         if (gameObject.activeInHierarchy)
         {
@@ -43,19 +43,19 @@ public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler,IPointerExitH
         }
     }
 
-    private void SetCustomCursor(string imagePath)
-    {
-        byte[] fileData = System.IO.File.ReadAllBytes(imagePath);
-        m_customCursor = new Texture2D(2, 2);
-        m_customCursor.LoadImage(fileData);
-    }
-
-    private void SetCustomHoverCursor(string imagePath)
-    {
-        byte[] fileData = System.IO.File.ReadAllBytes(imagePath);
-        m_customCursorHover = new Texture2D(2, 2);
-        m_customCursorHover.LoadImage(fileData);
-    }
+    // private void SetCustomCursor(string imagePath)
+    // {
+    //     byte[] fileData = System.IO.File.ReadAllBytes(imagePath);
+    //     m_customCursor = new Texture2D(2, 2);
+    //     m_customCursor.LoadImage(fileData);
+    // }
+    //
+    // private void SetCustomHoverCursor(string imagePath)
+    // {
+    //     byte[] fileData = System.IO.File.ReadAllBytes(imagePath);
+    //     m_customCursorHover = new Texture2D(2, 2);
+    //     m_customCursorHover.LoadImage(fileData);
+    // }
 
     private IEnumerator ScaleAnimation()
     {

@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_health: 500
   m_getShotFeedback: {fileID: 8032872490408735164}
-  m_orbHitVFX: {fileID: 734515705587495591, guid: 1bdce9b09b09345b3a108080e14c6eba, type: 3}
+  m_orbHitVFX: {fileID: 7835140608286780953, guid: 7b526769e38a044aa862ba1ae5de58a6, type: 3}
   m_orbDestroyVFX: {fileID: 2781375766544456499, guid: c76e20edd6908475194fc875649eb252, type: 3}
   m_deathSounds:
   - Announce_WeaponChange_1

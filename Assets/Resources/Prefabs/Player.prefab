@@ -19024,9 +19024,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dontDestroyOnLoad: 0
   m_Weapons:
-  - m_weaponName: Blazer
-    m_weaponGO: {fileID: 8057978474564535697}
-    m_weaponIcon: {fileID: 2110765718}
   - m_weaponName: Shotgun
     m_weaponGO: {fileID: 6678218799953199830}
     m_weaponIcon: {fileID: 1749427245}
@@ -19066,7 +19063,11 @@ MonoBehaviour:
   - m_weaponName: Pippy
     m_weaponGO: {fileID: 387959718}
     m_weaponIcon: {fileID: 1218904623}
+  - m_weaponName: Blazer
+    m_weaponGO: {fileID: 8057978474564535697}
+    m_weaponIcon: {fileID: 2110765718}
   m_currentWeaponName: 
+  m_WeaponRandomizerCS: {fileID: 54157285}
 --- !u!114 &54157285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19079,7 +19080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ad8d66189d9974aa808926382b387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_randomizeFrequencyInSeconds: 12
+  m_randomizeFrequencyInSeconds: 24
   m_randomizeTimer: 0
   m_weaponClockFeedback: {fileID: 732516356}
   m_nextWeapon: 
@@ -23715,7 +23716,7 @@ MonoBehaviour:
   m_firePoints:
   - {fileID: 7701359590681017814}
   m_bulletPrefab: {fileID: 4589737236847229155, guid: fbe925d14fe1744a5a24c680d84b2307, type: 3}
-  m_fireRateInSeconds: 3
+  m_fireRateInSeconds: 2.8
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1622259

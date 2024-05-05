@@ -11,7 +11,7 @@ public class Bullet_Pippy : Bullet
     protected override void Impact(Collider _otherCollider)
     {
         if (m_hasImpactVFX) PlayImpactVFX();
-        if (_otherCollider.TryGetComponent(out Health_Enemy health))
+        if (_otherCollider.TryGetComponent(out Health health))
         {
             int randomNum = Random.Range(0, 101);
             if (randomNum <= m_chanceOfTurningEnemyIntoFriend)
