@@ -42042,7 +42042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_orbSpawnLocation: {fileID: 1736649211}
-  m_orbSpawnRate: 5
+  m_orbSpawnRate: 80
   m_orbs:
   - {fileID: 8747883237982590866, guid: cbd915a4cb10141bfaa0b2e23e82f93a, type: 3}
   - {fileID: 8032872490202907679, guid: 1df01d07794cd4e6e979ce1dc763b2e4, type: 3}
@@ -66742,7 +66742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_orbSpawnLocation: {fileID: 564717518}
-  m_orbSpawnRate: 60
+  m_orbSpawnRate: 130
   m_orbs:
   - {fileID: 8747883237982590866, guid: cbd915a4cb10141bfaa0b2e23e82f93a, type: 3}
   - {fileID: 8032872490202907679, guid: 1df01d07794cd4e6e979ce1dc763b2e4, type: 3}
