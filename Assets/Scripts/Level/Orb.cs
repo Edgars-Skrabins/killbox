@@ -25,9 +25,9 @@ public abstract class Orb : Health
 
     protected override void Die(EDamageTypes _damageType)
     {
+        Destroy(gameObject);
         PlayEffect();
         PlayDeathSound();
-        Destroy(gameObject);
     }
 
     private void PlayDeathSound()

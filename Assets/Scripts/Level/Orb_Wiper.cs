@@ -1,12 +1,7 @@
 public class Orb_Wiper : Orb
 {
-    // Start is called before the first frame update
-    private void Start()
+    protected override void PlayEffect()
     {
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
+        WaveManager.I.SpawnEnemy(4);
     }
 }
