@@ -354,6 +354,78 @@ MonoBehaviour:
     playOnAwake: 0
     MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
+  - name: Announce_Replenish_1
+    clip: {fileID: 8300000, guid: 1cedd3043efc34ac9b633585f5c43e6b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
+  - name: Announce_Replenish_2
+    clip: {fileID: 8300000, guid: 89e0a1538d2d84ac2b5c77543703617c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
+  - name: Announce_Replenish_3
+    clip: {fileID: 8300000, guid: 47457197f7a20429db503f13511b3796, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
+  - name: Announce_WeaponChange_1
+    clip: {fileID: 8300000, guid: 6647613c8e1b94fbdb9ee19dbce3d709, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
+  - name: Announce_WeaponChange_2
+    clip: {fileID: 8300000, guid: 041d1d758bf64464d9a38aee4dc25b2c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
+  - name: Announce_WeaponChange_3
+    clip: {fileID: 8300000, guid: 4e9dd79c3006c492fa270851c5fd9b9c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
+  - name: Announce_Wiper_1
+    clip: {fileID: 8300000, guid: a16f553e8fc9d4f26bd9301e2d2459fd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
+  - name: Announce_Wiper_2
+    clip: {fileID: 8300000, guid: c975ccaf2b63b424b8fed1c344fdbf0f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
+  - name: Announce_Wiper_3
+    clip: {fileID: 8300000, guid: 0f2786cba51564360a4fc0aef30e7fd0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
 --- !u!82 &3066876370385942851
 AudioSource:
   m_ObjectHideFlags: 0
