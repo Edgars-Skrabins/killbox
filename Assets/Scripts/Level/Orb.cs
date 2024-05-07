@@ -20,6 +20,7 @@ public abstract class Orb : Health
         m_health -= _damage;
         if (m_health <= 0)
         {
+            PlayDeathSound();
             Die(_damageType);
         }
 
@@ -31,7 +32,6 @@ public abstract class Orb : Health
     protected override void Die(EDamageTypes _damageType)
     {
         m_isAlive = false;
-        PlayDeathSound();
         Destroy(gameObject);
         PlayEffect();
     }
