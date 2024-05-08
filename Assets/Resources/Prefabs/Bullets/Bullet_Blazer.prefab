@@ -322,7 +322,7 @@ MonoBehaviour:
   m_bulletRB: {fileID: 8882113105936379187}
   m_bulletTF: {fileID: 4589737236847229152}
   m_maxBounces: 5
-  m_bounceCheckRadius: 12
+  m_bounceCheckRadius: 13
   m_enemyLayer:
     serializedVersion: 2
     m_Bits: 512

@@ -9389,7 +9389,7 @@ MonoBehaviour:
   m_firePoints:
   - {fileID: 509841980}
   m_bulletPrefab: {fileID: 4589737236847229155, guid: 611a097f534374a1b9efb3f04ed89536, type: 3}
-  m_fireRateInSeconds: 0.04
+  m_fireRateInSeconds: 0.038
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1884659
@@ -23716,7 +23716,7 @@ MonoBehaviour:
   m_firePoints:
   - {fileID: 7701359590681017814}
   m_bulletPrefab: {fileID: 4589737236847229155, guid: fbe925d14fe1744a5a24c680d84b2307, type: 3}
-  m_fireRateInSeconds: 2.8
+  m_fireRateInSeconds: 2.65
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1622259
