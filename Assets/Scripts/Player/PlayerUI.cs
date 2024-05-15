@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerUI : MonoBehaviour
 {
-
     [SerializeField] private WeaponRandomizer m_weaponRandomizerCS;
-    
+
     [SerializeField] public GameObject m_playMenu;
     [SerializeField] private Image m_weaponRandomizerTimer_UI;
     [SerializeField] private Image m_playerHealth_UI;
@@ -15,7 +14,8 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI m_scoreText;
     [SerializeField] private TextMeshProUGUI m_playScoreText;
 
-#region Pause Menu
+    #region Pause Menu
+
     [SerializeField] public GameObject m_pauseMenu;
 
     //[SerializeField] private TextMeshProUGUI m_pauseHighscoreText;
@@ -25,16 +25,14 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] public Slider m_musicSlider;
     [SerializeField] public Slider m_sfxSlider;
 
-
     #endregion
 
     #region Death Menu
+
     [SerializeField] public GameObject m_deathMenu;
 
     [SerializeField] private TextMeshProUGUI m_deathHighscoreText;
     [SerializeField] private TextMeshProUGUI m_deathFinalScore;
-
-
 
     #endregion
     public GameObject m_settingsMenu;
@@ -47,7 +45,6 @@ public class PlayerUI : MonoBehaviour
         m_audioSlider.onValueChanged.AddListener(SetMasterVolume);
         m_musicSlider.onValueChanged.AddListener(SetMusicVolume);
         m_sfxSlider.onValueChanged.AddListener(SetSFXVolume);
-
     }
 
     private void Start()
@@ -72,12 +69,10 @@ public class PlayerUI : MonoBehaviour
             AudioManager.I.Stop("BGM_Death");
         }
     }
-    
+
 
     private void Update()
     {
-        LoadingScreenAnimation.I.DisableLoadingScreen();
-
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             if (GameManager.I.IsGamePaused)
@@ -88,14 +83,12 @@ public class PlayerUI : MonoBehaviour
             {
                 GameManager.I.PauseGame();
             }
-
         }
 
         //PlayerStats.I.MouseSensitivity = m_sensitivitySlider.value;
-        
+
         UpdateMenus();
         UpdateHUD();
-
     }
 
     private void UpdateHUD()

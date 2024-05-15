@@ -29584,7 +29584,7 @@ MonoBehaviour:
   m_enemyHealth: 70
   m_enemyStartingHealth: 70
   m_enemyScoreValue: 40
-  m_enemySlowAmount: 2.5
+  m_enemySlowAmount: 3
   m_slowDuration: 2.5
   m_stunDuration: 1.3
   m_enemySpeed: 6

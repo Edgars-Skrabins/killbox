@@ -628,7 +628,7 @@ MonoBehaviour:
   - {fileID: 1061667788}
   - {fileID: 1513902391}
   m_bulletPrefab: {fileID: 4589737236847229155, guid: df88a7fba709dab49abd6d84cdca9464, type: 3}
-  m_fireRateInSeconds: 0.63
+  m_fireRateInSeconds: 0.61
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1884659
@@ -1804,7 +1804,7 @@ MonoBehaviour:
   m_firePoints:
   - {fileID: 1197340304}
   m_bulletPrefab: {fileID: 4589737236847229155, guid: 19e491727258a4a92ab7697145af5b73, type: 3}
-  m_fireRateInSeconds: 0.08
+  m_fireRateInSeconds: 0.095
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1622259
@@ -9389,7 +9389,7 @@ MonoBehaviour:
   m_firePoints:
   - {fileID: 509841980}
   m_bulletPrefab: {fileID: 4589737236847229155, guid: 611a097f534374a1b9efb3f04ed89536, type: 3}
-  m_fireRateInSeconds: 0.038
+  m_fireRateInSeconds: 0.029
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1884659
@@ -9408,7 +9408,7 @@ MonoBehaviour:
   m_spraySphereTF: {fileID: 1869319862}
   m_narrowestSpraySphereTF: {fileID: 1381893862}
   m_widestSpraySphereTF: {fileID: 203385654}
-  m_sprayRecoverySpeed: 12
+  m_sprayRecoverySpeed: 13
   m_sprayWorseningSpeed: 8
   m_emissionMaterial: {fileID: 2100000, guid: 46724ffa7f535284082310ac2488b0ff, type: 2}
   m_maxEmissionStrength: 11
@@ -10399,7 +10399,7 @@ MonoBehaviour:
   m_damageType: 2
   m_doesChargeTarget: 1
   m_specialEnemyExplosionDamage: 100
-  m_fireRateInSeconds: 0.28
+  m_fireRateInSeconds: 0.25
   m_laserLayers:
     serializedVersion: 2
     m_Bits: 523251
@@ -11806,7 +11806,7 @@ MonoBehaviour:
   m_weaponDamage: 10
   m_damageType: 0
   m_doesCharge: 0
-  m_fireRateInSeconds: 0.077
+  m_fireRateInSeconds: 0.075
   m_weaponRange: 5000
   m_damageLayer:
     serializedVersion: 2
@@ -15054,7 +15054,7 @@ MonoBehaviour:
   m_weaponDamage: 14
   m_damageType: 1
   m_doesCharge: 0
-  m_fireRateInSeconds: 0.05
+  m_fireRateInSeconds: 0.045
   m_weaponRange: 5000
   m_damageLayer:
     serializedVersion: 2
@@ -19080,7 +19080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ad8d66189d9974aa808926382b387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_randomizeFrequencyInSeconds: 24
+  m_randomizeFrequencyInSeconds: 11
   m_randomizeTimer: 0
   m_weaponClockFeedback: {fileID: 732516356}
   m_nextWeapon: 
@@ -22483,7 +22483,7 @@ MonoBehaviour:
   m_firePoints:
   - {fileID: 7428454191955537191}
   m_bulletPrefab: {fileID: 4589737236847229155, guid: 567bb0892858cf4428f3573babb78868, type: 3}
-  m_fireRateInSeconds: 0.29
+  m_fireRateInSeconds: 0.25
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1622259
@@ -22600,7 +22600,7 @@ MonoBehaviour:
   m_weaponDamage: 10
   m_damageType: 0
   m_doesCharge: 0
-  m_fireRateInSeconds: 0.077
+  m_fireRateInSeconds: 0.075
   m_weaponRange: 5000
   m_damageLayer:
     serializedVersion: 2
@@ -23061,7 +23061,7 @@ MonoBehaviour:
   m_firePoints:
   - {fileID: 5573131362792684586}
   m_bulletPrefab: {fileID: 0}
-  m_fireRateInSeconds: 0.24
+  m_fireRateInSeconds: 0.22
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1884659
@@ -23597,8 +23597,11 @@ MonoBehaviour:
   - {fileID: 161643987946963565}
   - {fileID: 161643987946963565}
   - {fileID: 161643987946963565}
+  - {fileID: 161643987946963565}
+  - {fileID: 161643987946963565}
+  - {fileID: 161643987946963565}
   m_bulletPrefab: {fileID: 2893767198637834749, guid: 5f446dac73d584adb8ccd20f61a084a4, type: 3}
-  m_fireRateInSeconds: 0.35
+  m_fireRateInSeconds: 0.33
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1884659
@@ -23716,7 +23719,7 @@ MonoBehaviour:
   m_firePoints:
   - {fileID: 7701359590681017814}
   m_bulletPrefab: {fileID: 4589737236847229155, guid: fbe925d14fe1744a5a24c680d84b2307, type: 3}
-  m_fireRateInSeconds: 2.65
+  m_fireRateInSeconds: 2.6
   m_firePointVisibleLayer:
     serializedVersion: 2
     m_Bits: 1622259

@@ -20110,7 +20110,7 @@ MonoBehaviour:
   m_enemyHealth: 100
   m_enemyStartingHealth: 100
   m_enemyScoreValue: 20
-  m_enemySlowAmount: 2.5
+  m_enemySlowAmount: 3
   m_slowDuration: 2.5
   m_stunDuration: 1.3
   m_enemySpeed: 5.8

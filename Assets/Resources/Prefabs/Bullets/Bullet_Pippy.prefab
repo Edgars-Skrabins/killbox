@@ -9853,7 +9853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917f36ad04b164c2aa7a62367611e139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_bulletDamage: 10
+  m_bulletDamage: 15
   m_damageType: 0
   m_doesCharge: 1
   m_bulletSpeed: 50

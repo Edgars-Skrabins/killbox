@@ -19964,7 +19964,7 @@ MonoBehaviour:
   m_enemyStartingHealth: 300
   m_enemyScoreValue: 100
   m_enemySlowAmount: 1.8
-  m_slowDuration: 2.5
+  m_slowDuration: 3.2
   m_stunDuration: 1.5
   m_enemySpeed: 5
   m_navMeshAgent: {fileID: 812098267957970375}

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
-
     [SerializeField] private TextMeshProUGUI m_highscoreText;
     [SerializeField] private Slider m_sensitivitySlider;
     [SerializeField] private Slider m_audioSlider;
@@ -20,12 +19,6 @@ public class MainMenuManager : MonoBehaviour
         m_audioSlider.onValueChanged.AddListener(SetMasterVolume);
         m_musicSlider.onValueChanged.AddListener(SetMusicVolume);
         m_sfxSlider.onValueChanged.AddListener(SetSFXVolume);
-
-    }
-
-    private void FixedUpdate()
-    {
-        LoadingScreenAnimation.I.DisableLoadingScreen();
     }
 
     private void Start()
@@ -34,6 +27,7 @@ public class MainMenuManager : MonoBehaviour
 
         // main menu
         Canvas.transform.GetChild(0).gameObject.SetActive(true);
+
         // settings
         Canvas.transform.GetChild(1).gameObject.SetActive(false);
 
@@ -68,10 +62,12 @@ public class MainMenuManager : MonoBehaviour
     {
         AudioManager.I.Mixer.SetFloat(AudioManager.I.Master_Volume, Mathf.Log10(value) * 20);
     }
+
     private void SetMusicVolume(float value)
     {
         AudioManager.I.Mixer.SetFloat(AudioManager.I.Music_Volume, Mathf.Log10(value) * 20);
     }
+
     private void SetSFXVolume(float value)
     {
         AudioManager.I.Mixer.SetFloat(AudioManager.I.SFX_Volume, Mathf.Log10(value) * 20);
@@ -85,8 +81,6 @@ public class MainMenuManager : MonoBehaviour
         PlayerPrefs.SetFloat(AudioManager.I.SFX_Volume, m_sfxSlider.value);
 
         PlayerPrefs.Save();
-
-        LoadingScreenAnimation.I.EnableLoadingScreen();
 
         if (!AudioManager.I.Playing("BGM_Game"))
         {
