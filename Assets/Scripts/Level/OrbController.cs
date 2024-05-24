@@ -1,10 +1,12 @@
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class OrbController : MonoBehaviour
 {
     [SerializeField] private Transform m_orbSpawnLocation;
     [SerializeField] private float m_orbSpawnRate;
     [SerializeField] private GameObject[] m_orbs;
+    [SerializeField] private string[] m_orbSpawnAudioSFXs;
 
     private GameObject m_currentOrb;
     private bool m_isOrbAlive;
@@ -44,6 +46,7 @@ public class OrbController : MonoBehaviour
 
     private void SpawnOrb()
     {
+        AudioManager.I.Play(m_orbSpawnAudioSFXs[Random.Range(0, m_orbSpawnAudioSFXs.Length)]);
         SetIsOrbAlive(true);
         int randomOrbIndex = Random.Range(0, m_orbs.Length);
         m_currentOrb = Instantiate(m_orbs[randomOrbIndex], m_orbSpawnLocation.position, Quaternion.identity);

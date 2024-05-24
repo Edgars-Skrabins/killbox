@@ -426,6 +426,30 @@ MonoBehaviour:
     playOnAwake: 0
     MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
     source: {fileID: 0}
+  - name: Announce_Orb_1
+    clip: {fileID: 8300000, guid: 754aa544163d041bfb80498f32217773, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
+  - name: Announce_Orb_2
+    clip: {fileID: 8300000, guid: dc28827c3b8ec4ded8e01fafaddde499, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
+  - name: Announce_Orb_3
+    clip: {fileID: 8300000, guid: 296e39517ca164e65b70e9d83b16ff73, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    MixerGroup: {fileID: -6985304413199031397, guid: 098d5e8e5e91a41449950b0ffbd18532, type: 2}
+    source: {fileID: 0}
 --- !u!82 &3066876370385942851
 AudioSource:
   m_ObjectHideFlags: 0

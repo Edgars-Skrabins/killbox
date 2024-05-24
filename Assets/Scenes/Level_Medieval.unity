@@ -41655,6 +41655,10 @@ MonoBehaviour:
   - {fileID: 8747883237982590866, guid: cbd915a4cb10141bfaa0b2e23e82f93a, type: 3}
   - {fileID: 8032872490202907679, guid: 1df01d07794cd4e6e979ce1dc763b2e4, type: 3}
   - {fileID: 8032577299362937190, guid: 6b95b36c6fa6a487a85b3e56a70d0480, type: 3}
+  m_orbSpawnAudioSFXs:
+  - Announce_Orb_1
+  - Announce_Orb_2
+  - Announce_Orb_3
 --- !u!1001 &1271728149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66035,6 +66039,10 @@ MonoBehaviour:
   - {fileID: 8747883237982590866, guid: cbd915a4cb10141bfaa0b2e23e82f93a, type: 3}
   - {fileID: 8032872490202907679, guid: 1df01d07794cd4e6e979ce1dc763b2e4, type: 3}
   - {fileID: 8032577299362937190, guid: 6b95b36c6fa6a487a85b3e56a70d0480, type: 3}
+  m_orbSpawnAudioSFXs:
+  - Announce_Orb_1
+  - Announce_Orb_2
+  - Announce_Orb_3
 --- !u!1001 &2030541421
 PrefabInstance:
   m_ObjectHideFlags: 0
