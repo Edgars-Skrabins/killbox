@@ -7,7 +7,7 @@ Killbox is a single-player first person shooter with an open world, where you de
 ## Download
 
 - [Play in browser](https://deimos-game-studio.itch.io/killbox)
-- [Download from GitHub Release](https://github.com/Edgars-Skrabins/killbox/releases/tag/Latest)
+- [Download](https://github.com/Edgars-Skrabins/killbox/releases/tag/Latest)
 
 ## Unity Version 
 
