@@ -7,7 +7,7 @@
 ## Dependancies
 - Feel by More Mountains: https://assetstore.unity.com/packages/tools/particles-effects/feel-183370
 
-## Download
+## Try it out
 
 - [Play in browser](https://deimos-game-studio.itch.io/killbox)
-- [Download](https://github.com/Edgars-Skrabins/killbox/releases/tag/Latest)
+- [Download for Windows](https://github.com/Edgars-Skrabins/killbox/releases/tag/Latest)
